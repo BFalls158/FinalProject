@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="484 1170 414 961">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-iPhone_6_7_Plus_2);
+      }
+
+      .cls-3 {
+        fill: #a39e89;
+      }
+
+      .cls-11, .cls-3 {
+        stroke: #95989a;
+      }
+
+      .cls-4 {
+        fill: #7ff783;
+        font-size: 120px;
+        font-family: Kefa-Regular, Kefa;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #f0f0f0;
+      }
+
+      .cls-6 {
+        font-family: internet_friends, internet friends;
+      }
+
+      .cls-7 {
+        stroke: rgba(0,0,0,0);
+      }
+
+      .cls-8 {
+        font-size: 13px;
+        font-family: Helvetica;
+      }
+
+      .cls-9 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-10 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-11, .cls-13, .cls-15 {
+        fill: #fff;
+      }
+
+      .cls-12, .cls-14, .cls-17 {
+        fill: #51a754;
+      }
+
+      .cls-12 {
+        font-size: 22px;
+        opacity: 0.5;
+      }
+
+      .cls-12, .cls-13, .cls-14 {
+        font-family: HelveticaNeue-Bold, Helvetica Neue;
+        font-weight: 700;
+      }
+
+      .cls-13 {
+        font-size: 44px;
+      }
+
+      .cls-14, .cls-15 {
+        font-size: 20px;
+      }
+
+      .cls-15 {
+        font-family: HelveticaNeue, Helvetica Neue;
+      }
+
+      .cls-16 {
+        stroke: none;
+      }
+
+      .cls-18 {
+        filter: url(#Rectangle_52);
+      }
+    </style>
+    <filter id="Rectangle_52" x="454" y="1168" width="474" height="341" filterUnits="userSpaceOnUse">
+      <feOffset dy="28" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="449.641" height="264.047"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect class="cls-1" width="449.641" height="47.047"/>
+    </clipPath>
+    <clipPath id="clip-iPhone_6_7_Plus_2">
+      <rect x="484" y="1170" width="414" height="961"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_6_7_Plus_2" data-name="iPhone 6/7 Plus – 2" class="cls-2">
+    <rect class="cls-17" x="484" y="1170" width="414" height="961"/>
+    <g class="cls-18" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <g id="Rectangle_52-2" data-name="Rectangle 52" class="cls-3" transform="translate(484 1170)">
+        <rect class="cls-16" width="414" height="281"/>
+        <rect class="cls-1" x="0.5" y="0.5" width="413" height="280"/>
+      </g>
+    </g>
+    <text id="BOOK_BUDDIES" data-name="BOOK 
+BUDDIES" class="cls-4" transform="translate(512 1323)"><tspan x="0" y="0">BOOK</tspan><tspan class="cls-5" y="0"> </tspan><tspan class="cls-6"><tspan x="0" y="92">BUDDIES</tspan></tspan></text>
+    <g id="status_bar" data-name="status bar" transform="translate(-880 1178)">
+      <g id="battery" transform="translate(1743.421 -0.39)">
+        <path id="path" class="cls-7" d="M1.668,1.084h0A1.139,1.139,0,0,0,.555,2.253v7.6a1.142,1.142,0,0,0,1.113,1.169H23.312a1.139,1.139,0,0,0,1.113-1.169v-7.6a1.142,1.142,0,0,0-1.113-1.169Zm0-.584H23.312A1.713,1.713,0,0,1,24.98,2.253v7.6A1.709,1.709,0,0,1,23.312,11.6H1.668A1.713,1.713,0,0,1,0,9.849v-7.6A1.709,1.709,0,0,1,1.668.5Z" transform="translate(0 -0.5)"/>
+        <rect id="rectangle" class="cls-7" width="9.992" height="8.882" rx="1" transform="translate(1.11 1.11)"/>
+        <path id="path-2" data-name="path" class="cls-7" d="M24.665,5.923A1.943,1.943,0,0,1,23,7.846V4A1.943,1.943,0,0,1,24.665,5.923Z" transform="translate(2.535 -0.114)"/>
+      </g>
+      <text id="battery_percent" data-name="battery percent" class="cls-8" transform="translate(1712.335 9.61)"><tspan x="0" y="0">42%</tspan></text>
+      <path id="bluetooth" d="M306.916,15.567v-3.95l1.9,2.07-1.9,1.88Zm1.988-7.8-1.988,2V5.982L308.9,7.77Zm-1.51,2.958,2.95-2.958-4.4-4.27h-.1V9.439l-2.987-3.132L302,7.2l3.594,3.532L302,14.26l.851.889,2.987-3.132v5.939h.19l4.358-4.281-2.993-2.946Z" transform="translate(1395.902 -5)"/>
+      <text id="time" class="cls-8" transform="translate(1544.693 10.72)"><tspan x="0" y="0">9:41 AM</tspan></text>
+      <path id="wifi" class="cls-7" d="M91.157,7.188a8.566,8.566,0,0,1,5.621,2.094l1.045-1.154A9.764,9.764,0,0,0,84.5,8.121l1.043,1.155a8.565,8.565,0,0,1,5.614-2.088Zm0,3.33a5.2,5.2,0,0,1,3.379,1.241l1.105-1.221a6.744,6.744,0,0,0-8.964,0l1.1,1.223a5.2,5.2,0,0,1,3.375-1.237ZM93.43,12.98a3.423,3.423,0,0,0-4.545,0l2.271,2.515L93.43,12.98Z" transform="translate(1375.817 -5.89)"/>
+      <text id="carrier" class="cls-8" transform="translate(1412.578 9.61)"><tspan x="0" y="0">Carrier</tspan></text>
+      <g id="signal_strength" data-name="signal strength" transform="translate(1371.5 2.941)">
+        <circle id="black_circle" data-name="black circle" class="cls-7" cx="3.053" cy="3.053" r="3.053"/>
+        <circle id="black_circle-2" data-name="black circle" class="cls-7" cx="3.053" cy="3.053" r="3.053" transform="translate(7.771)"/>
+        <circle id="black_circle-3" data-name="black circle" class="cls-7" cx="3.053" cy="3.053" r="3.053" transform="translate(15.543)"/>
+        <path id="white_circle" data-name="white circle" class="cls-7" d="M24.053,5.551h0a2.5,2.5,0,1,0-2.5-2.5,2.5,2.5,0,0,0,2.5,2.5Zm0,.555h0a3.053,3.053,0,1,1,3.053-3.053,3.053,3.053,0,0,1-3.053,3.053Z" transform="translate(2.314)"/>
+        <path id="white_circle-2" data-name="white circle" class="cls-7" d="M31.053,5.551h0a2.5,2.5,0,1,0-2.5-2.5,2.5,2.5,0,0,0,2.5,2.5Zm0,.555h0a3.053,3.053,0,1,1,3.053-3.053,3.053,3.053,0,0,1-3.053,3.053Z" transform="translate(3.086)"/>
+      </g>
+    </g>
+    <g id="Repeat_Grid_12" data-name="Repeat Grid 12" class="cls-9" transform="translate(466.18 1571.977)">
+      <g id="Group_13" data-name="Group 13" transform="translate(17.82 -437.977)">
+        <g id="Repeat_Grid_9" data-name="Repeat Grid 9" class="cls-10" transform="translate(-17.82 437.977)">
+          <g id="Group_12" data-name="Group 12" transform="translate(17.82 -437.977)">
+            <g id="Rectangle_53" data-name="Rectangle 53" class="cls-11" transform="translate(-17.82 437.977)">
+              <rect class="cls-16" width="449.641" height="47.047" rx="12"/>
+              <rect class="cls-1" x="0.5" y="0.5" width="448.641" height="46.047" rx="11.5"/>
+            </g>
+          </g>
+        </g>
+        <text id="Email" class="cls-12" transform="translate(206.313 469.304)"><tspan x="-29.084" y="0">Email</tspan></text>
+      </g>
+      <g id="Group_15" data-name="Group 15" transform="translate(17.82 -369.977)">
+        <g id="Repeat_Grid_10" data-name="Repeat Grid 10" class="cls-10" transform="translate(-17.82 437.977)">
+          <g id="Group_14" data-name="Group 14" transform="translate(17.82 -437.977)">
+            <g id="Rectangle_54" data-name="Rectangle 54" class="cls-11" transform="translate(-17.82 437.977)">
+              <rect class="cls-16" width="449.641" height="47.047" rx="12"/>
+              <rect class="cls-1" x="0.5" y="0.5" width="448.641" height="46.047" rx="11.5"/>
+            </g>
+          </g>
+        </g>
+        <text id="Username" class="cls-12" transform="translate(206.313 469.304)"><tspan x="-53.966" y="0">Username</tspan></text>
+      </g>
+      <g id="Group_17" data-name="Group 17" transform="translate(17.82 -301.977)">
+        <g id="Repeat_Grid_11" data-name="Repeat Grid 11" class="cls-10" transform="translate(-17.82 437.977)">
+          <g id="Group_16" data-name="Group 16" transform="translate(17.82 -437.977)">
+            <g id="Rectangle_55" data-name="Rectangle 55" class="cls-11" transform="translate(-17.82 437.977)">
+              <rect class="cls-16" width="449.641" height="47.047" rx="12"/>
+              <rect class="cls-1" x="0.5" y="0.5" width="448.641" height="46.047" rx="11.5"/>
+            </g>
+          </g>
+        </g>
+        <text id="Password" class="cls-12" transform="translate(206.313 469.304)"><tspan x="-51.942" y="0">Password</tspan></text>
+      </g>
+      <g id="Group_17-2" data-name="Group 17" transform="translate(17.82 -233.977)">
+        <g id="Repeat_Grid_11-2" data-name="Repeat Grid 11" class="cls-10" transform="translate(-17.82 437.977)">
+          <g id="Group_16-2" data-name="Group 16" transform="translate(17.82 -437.977)">
+            <g id="Rectangle_55-2" data-name="Rectangle 55" class="cls-11" transform="translate(-17.82 437.977)">
+              <rect class="cls-16" width="449.641" height="47.047" rx="12"/>
+              <rect class="cls-1" x="0.5" y="0.5" width="448.641" height="46.047" rx="11.5"/>
+            </g>
+          </g>
+        </g>
+        <text id="Password_Confirm" data-name="Password Confirm" class="cls-12" transform="translate(206.313 469.304)"><tspan x="-97.361" y="0">Password Confirm</tspan></text>
+      </g>
+    </g>
+    <text id="Sign_Up" data-name="Sign Up" class="cls-13" transform="translate(691 1535)"><tspan x="-82.302" y="0">Sign Up</tspan></text>
+    <g id="Repeat_Grid_13" data-name="Repeat Grid 13" class="cls-10" transform="translate(466.18 1965.977)">
+      <g id="Group_16-3" data-name="Group 16" transform="translate(17.82 -437.977)">
+        <g id="Rectangle_55-3" data-name="Rectangle 55" class="cls-11" transform="translate(-17.82 437.977)">
+          <rect class="cls-16" width="449.641" height="47.047" rx="12"/>
+          <rect class="cls-1" x="0.5" y="0.5" width="448.641" height="46.047" rx="11.5"/>
+        </g>
+      </g>
+    </g>
+    <text id="Sign_Up-2" data-name="Sign Up" class="cls-14" transform="translate(691 1995)"><tspan x="-37.41" y="0">Sign Up</tspan></text>
+    <text id="Terms_of_Service" data-name="Terms of Service" class="cls-15" transform="translate(691 1949)"><tspan x="-74.26" y="0">Terms of Service</tspan></text>
+  </g>
+</svg>
