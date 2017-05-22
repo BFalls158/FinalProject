@@ -10,12 +10,29 @@ var pool = new pg.Pool({
 	//Get Marcells stuff
 });
 
+app.get('/db/users', function(req, res) {
+	//retrives list of all users
+});
 
+app.get('/db/users/:user', function(req, res) {
+	//retrives list of users. Used in logging in/creating account
+});
 
+app.get('/db/library/:user', function(req, res) {
+	//retrieve library of user.
+});
 
+app.get('/db/watchlist/:user', function(req, res) {
+	//retrieve watchlist of user
+});
 
+app.get('/db/library', function(req, res) {
+	//retrieve libraries of all users
+});
 
-
+app.get('/db/watchlist', function(req, res) {
+	//retrieve watchlists of all users
+});
 
 
 
