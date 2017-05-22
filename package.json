@@ -13,5 +13,8 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "pg": "^6.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
   }
 }
