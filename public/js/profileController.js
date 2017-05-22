@@ -1,4 +1,4 @@
 angular.module("BookBuddiesMod")
-    .controller("profileController", function(){
+    .controller("profileController", function($scope, apiService){
 
     });

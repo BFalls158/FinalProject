@@ -1,4 +1,4 @@
 angular.module("BookBuddiesMod")
-    .controller("tradeController", function(){
+    .controller("tradeController", function($scope, apiService){
 
     });

@@ -1,34 +1,25 @@
 angular.module("BookBuddiesMod")
     .service("apiService", function($http){
 
-       this.setBooks = function(search, type) {
+        var books = {};
 
-           var promise =
-            $http({
-            method: "GET",
-            url: 'https://www.googleapis.com/books/v1/volumes' + type,
-            params: {
-                key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA',
-                q: type + search
-            }
-        });
+        this.setSearchedBooks = function(search, type) {
+
+            var promise =
+                $http({
+                method: "GET",
+                url: 'https://www.googleapis.com/books/v1/volumes',
+                params: {
+                    key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA',
+                    q: 'intitle:Name of the wind'  //Will eventually be type + search
+                }
+            }).then(function(response){
+                books = response.data;
+            })
         return promise;
-       };
+        };
 
-
-        // this.setAuthor = function(search, type) {
-        //
-        //        var promise =
-        //         $http({
-        //         method: "GET",
-        //         url: 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + type,
-        //         params: {
-        //             key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA',
-        //             q: inauthor:search
-        //         }
-        //     });
-        //     return promise;
-        //    };
-
-
+       this.getSearchedBooks = function() {
+        return books;
+       }
     });

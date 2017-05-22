@@ -1,4 +1,4 @@
-angular.module("BookBuddiesMod", ["ui.bootsrap", "ngAnimate", "ngRoute"])
+angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
     .config(function($routeProvider){
         $routeProvider
         .when("/", {
