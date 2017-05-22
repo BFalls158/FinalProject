@@ -22,11 +22,21 @@
     <script src="js/profileController.js"></script>
     <script src="js/signupController.js"></script>
     <script src="js/tradeController.js"></script>
-
   </head>
   <body>
-
+    <div class="header">
+   <div class="appTitle">
+       <h2>Book</h2><h2> Buddies</h2>
+   </div>
+   <div class="search">
+       <form class="searchForm">
+         <input placeholder="Search"><br>
+         <input type="radio" value="title" id="r1"><label for="r1">Title</label><br>
+         <input type="radio" value="author" id="r2"><label for="r2">Author</label><br>
+         <input type="radio" value="isbn" id="r3"><label for="r3">ISBN</label>
+       </form>
+   </div>
+</div>
     <ng-view></ng-view>
-
   </body>
 </html>

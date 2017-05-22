@@ -9,5 +9,5 @@ angular.module("BookBuddiesMod", ["ui.bootsrap", "ngAnimate", "ngRoute"])
         })
         .when("/searchresults", {
             templateUrl: "views/searchResults.html"
-        }); 
+        });
     });
