@@ -1,22 +1,49 @@
 .appTitle {
   float: left;
   display: inline;
+  margin-top: 100px;
+  margin-left: 30px;
 
 }
 
 .search {
   float: right;
   display: inline;
+  margin-top: 30px;
+  margin-right: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 40px 20px;
+  border-radius: 10px;
+  border: solid white 1px;
 
 }
 
 .header {
   background-image: url("bookimages/bookbg.jpg");
   width: 100%;
-  height: 200px;
+  height: 300px;
   background-size: cover;
 }
 
-h2 {
+@font-face {
+    font-family: baduy;
+    src: url(baduy/BADUY.otf);
+}
+
+.b1{
   display: inline;
+  font-family: baduy;
+  font-size: 70px;
+  color: 	rgb(105,105,105);
+}
+
+.b2{
+  display: inline;
+  font-family: baduy;
+  font-size: 70px;
+  color: rgb(84, 255, 132);
+}
+
+button {
+  background-color: rgb(84, 255, 132);
 }
