@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <!--------Bootstrap Style Sheets--------->
+    <!--Bootstrap Style Sheets--------->
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
-    <!---------Our Style Sheets------------->
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <!--------External JS Links------------->
+    <!--Our Style Sheets------------->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!--External JS Links------------->
     <script src="libs/angular.min.js"></script>
     <script src="libs/angular-route.min.js"></script>
     <script src="libs/angular-animate.min.js"></script>
     <script src="libs/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
-    <!----- Our script files----------->
+    <!--- Our script files----------->
     <script src="js/app.js"></script>
     <script src="js/apiService.js"></script>
     <script src="js/dbService.js"></script>
@@ -22,11 +22,21 @@
     <script src="js/profileController.js"></script>
     <script src="js/signupController.js"></script>
     <script src="js/tradeController.js"></script>
-
   </head>
   <body>
-
+    <div class="header">
+   <div class="appTitle">
+       <h2>Book</h2><h2> Buddies</h2>
+   </div>
+   <div class="search">
+       <form class="searchForm">
+         <input placeholder="Search"><br>
+         <input type="radio" value="title" id="r1"><label for="r1">Title</label><br>
+         <input type="radio" value="author" id="r2"><label for="r2">Author</label><br>
+         <input type="radio" value="isbn" id="r3"><label for="r3">ISBN</label>
+       </form>
+   </div>
+</div>
     <ng-view></ng-view>
-
   </body>
 </html>

@@ -1,0 +1,20 @@
+.appTitle {
+  float: left;
+  display: inline;
+
+}
+
+.search {
+  float: right;
+  display: inline;
+
+}
+
+.header {
+  background-image: url("BookImages/bookbg.jpg");
+
+}
+
+h2 {
+  display: inline;
+}
