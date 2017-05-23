@@ -87,7 +87,6 @@ function sendEmail (text) {
 // testEmail('Hi Emily');
 
 // Server port listen stuff
->>>>>>> 18814487a4cb09313a8a6136b62cbf24565d1aaa
 var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
