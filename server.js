@@ -11,29 +11,44 @@ app.use(bodyParser.json());
 
 var pool = require("./pg-connection-pool");
 
-app.get('/db/users', function(req, res) {
+app.get('/db/userinfo', function(req, res) {
 	//retrives list of all users
+    pool.query("SELECT" + username + "FROM userinfo;").then(function(result) {
+        res.send(result.rows);
+    });
 });
 
-app.get('/db/users/:user', function(req, res) {
+app.get('/db/userinfo/:username', function(req, res) {
 	//retrives list of users. Used in logging in/creating account
+    pool.query("SELECT username FROM userinfo;").then(function(result) {
+        res.send(result.rows);
 });
 
-app.get('/db/library/:user', function(req, res) {
+app.get('/db/library/:username', function(req, res) {
 	//retrieve library of user.
+    pool.query("SELECT * FROM library WHERE username='" + username + "';").then(function(result) {
+        res.send(result.rows);
+    
 });
 
-app.get('/db/watchlist/:user', function(req, res) {
+app.get('/db/watchlist/:username', function(req, res) {
 	//retrieve watchlist of user
+     pool.query("SELECT * FROM watchlist WHERE username='" + username + ';").then(function(result) {
+        res.send(result.rows);
 });
 
 app.get('/db/library', function(req, res) {
 	//retrieve libraries of all users
+    pool.query("SELECT * FROM library;").then(function(result) {
+        res.send(result.rows);
 });
 
 app.get('/db/watchlist', function(req, res) {
 	//retrieve watchlists of all users
+    pool.query("SELECT * FROM watchlist;").then(function(result) {
+        res.send(result.rows);
 });
+
 
 
 
