@@ -3,7 +3,7 @@ angular.module("BookBuddiesMod")
 
         var books = {};
 
-        this.setSearchedBooks = function(search, type) {
+        this.setSearchedBooks = function(search) {
 
             var promise =
                 $http({
@@ -11,7 +11,7 @@ angular.module("BookBuddiesMod")
                 url: 'https://www.googleapis.com/books/v1/volumes',
                 params: {
                     key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA',
-                    q: type + search //'intitle:Name of the wind'
+                    q: search //'intitle:Name of the wind'
                 }
             }).then(function(response){
                 books = response.data;
