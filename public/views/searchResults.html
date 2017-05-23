@@ -1,7 +1,7 @@
 <h3>Search Results</h3>
-<div ng-repeat="">
-  <img src="{{ thumbnail }}" class="column1">
-  <div class="column2"><cite>{{ title }}</cite><p>{{ author }}<br>{{ description }}</p></div>
+<div ng-repeat="book in list">
+  <img ng-src="{{ book.thumbnail }}" class="column1">
+  <div class="column2"><cite>{{ book.title }}</cite><p>{{ book.author }}<br>{{ book.description }}</p></div>
   <div class="column3"><button type="button" ng-click="">Add</button><!--Add to watchlist-->
     <p ng-click="">Number Available: {{  }}</p> <!--Link to module with list of users offering book, possible stretch goal-->
   </div>
