@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 //	//Get Marcells stuff
 //});
 
-var pool = require("./pg-connection-pool");
+// var pool = require("./pg-connection-pool");
 
 app.get('/db/users', function(req, res) {
 	//retrives list of all users
