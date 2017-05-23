@@ -1,4 +1,4 @@
 angular.module("BookBuddiesMod")
-    .service("dbService", function(){
-    	
+    .service("dbService", function($http){
+
     });
