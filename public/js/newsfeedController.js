@@ -1,4 +1,4 @@
 angular.module("BookBuddiesMod")
-    .controller("newsfeedController", function($scope, apiService){
+    .controller("newsfeedController", function($scope, apiService, dbService){
 
     });
