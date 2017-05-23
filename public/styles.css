@@ -13,6 +13,10 @@
   background-size: cover;
 }
 
+.header a:hover {
+  text-decoration: none;
+}
+
 .appTitle {
   float: left;
   display: inline;
