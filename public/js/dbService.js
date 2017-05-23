@@ -3,7 +3,7 @@ angular.module("BookBuddiesMod")
 
 
       //this retrieves the library of every user
-      .this.getTotalLibrary = function() {
+      this.getTotalLibrary = function() {
         return $http({
             method: 'GET',
             url:'/db/library',
@@ -12,7 +12,7 @@ angular.module("BookBuddiesMod")
         });
       };
       //this retrives the library of a specific user
-      .this.getLibrary = function() {
+      this.getLibrary = function() {
         return $http({
           method: 'GET',
           url:'/db/library/:username',
@@ -21,7 +21,7 @@ angular.module("BookBuddiesMod")
         });
       };
       //this retrieves the watchlist of every user
-      .this.getTotalWatchlist = function() {
+      this.getTotalWatchlist = function() {
         return $http({
             method:'GET',
             url:'/db/watchlist',
@@ -30,7 +30,7 @@ angular.module("BookBuddiesMod")
         });
       };
       //this retrieves the watchlist of a specified user
-      .this.getWatchlist = function() {
+      this.getWatchlist = function() {
         return $http({
             method: 'GET',
             url: '/db/watchlist/:username',
@@ -39,7 +39,7 @@ angular.module("BookBuddiesMod")
         });
       };
       //this retrieves the  of a specified user
-      .this.getUserInfo = function(user) {
+      this.getUserInfo = function(user) {
         return $http({
             method: 'GET',
             url: '/db/userinfo/'+ user,
@@ -48,7 +48,7 @@ angular.module("BookBuddiesMod")
         });
       };
       //this deletes a title from library
-      .this.deleteLibrary = function(itemId) {
+      this.deleteLibrary = function(itemId) {
         return $http({
             method: 'DELETE',
             url: '/api/library/'+ itemId,
@@ -57,7 +57,7 @@ angular.module("BookBuddiesMod")
         });
       };
       //this deletes a title from watchlist
-      .this.deleteWatchlist = function(itemId) {
+      this.deleteWatchlist = function(itemId) {
         return $http({
             method: 'DELETE',
             url: '/api/watchlist/'+ itemId,
@@ -66,23 +66,23 @@ angular.module("BookBuddiesMod")
         });
       };
       //this adds a book to the users library
-      .this.addToLibrary = function(item) {
+      this.addToLibrary = function(item) {
         return $http({
             method: 'POST',
             url: '/api/library',
-            data: {item},
-        }).then(funciton(response) {
+            data: item
+        }).then(function(response) {
             return response;
         });
       };
       //this adds a book to the users watchlist
-      .this.addToWatchlist = function(item) {
+      this.addToWatchlist = function(item) {
         return $http({
             method: 'POST',
             url: '/api/watchlist',
-            data: {item},
-        }).then(function(function() {
+            data: item
+        }).then(function(response) {
             return response;
-        }))
+        })
       };
     });
