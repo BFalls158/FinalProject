@@ -10,7 +10,9 @@ angular.module("BookBuddiesMod")
     		email: 'bfalls1587@gmail.com',
     		title: 'other title'
     	}
-    	emailService.sendEmail(user1, user2).then(function(response) {
-    		console.log(response);
+    	
+
+    	$scope.sendEmail = emailService.sendEmail(user1, user2).then(function() {
+    		console.log('Succes'); //user message here
     	});
     });

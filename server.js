@@ -86,6 +86,7 @@ app.post('/email', function(req, res) {
 	}
 	sendEmail(user1, user2);
 	console.log('Success');
+	res.send('Success');
 });
 
 app.delete('/api/watchlist/', function(req, res) {
@@ -126,6 +127,7 @@ function sendEmail (user1, user2) {
   mailjet.post('send')
     .request(email)
     .catch(handleError);
+    console.log('email success');
 }
 
 
