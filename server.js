@@ -5,10 +5,6 @@ var app = express();
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-//var pool = new pg.Pool({
-//	//Get Marcells stuff
-//});
-
 // var pool = require("./pg-connection-pool");
 
 app.get('/db/userinfo', function(req, res) {
