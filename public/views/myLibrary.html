@@ -7,28 +7,28 @@
     <h3 class="column">MyBrary</h3>
     <h3 class="column">Watchlist</h3>
   </div>
-<!---Content of table----------------------------->
+<!---Content of table-->
   <div class="row">
-<!--Left column with my books to trade------------>
+<!--Left column with my books to trade-->
     <div id="myBrairy" class="column">
-      <div ng-repeat="book in myBooks">
+      <!-- <div ng-repeat="book in myBooks">
         <img src="{{ book.thumbnail }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-      </div>
+      </div> -->
       <button type="button" ng-click="">Manage Books</button>
     </div>
-<!---Right column with books I want--------------->
+<!---Right column with books I want-->
     <div id="watchlist" class="column">
-      <div ng-repeat="book in wantedBooks">
+      <!-- <div ng-repeat="book in wantedBooks">
         <img src="{{ book.thumbnail }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-      </div>
+      </div> -->
       <button type="button" ng-click="">Manage Books</button>
     </div>
   </div> <!--End row-->
 </div><!--End table-->
 
 <div id="matches">
-  <p ng-repeat="">You have a match with {{  }}! Book Title: {{  }}<p>
+  <!-- <p ng-repeat="">You have a match with {{  }}! Book Title: {{  }}<p> -->
   <button type="button" ng-click="">view</button>
 </div>
