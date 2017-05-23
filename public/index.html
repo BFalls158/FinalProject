@@ -24,21 +24,23 @@
     <script src="js/tradeController.js"></script>
   </head>
   <body ng-app="BookBuddiesMod">
+<!--==============header=====================-->
     <div class="header">
-   <div class="appTitle">
-       <h2 class="b1">Book</h2> <h2 class="b2">Buddies</h2>
-   </div>
-   <div class="search">
-       <form class="searchForm">
-         <input placeholder="..."><br><br>
-         <input type="radio" name="sr" value="title" id="r1"><label for="r1">Title</label><br>
-         <input type="radio" name="sr" value="author" id="r2"><label for="r2">Author</label><br>
-         <input type="radio" name="sr" value="isbn" id="r3"><label for="r3">ISBN</label>
-       </form>
-       <br>
-          <button type="button" name="sr">Find Books</button>
-   </div>
-</div>
+      <div class="appTitle">
+        <h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1>
+      </div>
+      <div class="search">
+        <form class="searchForm">
+          <input class="input" placeholder="...">
+          <button type="button" name="sr">Find Books</button><br>
+          <input type="radio" name="sr" value="title" id="r1"><label for="r1">Title</label>
+          <input type="radio" name="sr" value="author" id="r2"><label for="r2">Author</label>
+          <input type="radio" name="sr" value="isbn" id="r3"><label for="r3">ISBN</label>
+        </form>
+      </div>
+    </div>
+
     <ng-view></ng-view>
+
   </body>
 </html>
