@@ -84,13 +84,13 @@ app.delete('/api/watchlist/', function(req, res) {
 * Do not forget to update the sender address used in the sample
 */
 
-var mailjet = require ('node-mailjet')
-    .connect('184f5bf7776ad290ae318526722d4b4e'
-, '882b52189118835a928e463c7ed0926c')
-
-function handleError (err) {
-  throw new Error(err.ErrorMessage);
-}
+// var mailjet = require ('node-mailjet')
+//     .connect('184f5bf7776ad290ae318526722d4b4e'
+// , '882b52189118835a928e463c7ed0926c')
+//
+// function handleError (err) {
+//   throw new Error(err.ErrorMessage);
+// }
 
 // function newContact (email) {
 //   mailjet.post('contact')
