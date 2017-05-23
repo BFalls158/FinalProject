@@ -17,6 +17,7 @@
     <script src="js/app.js"></script>
     <script src="js/apiService.js"></script>
     <script src="js/dbService.js"></script>
+    <script src="js/emailService.js"></script>
     <script src="js/loginController.js"></script>
     <script src="js/newsfeedController.js"></script>
     <script src="js/profileController.js"></script>
@@ -27,8 +28,12 @@
 <!--==============header=====================-->
     <div class="header">
       <div class="appTitle">
-        <h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1>
+        <a href="#!/"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
       </div>
+      <div id="profileLink">
+        <p>Hello {{ username }}!<br><a href="#!/profile">view library</a></p>
+      </div>
+
       <div class="search">
         <form class="searchForm">
           <input class="input" placeholder="..." ng-model="title">
