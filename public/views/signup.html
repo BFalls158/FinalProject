@@ -1,15 +1,23 @@
-<form ng-submit="">
-    <label>Username
-        <input type="text" ng-model="">
-    </label>
-    <label>Email
-        <input type="email" ng-model="">
-    </label>
-    <label>Password
-        <input type="password" ng-model="">
-    </label>
-    <label>Password Confirm
-        <input type="password" ng-model="">
-    </label>
-    <input type="submit">
-</form>
+<div class="modal fade" id="submitForm" role="dialog">
+    <div class="modal-dialog">
+    <form ng-submit="">
+        <label>Username
+            <input name="newName" type="text" ng-model="" required>
+            <span ng-show="submitForm.newName.$touched && submitForm.newName.$invalid">Password must be 7-25 characters.</span>
+        </label><br>
+        <label>Email
+            <input name="newEmail" type="email" ng-model="" required>
+            <span ng-show="submitForm.newEmail.$touched && submitForm.newEmail.$invalid">Please enter valid email.</span>
+        </label><br>
+        <label>Password
+            <input name="newPass" type="password" ng-model="" required>
+            <span ng-show="submitForm.newPass.$touched && submitForm.newPass.$invalid">Password must be 7-30 characters.</span>
+        </label><br>
+        <label>Password Confirm
+            <input name="passConfirm" type="password" ng-model="" required>
+            <span ng-show="submitForm.passConfirm.$touched && submitForm.passConfirm.$invalid">Passwords must match.</span>
+        </label><br>
+        <input type="submit">
+    </form>
+    </div>
+</div>    
