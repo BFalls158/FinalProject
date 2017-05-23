@@ -31,7 +31,7 @@
   display: inline;
   font-family: baduy;
   font-size: 90px;
-  color: rgb(84, 255, 132);
+  color: #51A754;
 }
 
 /*---------------------home screen search---------*/
@@ -47,7 +47,7 @@
 }
 
 button {
-  background-color: rgb(84, 255, 132);
+  background-color: #51A754;
   border-radius: 10px;
   padding: 2px 7px;
 }

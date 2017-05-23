@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 
 app.get('/db/userinfo', function(req, res) {
 	//retrives list of all users
+    var username = req.params.username;
     pool.query("SELECT" + username + "FROM userinfo;").then(function(result) {
         res.send(result.rows);
     });
@@ -22,31 +23,52 @@ app.get('/db/userinfo/:username', function(req, res) {
 	//retrives list of users. Used in logging in/creating account
     pool.query("SELECT username FROM userinfo;").then(function(result) {
         res.send(result.rows);
+    });
 });
-
+    
 app.get('/db/library/:username', function(req, res) {
 	//retrieve library of user.
-    pool.query("SELECT * FROM library WHERE username='" + username + "';").then(function(result) {
+    var username = req.params.username;
+    pool.query("SELECT * FROM library WHERE username=" + username + ";").then(function(result) {
         res.send(result.rows);
-    
+    }); 
 });
 
 app.get('/db/watchlist/:username', function(req, res) {
 	//retrieve watchlist of user
-     pool.query("SELECT * FROM watchlist WHERE username='" + username + "';").then(function(result) {
+    var username = req.params.username;
+     pool.query("SELECT * FROM watchlist WHERE username=" + username + "';").then(function(result) {
         res.send(result.rows);
+     });     
 });
 
 app.get('/db/library', function(req, res) {
 	//retrieve libraries of all users
     pool.query("SELECT * FROM library;").then(function(result) {
         res.send(result.rows);
+    });
 });
 
 app.get('/db/watchlist', function(req, res) {
 	//retrieve watchlists of all users
     pool.query("SELECT * FROM watchlist;").then(function(result) {
         res.send(result.rows);
+    });    
+});
+    
+app.get('/db/userinfo', function(req, res) {
+	//get email by user
+    var username = req.params.username;
+    pool.query("SELECT email FROM userinfo WHERE username=" + username + ";").then(function(result) {
+        res.send(result.rows);
+    });    
+});    
+
+app.delete('/api/library/', function(req, res) {
+    //delete from library
+    pool.query("DELETE FROM library WHERE " + type + "=" + type + ";").then(function(result) {
+        res.send(result.rows);
+    });
 });
 
 app.post('/email', function(req, res) {
@@ -66,6 +88,12 @@ app.post('/email', function(req, res) {
 	console.log('Success');
 });
 
+app.delete('/api/watchlist/', function(req, res) {
+    //delete from watchlist
+    pool.query("DELETE FROM watchlist WHERE " + type + "=" + type + ";").then(function(result) {
+        res.send(result.rows);
+    });
+});
 
 /**
 * This call sends an email to one recipient, using a validated sender address
@@ -100,7 +128,7 @@ function sendEmail (user1, user2) {
     .catch(handleError);
 }
 
-    
+
 // testEmail('Hi Emily');
 
 // Server port listen stuff
