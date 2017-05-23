@@ -64,17 +64,41 @@ app.get('/db/userinfo', function(req, res) {
     });    
 });    
 
-app.delete('/api/library/', function(req, res) {
+app.delete('/api/library/:id', function(req, res) {
     //delete from library
-    pool.query("DELETE FROM library WHERE " + type + "=" + type + ";").then(function(result) {
+    pool.query("DELETE FROM library WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);
     });
 });
 
-app.delete('/api/watchlist/', function(req, res) {
+app.delete('/api/watchlist/:id', function(req, res) {
     //delete from watchlist
-    pool.query("DELETE FROM watchlist WHERE " + type + "=" + type + ";").then(function(result) {
+    pool.query("DELETE FROM watchlist WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);
+    });
+});
+
+app.post('/api/library/', function() {
+    //add book to library
+    var item = req.body;
+    var sql = "INSERT INTO library(author, title, thumbnailurl, username)" +
+    "VALUES ($1::text, $2::text, $3::text, $4::text)";
+    var entry = [item.author, item.title, item.thumbnailurl, item.username];
+    pool.query(sql, entry).then(function() {
+        res.status(201);
+        res.send("INSTERTED");
+    });
+});
+
+app.post('/api/watchlist/', function() {
+    //add book to watchlist
+    var item = req.body;
+    var sql = "INSERT INTO watchlist(author, title, thumbnailurl, username)" +
+    "VALUES ($1::text, $2::text, $3::text, $4::text)";
+    var entry = [item.author, item.title, item.thumbnailurl, item.username];
+    pool.query(sql, entry).then(function() {
+        res.status(201);
+        res.send("INSTERTED");
     });
 });
 
@@ -115,7 +139,6 @@ function sendEmail (text) {
 // testEmail('Hi Emily');
 
 // Server port listen stuff
->>>>>>> 18814487a4cb09313a8a6136b62cbf24565d1aaa
 var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
