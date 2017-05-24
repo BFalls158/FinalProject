@@ -1,25 +1,71 @@
 @media screen and (max-width: 480px) {
-
+    
+    html{
+        max-width: 480px;
+    }
+    
     body {
-      background-color: yellow;
+/*      overflow-x: hidden;*/
+      text-align: center;  
     }
 
     .header{
         width: 100%;
-        height: 120px;
+        height: 200px;
         display: block;
-        margin: 0 auto;
     }
 
     .b1, .b2{
-        font-size: 30px;
+        font-size: 70px;
         text-align: center;
         margin: 0 auto;
         display: block;
     }
+    
+    .appTitle{
+        margin: 10px 0 0 0;
+    }
+    
+    .search{
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .searchForm{
+        text-align: center;
+    }
+
+    
+    /*----------------home page styling-----------------*/
+    
+    #mainBack{
+        display: none;
+    }
+    
+    #home .column1 {
+        position: relative;
+        min-width: 200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #home h4 {
+        text-align: center;
+    }
+    
+    #home .column2 {
+        top: 200px;
+        display: block;
+        min-width: 200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /*----------------profile view-----------------*/
 
 
-
-
-
+    .pcol {
+        width: 100%;
+    }
 }
