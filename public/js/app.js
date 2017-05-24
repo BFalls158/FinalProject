@@ -7,7 +7,7 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
         .when("/profile", {
             templateUrl: "views/myLibrary.html"
         })
-        .when("/searchresults", {
+        .when("/searchResults", {
             templateUrl: "views/searchResults.html",
             controller: "searchResultsController"
         });
