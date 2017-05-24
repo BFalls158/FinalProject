@@ -5,19 +5,19 @@ var app = express();
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-// var pool = require("./pg-connection-pool");
+ var pool = require("./pg-connection-pool");
 
 app.get('/db/userinfo', function(req, res) {
 	//retrives list of all users
-    var username = req.params.username;
-    pool.query("SELECT" + username + "FROM userinfo;").then(function(result) {
+    pool.query("SELECT * FROM userinfo;").then(function(result) {
         res.send(result.rows);
     });
 });
 
 app.get('/db/userinfo/:username', function(req, res) {
 	//retrives list of users. Used in logging in/creating account
-    pool.query("SELECT username FROM userinfo;").then(function(result) {
+    var username = req.params.username;
+    pool.query("SELECT * FROM userinfo WHERE username=$1::text ;", [username]).then(function(result) {
         res.send(result.rows);
     });
 });
@@ -25,7 +25,7 @@ app.get('/db/userinfo/:username', function(req, res) {
 app.get('/db/library/:username', function(req, res) {
 	//retrieve library of user.
     var username = req.params.username;
-    pool.query("SELECT * FROM library WHERE username=" + username + ";").then(function(result) {
+    pool.query("SELECT " + username + " FROM library WHERE username=$1::text;", [username]).then(function(result) {
         res.send(result.rows);
     });
 });
@@ -33,7 +33,7 @@ app.get('/db/library/:username', function(req, res) {
 app.get('/db/watchlist/:username', function(req, res) {
 	//retrieve watchlist of user
     var username = req.params.username;
-     pool.query("SELECT * FROM watchlist WHERE username=" + username + "';").then(function(result) {
+     pool.query("SELECT * FROM watchlist WHERE username= $1::text';", [username]).then(function(result) {
         res.send(result.rows);
      });
 });
@@ -52,15 +52,28 @@ app.get('/db/watchlist', function(req, res) {
     });
 });
 
-app.get('/db/userinfo', function(req, res) {
+app.get('/db/userinfo/:username', function(req, res) {
 	//get email by user
     var username = req.params.username;
-    pool.query("SELECT email FROM userinfo WHERE username=" + username + ";").then(function(result) {
+    pool.query("SELECT email FROM userinfo WHERE username=$1::text;", [username]).then(function(result) {
         res.send(result.rows);
     });
 });
 
-app.post('/api/library/', function() {
+app.post('/db/userinfo/', function(req, res) {
+    console.log("connected");
+    //add user to database
+    var item = req.body;
+    var sql = "INSERT INTO userinfo(username, email, password)" +
+    "VALUES ($1::text, $2::text, $3::text)";
+    var entry = [item.username, item.email, item.password];
+    pool.query(sql, entry).then(function() {
+        res.status(201);
+        res.send("INSTERTED");
+    });
+});
+
+app.post('/db/library/', function(req, res) {
     //add book to library
     var item = req.body;
     var sql = "INSERT INTO library(author, title, thumbnailurl, username)" +
@@ -72,7 +85,7 @@ app.post('/api/library/', function() {
     });
 });
 
-app.post('/api/watchlist/', function() {
+app.post('/db/watchlist/', function(req, res) {
     //add book to watchlist
     var item = req.body;
     var sql = "INSERT INTO watchlist(author, title, thumbnailurl, username)" +
@@ -84,14 +97,14 @@ app.post('/api/watchlist/', function() {
     });
 });   
 
-app.delete('/api/library/:id', function(req, res) {
+app.delete('/db/library/:id', function(req, res) {
     //delete from library
     pool.query("DELETE FROM library WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);
     });
 }); 
 
-app.delete('/api/watchlist/:id', function(req, res) {
+app.delete('/db/watchlist/:id', function(req, res) {
     //delete from watchlist
     pool.query("DELETE FROM watchlist WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);

@@ -1,5 +1,9 @@
 angular.module("BookBuddiesMod")
-    .controller("searchController", function($scope, $location, apiService, dbService){
+    .controller("searchController", function($scope, $location, apiService, dbService, $rootScope){
+
+    	$rootScope.user = 'BFalls';
+
+    	$scope.user = $rootScope.user;
 
  		$scope.list = [];
 
@@ -25,5 +29,27 @@ angular.module("BookBuddiesMod")
                description: book.volumeInfo.description});
               })
           console.log($scope.list);
+        }
+
+        $scope.addToLibrary = function (book) {
+        	var entry = {
+        		username: $rootScope.user,
+        		title: book.title,
+        		author: book.author,
+        		description: book.description,
+        		thumbnail: book.thumbnail
+        	}
+        	dbService.addToLibrary(entry);
+        }
+
+        $scope.addToWatchlist = function (book) {
+        	var entry = {
+        		username: $rootScope.user,
+        		title: book.title,
+        		author: book.author,
+        		description: book.description,
+        		thumbnail: book.thumbnail
+        	}
+        	dbService.addToWatchlist(entry);
         }
     });
