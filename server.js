@@ -100,7 +100,7 @@ app.post('/db/watchlist/', function(req, res) {
 app.delete('/db/library/:id', function(req, res) {
     //delete from library
     var id = req.params.id;
-    var sql = "DELETE FROM watchlist WHERE id=$1::int;"
+    var sql = "DELETE FROM library WHERE id=$1::int;"
     var entry = [id];
     pool.query(sql, entry).then(function(result) {
         res.send(result.rows);

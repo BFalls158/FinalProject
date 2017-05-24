@@ -48,34 +48,20 @@ angular.module("BookBuddiesMod")
         });
       };
       //this deletes a title from library
-      this.deleteLibrary = function(user, title) {
+      this.deleteLibrary = function(id) {
         return $http({
             method: 'DELETE',
-            url: '/db/library',
-            data: {
-              username: user,
-              title: title
-            },
-            headers: {
-            "Content-Type": "application/json;charset=utf-8"
-            }
+            url: '/db/library/' + id
         }).then(function(response) {
             console.log('deleted');
             return response;
         });
       };
       //this deletes a title from watchlist
-      this.deleteWatchlist = function(user, title) {
+      this.deleteWatchlist = function(id) {
         return $http({
             method: 'DELETE',
-            url: '/db/watchlist',
-            data: {
-              username: user,
-              title: title
-            },
-            headers: {
-            "Content-Type": "application/json;charset=utf-8"
-            }
+            url: '/db/watchlist/'+ id
         }).then(function(response) {
             console.log('deleted');
             return response;

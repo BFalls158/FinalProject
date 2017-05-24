@@ -9,7 +9,7 @@
       <div ng-repeat="book in myLibrary">
         <img ng-src="{{ book.thumbnailurl }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-        <button type="button" class="wishlist-delete" ng-click="deleteLibrary(user, book.title)">Delete</button>
+        <button type="button" class="wishlist-delete" ng-click="deleteLibrary(book.id)">Delete</button>
 
       </div>
       </div>
@@ -22,7 +22,7 @@
       <div ng-repeat="book in myWatchlist">
         <img ng-src="{{ book.thumbnailurl }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-        <button type="button" class="wishlist-delete" ng-click="deleteWishlist(user, book.title)">Delete</button>
+        <button type="button" class="wishlist-delete" ng-click="deleteWishlist(book.id)">Delete</button>
       </div>
     </div>
   </div>

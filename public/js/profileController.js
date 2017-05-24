@@ -7,17 +7,35 @@ angular.module("BookBuddiesMod")
 
     	$scope.myWatchlist = [];
 
-    	$scope.getLibrary = dbService.getLibrary($scope.user).then(function(response){
+    	$scope.getLibrary = function(){
+    		dbService.getLibrary($scope.user).then(function(response){
     		$scope.myLibrary = response;
     		console.log(response);
-    	});
+    		});
+    	}
 
-    	$scope.getWatchlist = dbService.getWatchlist($scope.user).then(function(response){
+    	$scope.getWatchlist = function(){
+    		dbService.getWatchlist($scope.user).then(function(response){
     		$scope.myWatchlist = response;
     		console.log(response);
-    	});
+    		});
+    	}
 
-    	$scope.deleateWishlist = dbService.deleteWishlist;
+    	$scope.deleteWishlist = function(id) {
+			dbService.deleteWishlist(id).then(function(){
+                $scope.myWatchlist = [];
+                $scope.getWatchlist();
 
-    	$scope.deleateLibrary = dbService.deleteLibrary;
+			});
+    	}
+
+    	$scope.deleteLibrary = function(id) {
+    		dbService.deleteLibrary(id).then(function(){
+    	        $scope.myLibrary = [];
+                $scope.getLibrary();
+    		});
+    	}
+
+        $scope.getLibrary();
+        $scope.getWatchlist();
     });
