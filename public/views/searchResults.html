@@ -1,10 +1,9 @@
 <h3>Search Results</h3>
-  <div ng-repeat="book in list">
+<div ng-repeat="book in list">
   <img ng-src="{{ book.thumbnail }}" class="column1">
   <div class="column2"><cite>{{ book.title }}</cite><p>{{ book.author }}<br>{{ book.description }}</p></div>
-  <div class="column3"><button type="button" ng-click="">Add</button>
+  <div class="column3"><button type="button" ng-click="">Add to Library</button></div>
   	<!--Add to watchlist -->
-    <p ng-click="">Add to Watchlist</p> 
+  <div class="column3"><button type="button" ng-click="">Add to Watchlist</button></div>
     <!--Link to module with list of users offering book, possible stretch goal -->
-  </div>
 </div>
