@@ -1,12 +1,12 @@
-<div id="home">
+<div id="home" ng-controller="homeController">
     <div id="main" class="column1">
       <h2>Available Books</h2>
       <h4>Popular Books</h4>
       <div id="mainBooks">
         <div id="mainBack"></div>
-        <!-- <div class="mainBook" ng-repeat="">
-          <img src="{{  }}"><cite class="mainTitle">{{ title }}</cite>
-        </div> -->
+        <div class="mainBook" ng-repeat="book in popularBooks">
+          <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle">{{ book.title }}</cite>
+        </div>
       </div>
 
       <h4>More Titles</h4>
@@ -18,6 +18,6 @@
     <div id="mainDirectives" class="column2">
       <!--this is the right hand column where our directives will load(Sign-in, sign-up, match feed)-->
       <
-      <div class="log-in"></div>
+      <match-feed></match-feed>
     </div>
 </div>
