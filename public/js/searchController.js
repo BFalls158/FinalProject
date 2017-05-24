@@ -37,7 +37,7 @@ angular.module("BookBuddiesMod")
         		title: book.title,
         		author: book.author,
         		description: book.description,
-        		thumbnail: book.thumbnail
+        		thumbnailurl: book.thumbnail
         	}
         	dbService.addToLibrary(entry);
         }
@@ -48,7 +48,7 @@ angular.module("BookBuddiesMod")
         		title: book.title,
         		author: book.author,
         		description: book.description,
-        		thumbnail: book.thumbnail
+        		thumbnailurl: book.thumbnail
         	}
         	dbService.addToWatchlist(entry);
         }

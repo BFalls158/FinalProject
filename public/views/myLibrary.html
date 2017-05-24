@@ -1,38 +1,33 @@
+
 <h2>{{username}}</h2>
-<!--Headers for ng-repeated books I have and books I want---->
-<div id="myLibraryTable">
-  <div class="row">
-    <h3 class="column">MyBrary</h3>
-  </div>
-    
-    
-<!---Content of table-->
-  <div class="row">
-      
-      
+<div id="myLibraryView">
 <!--Left column with my books to trade-->
-    <div id="myBrairy" class="column">
+
+  <div class="pcol">
+    <h3>Library</h3>
+      <div class="books">
       <!-- <div ng-repeat="book in myBooks">
         <img src="{{ book.thumbnail }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
       </div> -->
-      <button type="button" ng-click="">Manage Books</button>
+      </div>
+    <button type="button" ng-click="">Manage Books</button>
     </div>
-      
-      
+
 <!---Right column with books I want-->
-    <h3 class="column">Watchlist</h3>  
-    <div id="watchlist" class="column">
+  <div class="pcol">
+    <h3>Watchlist</h3>
+    <div class="books">
       <!-- <div ng-repeat="book in wantedBooks">
         <img src="{{ book.thumbnail }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
       </div> -->
-      <button type="button" ng-click="">Manage Books</button>
     </div>
-  </div> <!--End row-->
-</div><!--End table-->
+    <button type="button" ng-click="">Manage Books</button>
+  </div>
+</div> <!--End myLibraryView-->
 
 <div id="matches">
-  <!-- <p ng-repeat="">You have a match with {{  }}! Book Title: {{  }}<p> -->
-  <button type="button" ng-click="">view</button>
+  <!--<p ng-repeat="">You have a match with <a href="{{}}">{{  }}! Book Title: {{  }}<p> -->
+
 </div>

@@ -3,6 +3,10 @@
     src: url(baduy/BADUY.otf);
 }
 
+h3 {
+  margin-top: 0px !important;
+}
+
 .header {
   background-image: url("images/bookbg.jpg");
   background-size: cover cover;
@@ -38,6 +42,12 @@
   color: #51A754;
 }
 
+#profileLink {
+  position: absolute;
+  top: 80px;
+  left: 60%;
+  color: white;
+}
 /*---------------------home screen search---------*/
 .search {
   float: right;
@@ -140,9 +150,32 @@ button:focus {
 
 /*--------------profile view--------*/
 
-.myBrairy {
-    display: inline-block;
-    width: 
+.myLibraryView {
+    height:420px;
+    width: 100%;
+}
+
+.pcol {
+  display: inline-block;
+  min-height: 350px;
+  width: 49%;
+  min-width: 300px;
+  vertical-align: top;
+  margin: 5px;
+  padding: 10px;
+  padding-top: -20px;
+  border: 1px solid lightgrey;
+  text-align: center;
+}
+
+.books {
+  height: 260px;
+  border: 1px solid pink;
+  width: 100%;
+}
+
+#myLibraryView button {
+  margin-top: 5px;
 }
 
 
