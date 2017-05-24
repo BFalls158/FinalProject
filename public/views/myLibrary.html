@@ -6,28 +6,24 @@
   <div class="pcol">
     <h3>Library</h3>
       <div class="books">
-      <!-- <div ng-repeat="book in myBooks">
-        <img src="{{ book.thumbnail }}">
+      <div ng-repeat="book in myLibrary">
+        <img ng-src="{{ book.thumbnailurl }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-      </div> -->
+        <button type="button" class="wishlist-delete" ng-click="deleteLibrary(user, book.title)">Delete</button>
+
       </div>
-    <button type="button" ng-click="">Manage Books</button>
+      </div>
     </div>
 
 <!---Right column with books I want-->
   <div class="pcol">
     <h3>Watchlist</h3>
     <div class="books">
-      <!-- <div ng-repeat="book in wantedBooks">
-        <img src="{{ book.thumbnail }}">
+      <div ng-repeat="book in myWatchlist">
+        <img ng-src="{{ book.thumbnailurl }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-      </div> -->
+        <button type="button" class="wishlist-delete" ng-click="deleteWishlist(user, book.title)">Delete</button>
+      </div>
     </div>
-    <button type="button" ng-click="">Manage Books</button>
   </div>
 </div> <!--End myLibraryView-->
-
-<div id="matches">
-  <!--<p ng-repeat="">You have a match with <a href="{{}}">{{  }}! Book Title: {{  }}<p> -->
-
-</div>

@@ -12,10 +12,10 @@ angular.module("BookBuddiesMod")
         });
       };
       //this retrives the library of a specific user
-      this.getLibrary = function() {
+      this.getLibrary = function(user) {
         return $http({
           method: 'GET',
-          url:'/db/library/:username',
+          url:'/db/library/' + user,
         }).then(function(response) {
             return response.data;
         });
@@ -30,15 +30,15 @@ angular.module("BookBuddiesMod")
         });
       };
       //this retrieves the watchlist of a specified user
-      this.getWatchlist = function() {
+      this.getWatchlist = function(user) {
         return $http({
             method: 'GET',
-            url: '/db/watchlist/:username',
+            url: '/db/watchlist/' + user,
         }).then(function(response) {
             return response.data;
         });
       };
-      //this retrieves the  of a specified user
+      //this retrieves the info of a specified user
       this.getUserInfo = function(user) {
         return $http({
             method: 'GET',
@@ -48,20 +48,36 @@ angular.module("BookBuddiesMod")
         });
       };
       //this deletes a title from library
-      this.deleteLibrary = function(itemId) {
+      this.deleteLibrary = function(user, title) {
         return $http({
             method: 'DELETE',
-            url: '/db/library/'+ itemId,
+            url: '/db/library',
+            data: {
+              username: user,
+              title: title
+            },
+            headers: {
+            "Content-Type": "application/json;charset=utf-8"
+            }
         }).then(function(response) {
+            console.log('deleted');
             return response;
         });
       };
       //this deletes a title from watchlist
-      this.deleteWatchlist = function(itemId) {
+      this.deleteWatchlist = function(user, title) {
         return $http({
             method: 'DELETE',
-            url: '/db/watchlist/'+ itemId,
+            url: '/db/watchlist',
+            data: {
+              username: user,
+              title: title
+            },
+            headers: {
+            "Content-Type": "application/json;charset=utf-8"
+            }
         }).then(function(response) {
+            console.log('deleted');
             return response;
         });
       };
