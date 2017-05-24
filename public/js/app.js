@@ -8,7 +8,6 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
             templateUrl: "views/myLibrary.html"
         })
         .when("/searchResults", {
-            templateUrl: "views/searchResults.html",
-            // controller: "searchResultsController"
+            templateUrl: "views/searchResults.html"
         });
     });
