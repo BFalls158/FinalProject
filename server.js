@@ -60,7 +60,7 @@ app.get('/db/userinfo/:username', function(req, res) {
     });
 });
 
-app.post('/db/userinfo/', function() {
+app.post('/db/userinfo/', function(req, res) {
     console.log("connected");
     //add user to database
     var item = req.body;
@@ -73,7 +73,7 @@ app.post('/db/userinfo/', function() {
     });
 });
 
-app.post('/db/library/', function() {
+app.post('/db/library/', function(req, res) {
     //add book to library
     var item = req.body;
     var sql = "INSERT INTO library(author, title, thumbnailurl, username)" +
@@ -85,7 +85,7 @@ app.post('/db/library/', function() {
     });
 });
 
-app.post('/db/watchlist/', function() {
+app.post('/db/watchlist/', function(req, res) {
     //add book to watchlist
     var item = req.body;
     var sql = "INSERT INTO watchlist(author, title, thumbnailurl, username)" +
