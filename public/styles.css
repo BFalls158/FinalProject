@@ -86,6 +86,39 @@ button:focus {
   margin-bottom: 5px;
 }
 
+.mainBook {
+    display: inline-block;
+    vertical-align: top;
+    margin: -90px 40px 0 0;
+    z-index: 5;
+}
+
+.mainBook img{
+    height: 180px;
+}
+
+.mainTitle{
+    display: block;
+    width: 90px;
+    text-align: center;
+    margin: 0 auto;
+    height: 42px;
+/*    text-overflow: ellipsis;*/
+    overflow: hidden;
+/*    white-space: nowrap;*/
+    font-weight: bold;
+    line-height: 14px;
+}
+
+.moreTitles{
+    margin: 70px 0 0 0;
+}
+
+.mainBook cite:after {
+    content: '...';
+}
+
+
 /*----------------home page styling-----------------*/
 #home {
   display: inline-block;
