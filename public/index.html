@@ -23,8 +23,10 @@
     <script src="js/profileController.js"></script>
     <script src="js/signupController.js"></script>
     <script src="js/tradeController.js"></script>
+    <script src="js/searchController.js"></script>
+    <script src="js/searchResultsController.js"></script>
   </head>
-  <body ng-app="BookBuddiesMod">
+  <body ng-app="BookBuddiesMod" ng-controller="searchController">
 <!--==============header=====================-->
     <div class="header">
       <div class="appTitle">
@@ -36,16 +38,15 @@
 
       <div class="search">
         <form class="searchForm">
-          <input class="input" placeholder="..." ng-model="title">
-          <button type="button" name="sr" ng-click="setSearch(title)">Find Books</button><br>
-          <input type="radio" name="sr" value="title" id="r1"><label for="r1">Title</label>
-          <input type="radio" name="sr" value="author" id="r2"><label for="r2">Author</label>
-          <input type="radio" name="sr" value="isbn" id="r3"><label for="r3">ISBN</label>
+          <input class="input" placeholder="..." ng-model="search">
+          <button type="button" name="sr" ng-click="setSearch(search)">Find Books</button><br>
         </form>
       </div>
     </div>
 
     <ng-view></ng-view>
-
+    <!-- <input type="radio" name="sr" value="title" id="r1"><label for="r1">Title</label>
+    <input type="radio" name="sr" value="author" id="r2"><label for="r2">Author</label>
+    <input type="radio" name="sr" value="isbn" id="r3"><label for="r3">ISBN</label> -->
   </body>
 </html>

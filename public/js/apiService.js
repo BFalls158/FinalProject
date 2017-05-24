@@ -10,11 +10,13 @@ angular.module("BookBuddiesMod")
                 method: "GET",
                 url: 'https://www.googleapis.com/books/v1/volumes',
                 params: {
-                    key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA',
-                    q: search //'intitle:Name of the wind'
+
+                    q: search, //'intitle:Name of the wind'
+                    key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA'
                 }
             }).then(function(response){
                 books = response.data;
+                // console.log(response.data);
             })
         return promise;
         };
