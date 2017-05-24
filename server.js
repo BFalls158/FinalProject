@@ -60,7 +60,8 @@ app.get('/db/userinfo/:username', function(req, res) {
     });
 });
 
-app.post('/api/userinfo/', function() {
+app.post('/db/userinfo/', function() {
+    console.log("connected");
     //add user to database
     var item = req.body;
     var sql = "INSERT INTO userinfo(username, email, password)" +
@@ -72,7 +73,7 @@ app.post('/api/userinfo/', function() {
     });
 });
 
-app.post('/api/library/', function() {
+app.post('/db/library/', function() {
     //add book to library
     var item = req.body;
     var sql = "INSERT INTO library(author, title, thumbnailurl, username)" +
@@ -84,7 +85,7 @@ app.post('/api/library/', function() {
     });
 });
 
-app.post('/api/watchlist/', function() {
+app.post('/db/watchlist/', function() {
     //add book to watchlist
     var item = req.body;
     var sql = "INSERT INTO watchlist(author, title, thumbnailurl, username)" +
@@ -96,14 +97,14 @@ app.post('/api/watchlist/', function() {
     });
 });   
 
-app.delete('/api/library/:id', function(req, res) {
+app.delete('/db/library/:id', function(req, res) {
     //delete from library
     pool.query("DELETE FROM library WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);
     });
 }); 
 
-app.delete('/api/watchlist/:id', function(req, res) {
+app.delete('/db/watchlist/:id', function(req, res) {
     //delete from watchlist
     pool.query("DELETE FROM watchlist WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);
