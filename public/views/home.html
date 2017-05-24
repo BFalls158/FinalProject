@@ -4,9 +4,9 @@
       <h4>Popular Books</h4>
       <div id="mainBooks">
         <div id="mainBack"></div>
-        <!-- <div class="mainBook" ng-repeat="">
-          <img src="{{  }}"><cite class="mainTitle">{{ title }}</cite>
-        </div> -->
+        <div class="mainBook" ng-repeat="book in popularBooks">
+          <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle">{{ book.title }}</cite>
+        </div>
       </div>
 
       <h4>More Titles</h4>
@@ -18,8 +18,13 @@
     <div id="mainDirectives" class="column2">
       <button type="button" class="btn btn-lg" name="button" data-toggle="modal" data-target="#tradeForm">Trade Books</button>
       <!--this is the right hand column where our directives will load(Sign-in, sign-up, match feed)-->
+<<<<<<< HEAD
 
       <div class="log-in"></div>
+=======
+      <
+      <match-feed></match-feed>
+>>>>>>> b33584c193f11fac5bf689f88556c902bb4b6a8b
     </div>
 </div>
 
