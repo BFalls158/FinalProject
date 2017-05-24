@@ -51,7 +51,7 @@ angular.module("BookBuddiesMod")
       this.deleteLibrary = function(itemId) {
         return $http({
             method: 'DELETE',
-            url: '/api/library/'+ itemId,
+            url: '/db/library/'+ itemId,
         }).then(function(response) {
             return response;
         });
@@ -60,7 +60,7 @@ angular.module("BookBuddiesMod")
       this.deleteWatchlist = function(itemId) {
         return $http({
             method: 'DELETE',
-            url: '/api/watchlist/'+ itemId,
+            url: '/db/watchlist/'+ itemId,
         }).then(function(response) {
             return response;
         });
@@ -69,7 +69,7 @@ angular.module("BookBuddiesMod")
       this.addToLibrary = function(item) {
         return $http({
             method: 'POST',
-            url: '/api/library',
+            url: '/db/library',
             data: item
         }).then(function(response) {
             return response;
@@ -79,7 +79,7 @@ angular.module("BookBuddiesMod")
       this.addToWatchlist = function(item) {
         return $http({
             method: 'POST',
-            url: '/api/watchlist',
+            url: '/db/watchlist',
             data: item
         }).then(function(response) {
             return response;
