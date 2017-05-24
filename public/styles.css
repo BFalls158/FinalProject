@@ -42,6 +42,12 @@ h3 {
   color: #51A754;
 }
 
+#profileLink {
+  position: absolute;
+  top: 80px;
+  left: 60%;
+  color: white;
+}
 /*---------------------home screen search---------*/
 .search {
   float: right;
@@ -151,7 +157,7 @@ button:focus {
 
 .pcol {
   display: inline-block;
-  height: 350px;
+  min-height: 350px;
   width: 49%;
   min-width: 300px;
   vertical-align: top;
@@ -160,7 +166,6 @@ button:focus {
   padding-top: -20px;
   border: 1px solid lightgrey;
   text-align: center;
-  overflow-y: scroll;
 }
 
 .books {

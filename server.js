@@ -95,14 +95,14 @@ app.post('/db/watchlist/', function(req, res) {
         res.status(201);
         res.send("INSTERTED");
     });
-});   
+});
 
 app.delete('/db/library/:id', function(req, res) {
     //delete from library
     pool.query("DELETE FROM library WHERE " + id + "=" + id + ";").then(function(result) {
         res.send(result.rows);
     });
-}); 
+});
 
 app.delete('/db/watchlist/:id', function(req, res) {
     //delete from watchlist
@@ -110,7 +110,7 @@ app.delete('/db/watchlist/:id', function(req, res) {
         res.send(result.rows);
     });
 });
-    
+
 app.post('/email', function(req, res) {
 	//send email to user about book request
 	var body = req.body;
@@ -128,7 +128,7 @@ app.post('/email', function(req, res) {
 	console.log('Success');
 	res.send('Success');
 });
-    
+
 
 /**
 * This call sends an email to one recipient, using a validated sender address
