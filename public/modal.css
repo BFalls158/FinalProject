@@ -3,3 +3,7 @@
     height: 80%;
     display: inline-block;
 }
+
+.modal {
+    display: block;
+}

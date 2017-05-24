@@ -12,4 +12,11 @@ angular.module('BookBuddiesMod')
       replace: false,
       templateUrl: '/views/matches.html'
     }
+  })
+  .directive('tradeForm', function() {
+    return {
+      restrict: 'E',
+      replace: false,
+      templateUrl: '/views.requestTrade.html'
+    }
   });

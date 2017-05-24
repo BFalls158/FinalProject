@@ -1,35 +1,35 @@
-<div class="modal fade" id="tradeForm" role="dialog">
-    <div class="modal-dialog">
-        <div id="trade box">
+<div class="modal" id="tradeForm" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="trade box">
 <!--            Yours-->
             <div class="col1">
                 <h3>Your Library</h3>
                 <div>
                     <label>
                         <input type="checkbox">
-                        {{ item.book }}{{ item.author }} 
-                    </label>   
+                        {{ item.book }}{{ item.author }}
+                    </label>
                 </div>
                 <div class="trade-box">
                     <h3>Trade</h3>
-                    <p>{{ item.book}}{{ item.author }}</p>
+                    <p>{{ item.book }}{{ item.author }}</p>
                 </div>
-            </div>    
+            </div>
 <!--            Theirs-->
             <div class="col2">
                 <h3>Their Library</h3>
                 <div>
                     <label>
                         <input type="checkbox">
-                        {{ item.book }}{{ item.author }} 
-                    </label>   
+                        {{ item.book }}{{ item.author }}
+                    </label>
                 </div>
                 <div class="trade-box">
                     <h3>Trade</h3>
                     <p>{{ item.book}}{{ item.author }}</p>
                 </div>
-            </div>   
+            </div>
             <button type="submit">
-        </div> 
+        </div>
     </div>
 </div>
