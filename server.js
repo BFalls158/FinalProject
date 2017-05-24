@@ -60,6 +60,18 @@ app.get('/db/userinfo/:username', function(req, res) {
     });
 });
 
+app.post('/api/userinfo/', function() {
+    //add user to database
+    var item = req.body;
+    var sql = "INSERT INTO userinfo(username, email, password)" +
+    "VALUES ($1::text, $2::text, $3::text)";
+    var entry = [item.username, item.email, item.password];
+    pool.query(sql, entry).then(function() {
+        res.status(201);
+        res.send("INSTERTED");
+    });
+});
+
 app.post('/api/library/', function() {
     //add book to library
     var item = req.body;
