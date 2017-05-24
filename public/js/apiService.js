@@ -11,7 +11,7 @@ angular.module("BookBuddiesMod")
                 url: 'https://www.googleapis.com/books/v1/volumes',
                 params: {
 
-                    q: search, //'intitle:Name of the wind'
+                    q: search,
                     key: 'AIzaSyChc5wvGyYkMT2CfK9Tc680QBAqRbbExuA'
                 }
             }).then(function(response){
