@@ -5,19 +5,19 @@ var app = express();
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-// var pool = require("./pg-connection-pool");
+ var pool = require("./pg-connection-pool");
 
 app.get('/db/userinfo', function(req, res) {
 	//retrives list of all users
-    var username = req.params.username;
-    pool.query("SELECT" + username + "FROM userinfo;").then(function(result) {
+    pool.query("SELECT * FROM userinfo;").then(function(result) {
         res.send(result.rows);
     });
 });
 
 app.get('/db/userinfo/:username', function(req, res) {
 	//retrives list of users. Used in logging in/creating account
-    pool.query("SELECT username FROM userinfo;").then(function(result) {
+    var username = req.params.username;
+    pool.query("SELECT * FROM userinfo WHERE username=" + username + ";").then(function(result) {
         res.send(result.rows);
     });
 });
@@ -25,7 +25,7 @@ app.get('/db/userinfo/:username', function(req, res) {
 app.get('/db/library/:username', function(req, res) {
 	//retrieve library of user.
     var username = req.params.username;
-    pool.query("SELECT * FROM library WHERE username=" + username + ";").then(function(result) {
+    pool.query("SELECT " + username + " FROM library WHERE username=" + username + ";").then(function(result) {
         res.send(result.rows);
     });
 });
@@ -33,7 +33,7 @@ app.get('/db/library/:username', function(req, res) {
 app.get('/db/watchlist/:username', function(req, res) {
 	//retrieve watchlist of user
     var username = req.params.username;
-     pool.query("SELECT * FROM watchlist WHERE username=" + username + "';").then(function(result) {
+     pool.query("SELECT " + username +  " FROM watchlist WHERE username=" + username + "';").then(function(result) {
         res.send(result.rows);
      });
 });
@@ -52,7 +52,7 @@ app.get('/db/watchlist', function(req, res) {
     });
 });
 
-app.get('/db/userinfo', function(req, res) {
+app.get('/db/userinfo/:username', function(req, res) {
 	//get email by user
     var username = req.params.username;
     pool.query("SELECT email FROM userinfo WHERE username=" + username + ";").then(function(result) {
