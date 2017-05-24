@@ -1,9 +1,7 @@
 angular.module("BookBuddiesMod")
-    .controller("searchController", function($scope, $location, apiService, dbService, $rootScope){
+    .controller("searchController", function($scope, $location, apiService, dbService){
 
-    	$rootScope.user = 'BFalls';
-
-    	$scope.user = $rootScope.user;
+    $scope.user = "BFalls";
 
  		$scope.list = [];
 
@@ -33,7 +31,7 @@ angular.module("BookBuddiesMod")
 
         $scope.addToLibrary = function (book) {
         	var entry = {
-        		username: $rootScope.user,
+        		username: $scope.user,
         		title: book.title,
         		author: book.author,
         		description: book.description,

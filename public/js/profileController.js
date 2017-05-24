@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("profileController", function($scope, apiService, dbService, $rootScope){
+    .controller("profileController", function($scope, apiService, dbService){
 
     	$scope.user = "BFalls";
 

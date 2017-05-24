@@ -1,5 +1,6 @@
 angular.module("BookBuddiesMod")
     .controller("tradeController", function($scope, apiService, dbService, emailService){
+        $scope.user = "BFalls";
     	var user1 = {
     		name: 'book',
     		email: 'email',
