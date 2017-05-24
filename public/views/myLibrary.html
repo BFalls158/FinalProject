@@ -2,28 +2,32 @@
 <h2>{{username}}</h2>
 <div id="myLibraryView">
 <!--Left column with my books to trade-->
-<h3 class="col1">MyBrary</h3>
-    <div id="myBrairy">
+
+  <div class="pcol">
+    <h3>Library</h3>
+      <div class="books">
       <!-- <div ng-repeat="book in myBooks">
         <img src="{{ book.thumbnail }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
       </div> -->
-      <button type="button" ng-click="">Manage Books</button>
+      </div>
+    <button type="button" ng-click="">Manage Books</button>
     </div>
 
 <!---Right column with books I want-->
-<h3 class="col2">Watchlist</h3>
-    <div id="watchlist">
+  <div class="pcol">
+    <h3>Watchlist</h3>
+    <div class="books">
       <!-- <div ng-repeat="book in wantedBooks">
         <img src="{{ book.thumbnail }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
       </div> -->
-      <button type="button" ng-click="">Manage Books</button>
     </div>
-  </div> <!--End row-->
-</div><!--End table-->
+    <button type="button" ng-click="">Manage Books</button>
+  </div>
+</div> <!--End myLibraryView-->
 
 <div id="matches">
-  <!-- <p ng-repeat="">You have a match with <a href="{{}}">{{  }}! Book Title: {{  }}<p> -->
-  <button type="button" ng-click="">view</button>
+  <!--<p ng-repeat="">You have a match with <a href="{{}}">{{  }}! Book Title: {{  }}<p> -->
+
 </div>
