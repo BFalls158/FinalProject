@@ -17,7 +17,7 @@ app.get('/db/userinfo', function(req, res) {
 app.get('/db/userinfo/:username', function(req, res) {
 	//retrives list of users. Used in logging in/creating account
     var username = req.params.username;
-    pool.query("SELECT * FROM userinfo WHERE username=" + username + ";").then(function(result) {
+    pool.query("SELECT * FROM userinfo WHERE username= $1::text ;", [username]).then(function(result) {
         res.send(result.rows);
     });
 });
