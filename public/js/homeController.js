@@ -34,4 +34,5 @@ angular.module("BookBuddiesMod")
     	}];
 
     	//TODO Make call to dbService getting popular books (most instances of books in libraries)
+
     });
