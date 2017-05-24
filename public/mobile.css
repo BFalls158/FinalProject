@@ -39,14 +39,23 @@
     
     /*----------------home page styling-----------------*/
     
-    #mainBack{
+    #mainBack, #mainList, .moreTitles{
         display: none;
+    }
+    
+    #mainBack{
+        height: auto;
+    }
+    
+    #home {
+        height: 1000px;
     }
     
     #home .column1 {
         position: relative;
         min-width: 200px;
         width: 100%;
+        height: auto;
         margin: 0 auto;
     }
 
@@ -61,6 +70,19 @@
         width: 100%;
         margin: 0 auto;
     }
+    
+    .column1, .column2 {
+        border: none;
+    }
+    
+    .mainBook {
+        display: block;
+        margin: 0 20px 0 0;
+    }    
+    
+    .moreTitles{
+    margin: 0;
+}
     
     /*----------------profile view-----------------*/
 
