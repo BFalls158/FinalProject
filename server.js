@@ -33,7 +33,7 @@ app.get('/db/library/:username', function(req, res) {
 app.get('/db/watchlist/:username', function(req, res) {
 	//retrieve watchlist of user
     var username = req.params.username;
-     pool.query("SELECT " + username +  " FROM watchlist WHERE username=" + username + "';").then(function(result) {
+     pool.query("SELECT * FROM watchlist WHERE username=" + username + "';").then(function(result) {
         res.send(result.rows);
      });
 });
