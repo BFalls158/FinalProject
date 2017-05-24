@@ -76,9 +76,9 @@ app.post('/db/userinfo/', function(req, res) {
 app.post('/db/library/', function(req, res) {
     //add book to library
     var item = req.body;
-    var sql = "INSERT INTO library(author, title, thumbnailurl, username)" +
-    "VALUES ($1::text, $2::text, $3::text, $4::text)";
-    var entry = [item.author, item.title, item.thumbnailurl, item.username];
+    var sql = "INSERT INTO library(author, title, thumbnailurl, username, description)" +
+    "VALUES ($1::text, $2::text, $3::text, $4::text, $5::text)";
+    var entry = [item.author, item.title, item.thumbnailurl, item.username, item.description];
     pool.query(sql, entry).then(function() {
         res.status(201);
         res.send("INSTERTED");
@@ -88,9 +88,9 @@ app.post('/db/library/', function(req, res) {
 app.post('/db/watchlist/', function(req, res) {
     //add book to watchlist
     var item = req.body;
-    var sql = "INSERT INTO watchlist(author, title, thumbnailurl, username)" +
-    "VALUES ($1::text, $2::text, $3::text, $4::text)";
-    var entry = [item.author, item.title, item.thumbnailurl, item.username];
+    var sql = "INSERT INTO watchlist(author, title, thumbnailurl, username, description)" +
+    "VALUES ($1::text, $2::text, $3::text, $4::text, $5::text)";
+    var entry = [item.author, item.title, item.thumbnailurl, item.username, item.description];
     pool.query(sql, entry).then(function() {
         res.status(201);
         res.send("INSTERTED");
