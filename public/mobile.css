@@ -93,7 +93,13 @@
     
     /*----------------search results-----------------*/
     
+    .column2 {
+        text-align: center;
+        width: auto;
+        display: block;
+    }
     
-    
-    
+    .mobileTitle{
+        display: block;
+    }
 }
