@@ -17,6 +17,6 @@ angular.module('BookBuddiesMod')
     return {
       restrict: 'E',
       replace: false,
-      templateUrl: '/views.requestTrade.html'
+      templateUrl: '/views/requestTrade.html'
     }
   });

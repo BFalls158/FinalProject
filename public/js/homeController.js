@@ -1,6 +1,7 @@
 angular.module("BookBuddiesMod")
-  .controller("homeController", function($scope, $http, apiService, dbService){
-
+  .controller("homeController", function($scope, $http, apiService, dbService, $uibModal){
+        $scope.user = dbService.setCurrentUser();
+        
     	$scope.popularBooks = [
     	{
     		author:"F. Scott Fitzgerald",

@@ -25,7 +25,7 @@ app.get('/db/userinfo/:username', function(req, res) {
 app.get('/db/library/:username', function(req, res) {
 	//retrieve library of user.
     var username = req.params.username;
-    pool.query("SELECT " + username + " FROM library WHERE username=$1::text;", [username]).then(function(result) {
+    pool.query("SELECT * FROM library WHERE username=$1::text;", [username]).then(function(result) {
         res.send(result.rows);
     });
 });
@@ -33,7 +33,7 @@ app.get('/db/library/:username', function(req, res) {
 app.get('/db/watchlist/:username', function(req, res) {
 	//retrieve watchlist of user
     var username = req.params.username;
-     pool.query("SELECT * FROM watchlist WHERE username= $1::text';", [username]).then(function(result) {
+     pool.query("SELECT * FROM watchlist WHERE username=$1::text;", [username]).then(function(result) {
         res.send(result.rows);
      });
 });
@@ -99,14 +99,20 @@ app.post('/db/watchlist/', function(req, res) {
 
 app.delete('/db/library/:id', function(req, res) {
     //delete from library
-    pool.query("DELETE FROM library WHERE " + id + "=" + id + ";").then(function(result) {
+    var id = req.params.id;
+    var sql = "DELETE FROM library WHERE id=$1::int;"
+    var entry = [id];
+    pool.query(sql, entry).then(function(result) {
         res.send(result.rows);
     });
 });
 
 app.delete('/db/watchlist/:id', function(req, res) {
     //delete from watchlist
-    pool.query("DELETE FROM watchlist WHERE " + id + "=" + id + ";").then(function(result) {
+    var id = req.params.id;
+    var sql = "DELETE FROM watchlist WHERE id=$1::int;"
+    var entry = [id];
+    pool.query(sql, entry).then(function(result) {
         res.send(result.rows);
     });
 });
@@ -139,7 +145,7 @@ var mailjet = require ('node-mailjet')
     .connect(process.env.API_KEY, process.env.API_SECRET);
 
 function handleError (err) {
-  throw new Error(err.ErrorMessage);
+	throw new Error(err.ErrorMessage);
 }
 
 // function newContact (email) {
@@ -149,18 +155,18 @@ function handleError (err) {
 // }
 
 function sendEmail (user1, user2) {
-  email = {};
-  email['FromName'] = 'Book Buddies';
-  email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
-  email['Subject'] = user1.name + ' has requested a trade!';
-  email['Recipients'] = [{Email: user2.email}];
-  email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange'
-  + user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
+	email = {};
+	email['FromName'] = 'Book Buddies';
+	email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
+	email['Subject'] = user1.name + ' has requested a trade!';
+	email['Recipients'] = [{Email: user2.email}];
+	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange'
+	+ user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
 
-  mailjet.post('send')
-    .request(email)
-    .catch(handleError);
-    console.log('email success');
+    mailjet.post('send')
+    	.request(email)
+    	.catch(handleError);
+    	console.log('email success');
 }
 
 
@@ -171,3 +177,14 @@ var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
 });
+
+//SQL Query to return matches.
+
+// SELECT library.username
+// FROM library
+// INNER JOIN watchlist ON watchlist.title = library.title
+// WHERE watchlist.username = 'BFalls';
+
+// SELECT library.username, library.title
+// FROM library, watchlist 
+// WHERE watchlist.title = library.title AND watchlist.username = 'BFalls';
