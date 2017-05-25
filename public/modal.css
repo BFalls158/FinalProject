@@ -2,12 +2,14 @@
    opacity:0;
 }*/
 .modal{
-    transition: all linear 1s;
-    opacity:1;
-    background-color: rgba(0,0,0,0.4);
-    height:120vh;
-    width:100vw;
-    margin-top:-25%;
-    margin-left:-13%;
+    /*transition: all linear 1s;
+    opacity:1;*/
+    background-color: white;
 
+    display: block;
+
+}
+
+.modal-open .modal{
+  background-color: transparent;
 }
