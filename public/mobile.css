@@ -1,12 +1,12 @@
 @media screen and (max-width: 480px) {
-    
+
     html{
         max-width: 480px;
     }
-    
+
     body {
 /*      overflow-x: hidden;*/
-      text-align: center;  
+      text-align: center;
     }
 
     .header{
@@ -21,36 +21,36 @@
         margin: 0 auto;
         display: block;
     }
-    
+
     .appTitle{
         margin: 10px 0 0 0;
     }
-    
+
     .search{
         margin: 0 auto;
         width: 100%;
         padding: 0;
     }
-    
+
     .searchForm{
         text-align: center;
     }
 
-    
+
     /*----------------home page styling-----------------*/
-    
+
     #mainBack, #mainList, .moreTitles{
         display: none;
     }
-    
+
     #mainBack{
         height: auto;
     }
-    
+
     #home {
         height: 1000px;
     }
-    
+
     #home .column1 {
         position: relative;
         min-width: 200px;
@@ -62,7 +62,7 @@
     #home h4 {
         text-align: center;
     }
-    
+
     #home .column2 {
 /*        top: 200px;*/
         display: block;
@@ -70,27 +70,27 @@
         width: 100%;
         margin: 0 auto;
     }
-    
+
     .column1, .column2 {
         border: none;
     }
-    
+
     .mainBook {
         display: block;
         margin: 0 20px 0 0;
-    }    
-    
+    }
+
     .moreTitles{
     margin: 0;
 }
-    
+
     /*----------------profile view-----------------*/
 
 
     .pcol {
         width: 100%;
     }
-    
+
     /*----------------search results-----------------*/
     
     .column2 {
@@ -102,4 +102,5 @@
     .mobileTitle{
         display: block;
     }
+
 }
