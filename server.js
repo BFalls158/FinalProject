@@ -136,8 +136,7 @@ app.post('/email', function(req, res) {
 */
 
 var mailjet = require ('node-mailjet')
-    .connect('184f5bf7776ad290ae318526722d4b4e'
-, '882b52189118835a928e463c7ed0926c');
+    .connect(process.env.API_KEY, process.env.API_SECRET);
 
 function handleError (err) {
   throw new Error(err.ErrorMessage);

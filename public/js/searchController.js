@@ -24,7 +24,7 @@ angular.module("BookBuddiesMod")
           
           books.items.forEach(function(book) {
               $scope.list.push({author: book.volumeInfo.authors[0],
-               thumbnail: book.volumeInfo.imageLinks.smallThumbnail,
+               thumbnail: book.volumeInfo.imageLinks.thumbnail,
                title: book.volumeInfo.title, 
                description: book.volumeInfo.description});
               })
