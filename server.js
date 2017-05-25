@@ -168,7 +168,7 @@ function sendEmail (user1, user2) {
 	email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
 	email['Subject'] = user1.name + ' has requested a trade!';
 	email['Recipients'] = [{Email: user2.email}];
-	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange'
+	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange their book '
 	+ user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
 
     mailjet.post('send')
