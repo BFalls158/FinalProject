@@ -1,9 +1,7 @@
 angular.module("BookBuddiesMod")
-    .controller("searchController", function($scope, $location, apiService, dbService, $rootScope){
+    .controller("searchController", function($scope, $location, apiService, dbService){
 
-    	$rootScope.user = 'BFalls';
-
-    	$scope.user = $rootScope.user;
+    $scope.user = dbService.setCurrentUser();
 
  		$scope.list = [];
 
@@ -12,8 +10,9 @@ angular.module("BookBuddiesMod")
                 .then(function() {
                 	$scope.list = [];
                     $location.path("/searchResults");
-                    $scope.showResults();
-                })
+                    $scope.showResults();  
+                });
+            $scope.search = null;
         }
 
 
@@ -33,7 +32,7 @@ angular.module("BookBuddiesMod")
 
         $scope.addToLibrary = function (book) {
         	var entry = {
-        		username: $rootScope.user,
+        		username: $scope.user,
         		title: book.title,
         		author: book.author,
         		description: book.description,
@@ -44,7 +43,7 @@ angular.module("BookBuddiesMod")
 
         $scope.addToWatchlist = function (book) {
         	var entry = {
-        		username: $rootScope.user,
+        		username: $scope.user,
         		title: book.title,
         		author: book.author,
         		description: book.description,
