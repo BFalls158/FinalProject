@@ -12,6 +12,7 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
             templateUrl: "views/searchResults.html"
         })
         .when("/trade", {
-          templateUrl: "views/tradeView.html"
+          templateUrl: "views/tradeView.html",
+          controller: "tradeController"
         });
     });

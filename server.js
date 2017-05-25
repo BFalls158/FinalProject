@@ -156,19 +156,13 @@ function handleError (err) {
 	throw new Error(err.ErrorMessage);
 }
 
-// function newContact (email) {
-//   mailjet.post('contact')
-//       .request({Email: email})
-//       .catch(handleError);
-// }
-
 function sendEmail (user1, user2) {
 	email = {};
 	email['FromName'] = 'Book Buddies';
 	email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
 	email['Subject'] = user1.name + ' has requested a trade!';
 	email['Recipients'] = [{Email: user2.email}];
-	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange'
+	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange their book '
 	+ user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
 
     mailjet.post('send')
@@ -177,23 +171,8 @@ function sendEmail (user1, user2) {
     	console.log('email success');
 }
 
-
-// testEmail('Hi Emily');
-
 // Server port listen stuff
 var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
 });
-
-
-//SQL Query to return matches.
-
-// SELECT library.username
-// FROM library
-// INNER JOIN watchlist ON watchlist.title = library.title
-// WHERE watchlist.username = 'BFalls';
-
-// SELECT library.username, library.title
-// FROM library, watchlist 
-// WHERE watchlist.title = library.title AND watchlist.username = 'BFalls';

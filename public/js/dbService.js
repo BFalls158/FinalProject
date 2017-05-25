@@ -1,11 +1,21 @@
 angular.module("BookBuddiesMod")
-    .service("dbService", function($http){
+    .service("dbService", function($http, $location){
 
       var matches = [];
+      var tradeUser;
 
       //Sets the dummy user
       this.setCurrentUser = function() {
         return 'BFalls';
+      }
+
+      this.setTradeUser = function(user) {
+        tradeUser = user;
+        $location.path('/trade');
+      }
+
+      this.getTradeUser = function() {
+        return tradeUser;
       }
 
       //this retrieves the library of every user
