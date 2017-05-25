@@ -1,7 +1,7 @@
 angular.module("BookBuddiesMod")
     .controller("profileController", function($scope, apiService, dbService){
 
-    	$scope.user = "BFalls";
+    	$scope.user = dbService.setCurrentUser();
 
     	$scope.myLibrary = [];
 
@@ -19,8 +19,8 @@ angular.module("BookBuddiesMod")
     		});
     	}
 
-    	$scope.deleteWishlist = function(id) {
-			dbService.deleteWishlist(id).then(function(){
+    	$scope.deleteWatchlist = function(id) {
+			dbService.deleteWatchlist(id).then(function(){
                 $scope.myWatchlist = [];
                 $scope.getWatchlist();
 

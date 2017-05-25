@@ -22,7 +22,7 @@
       <div ng-repeat="book in myWatchlist">
         <img ng-src="{{ book.thumbnailurl }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-        <button type="button" class="wishlist-delete" ng-click="deleteWishlist(book.id)">Delete</button>
+        <button type="button" class="wishlist-delete" ng-click="deleteWatchlist(book.id)">Delete</button>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 angular.module("BookBuddiesMod")
     .controller("searchController", function($scope, $location, apiService, dbService){
 
-    $scope.user = "BFalls";
+    $scope.user = dbService.setCurrentUser();
 
  		$scope.list = [];
 

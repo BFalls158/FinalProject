@@ -1,6 +1,9 @@
 angular.module("BookBuddiesMod")
     .service("dbService", function($http){
 
+      this.setCurrentUser = function() {
+        return 'JNaasz';
+      }
 
       //this retrieves the library of every user
       this.getTotalLibrary = function() {
@@ -87,4 +90,11 @@ angular.module("BookBuddiesMod")
             return response;
         })
       };
+
+      // this.getMatches = function() {
+      //   return $http({
+      //     method: 'GET',
+      //     url: '/db/matches',
+      //   })
+      // }
     });

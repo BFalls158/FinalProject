@@ -145,7 +145,7 @@ var mailjet = require ('node-mailjet')
     .connect(process.env.API_KEY, process.env.API_SECRET);
 
 function handleError (err) {
-  throw new Error(err.ErrorMessage);
+	throw new Error(err.ErrorMessage);
 }
 
 // function newContact (email) {
@@ -155,18 +155,18 @@ function handleError (err) {
 // }
 
 function sendEmail (user1, user2) {
-  email = {};
-  email['FromName'] = 'Book Buddies';
-  email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
-  email['Subject'] = user1.name + ' has requested a trade!';
-  email['Recipients'] = [{Email: user2.email}];
-  email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange'
-  + user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
+	email = {};
+	email['FromName'] = 'Book Buddies';
+	email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
+	email['Subject'] = user1.name + ' has requested a trade!';
+	email['Recipients'] = [{Email: user2.email}];
+	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange'
+	+ user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
 
-  mailjet.post('send')
-    .request(email)
-    .catch(handleError);
-    console.log('email success');
+    mailjet.post('send')
+    	.request(email)
+    	.catch(handleError);
+    	console.log('email success');
 }
 
 

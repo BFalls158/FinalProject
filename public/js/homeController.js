@@ -1,6 +1,6 @@
 angular.module("BookBuddiesMod")
   .controller("homeController", function($scope, $http, apiService, dbService, $uibModal){
-        $scope.user = "BFalls";
+        $scope.user = dbService.setCurrentUser();
         
     	$scope.popularBooks = [
     	{
