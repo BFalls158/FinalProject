@@ -1,10 +1,9 @@
-<div class="modal" id="tradeForm" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content" id="trade box">
+<div  id="tradeForm">
+        <div id="trade box">
 <!--            Yours-->
             <div class="col1">
                 <h3>Your Library</h3>
-                <div>
+                <div class="toTrade">
                     <label>
                         <input type="checkbox">
                         {{ item.book }}{{ item.author }}
@@ -18,7 +17,7 @@
 <!--            Theirs-->
             <div class="col2">
                 <h3>Their Library</h3>
-                <div>
+                <div class="toTrade">
                     <label>
                         <input type="checkbox">
                         {{ item.book }}{{ item.author }}
@@ -29,7 +28,6 @@
                     <p>{{ item.book}}{{ item.author }}</p>
                 </div>
             </div>
-            <button type="submit">
+            <button type="submit">Propose Trade</button>
         </div>
-    </div>
 </div>
