@@ -1,6 +1,8 @@
 angular.module("BookBuddiesMod")
   .controller("homeController", function($scope, $http, apiService, dbService, $uibModal){
         $scope.user = dbService.setCurrentUser();
+
+        $scope.matches;
         
     	$scope.popularBooks = [
     	{
@@ -35,5 +37,10 @@ angular.module("BookBuddiesMod")
     	}];
 
     	//TODO Make call to dbService getting popular books (most instances of books in libraries)
+
+        dbService.setMatches($scope.user).then(function(response) {
+            $scope.matches = dbService.getMatches();
+            console.log($scope.matches);
+        });
 
     });

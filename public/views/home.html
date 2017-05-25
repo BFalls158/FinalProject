@@ -1,4 +1,5 @@
 <div id="home" ng-controller="homeController">
+    <!-- Column left -->
     <div id="main" class="column1">
       <h2>Available Books</h2>
       <h4>Popular Books</h4>
@@ -8,20 +9,14 @@
           <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle">{{ book.title }}</cite>
         </div>
       </div>
-
-<!--
-      <h4 class="moreTitles">More Titles</h4>
-      <div id="mainList">   fix this!
-         <p ng-repeat="">{{ title }}</p> 
-      </div>
--->
-
     </div>
+
     <div id="mainDirectives" class="column2">
-      <button type="button" class="btn btn-lg" name="button" data-toggle="modal" data-target="#tradeForm">Trade Books</button>
-      <!--this is the right hand column where our directives will load(Sign-in, sign-up, match feed)-->
-      <match-feed></match-feed>
+      <!--Column right-->
+      <div id="searchResult">
+        <h3>Matches</h3>
+        <p ng-repeat="match in matches"><a href="#">User: {{ match.username }} has Book Title: {{ match.title }}</a>
+</p>    <!--Clicking on the username match will direct to the matchProfile-->
+      </div>
     </div>
 </div>
-
-<trade-form></trade-form>

@@ -135,6 +135,14 @@ app.post('/email', function(req, res) {
 	res.send('Success');
 });
 
+app.get('/db/matches/:username', function(req, res) {
+	//get matches for user
+    var username = req.params.username;
+    pool.query("SELECT library.username, library.title FROM library, watchlist WHERE watchlist.title = library.title AND watchlist.username = $1::text;"
+    	, [username]).then(function(result) {
+        res.send(result.rows);
+    });
+});
 
 /**
 * This call sends an email to one recipient, using a validated sender address
@@ -177,6 +185,7 @@ var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
 });
+
 
 //SQL Query to return matches.
 
