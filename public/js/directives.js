@@ -8,8 +8,15 @@ angular.module('BookBuddiesMod')
   })
   .directive('matchFeed', function() {
     return {
-      restrict: 'C',
+      restrict: 'E',
       replace: false,
       templateUrl: '/views/matches.html'
+    }
+  })
+  .directive('tradeForm', function() {
+    return {
+      restrict: 'E',
+      replace: false,
+      templateUrl: '/views/requestTrade.html'
     }
   });

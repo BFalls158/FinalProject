@@ -5,9 +5,10 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
             templateUrl: "views/home.html"
         })
         .when("/profile", {
-            templateUrl: "views/myLibrary.html"
+            templateUrl: "views/myLibrary.html",
+            controller: "profileController"
         })
-        .when("/searchresults", {
+        .when("/searchResults", {
             templateUrl: "views/searchResults.html"
         });
     });
