@@ -1,9 +1,13 @@
-.col1, .col2 {
-    vertical-align: top;
-    height: 80%;
-    display: inline-block;
-}
+/*.modal.ng-hide{
+   opacity:0;
+}*/
+.modal{
+    transition: all linear 1s;
+    opacity:1;
+    background-color: rgba(0,0,0,0.4);
+    height:120vh;
+    width:100vw;
+    margin-top:-25%;
+    margin-left:-13%;
 
-.modal {
-    display: block;
 }
