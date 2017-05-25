@@ -156,12 +156,6 @@ function handleError (err) {
 	throw new Error(err.ErrorMessage);
 }
 
-// function newContact (email) {
-//   mailjet.post('contact')
-//       .request({Email: email})
-//       .catch(handleError);
-// }
-
 function sendEmail (user1, user2) {
 	email = {};
 	email['FromName'] = 'Book Buddies';
@@ -177,23 +171,8 @@ function sendEmail (user1, user2) {
     	console.log('email success');
 }
 
-
-// testEmail('Hi Emily');
-
 // Server port listen stuff
 var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
 });
-
-
-//SQL Query to return matches.
-
-// SELECT library.username
-// FROM library
-// INNER JOIN watchlist ON watchlist.title = library.title
-// WHERE watchlist.username = 'BFalls';
-
-// SELECT library.username, library.title
-// FROM library, watchlist 
-// WHERE watchlist.title = library.title AND watchlist.username = 'BFalls';
