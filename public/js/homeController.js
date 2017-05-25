@@ -3,7 +3,12 @@ angular.module("BookBuddiesMod")
 
         $scope.user = dbService.setCurrentUser();
 
+<<<<<<< HEAD
 
+=======
+        $scope.matches;
+        
+>>>>>>> d07330394a53f62eb7c0eff439e6a6a46ae8c60c
     	$scope.popularBooks = [
     	{
     		author:"F. Scott Fitzgerald",
@@ -37,5 +42,13 @@ angular.module("BookBuddiesMod")
     	}];
 
     	//TODO Make call to dbService getting popular books (most instances of books in libraries)
+
+        $scope.setTradeUser = function(user) {
+            dbService.setTradeUser(user);
+        }
+
+        dbService.setMatches($scope.user).then(function(response) {
+            $scope.matches = dbService.getMatches();
+        });
 
     });
