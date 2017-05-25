@@ -40,9 +40,9 @@
       </div>
 
       <div class="search">
-        <form class="searchForm">
+        <form class="searchForm" ng-submit="setSearch(search)">
           <input class="input" placeholder="..." ng-model="search">
-          <button type="button" name="sr" ng-click="setSearch(search)">Find Books</button><br>
+          <button type="submit" name="sr">Find Books</button>
         </form>
       </div>
     </div>

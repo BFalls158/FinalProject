@@ -10,8 +10,9 @@ angular.module("BookBuddiesMod")
                 .then(function() {
                 	$scope.list = [];
                     $location.path("/searchResults");
-                    $scope.showResults();
-                })
+                    $scope.showResults();  
+                });
+            $scope.search = null;
         }
 
 
@@ -42,7 +43,7 @@ angular.module("BookBuddiesMod")
 
         $scope.addToWatchlist = function (book) {
         	var entry = {
-        		username: $rootScope.user,
+        		username: $scope.user,
         		title: book.title,
         		author: book.author,
         		description: book.description,
