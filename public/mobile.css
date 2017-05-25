@@ -86,9 +86,13 @@
 
     /*----------------profile view-----------------*/
 
-
     .pcol {
         width: 100%;
+    }
+    
+    .pcol:nth-child(1){
+        width: 100%;
+        border-radius: 0;
     }
 
     /*----------------search results-----------------*/
