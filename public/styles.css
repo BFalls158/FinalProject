@@ -21,6 +21,10 @@ h3 {
   text-decoration: none;
 }
 
+.header a:focus {
+  text-decoration: none;
+}
+
 .appTitle {
   float: left;
   display: inline;
@@ -86,39 +90,6 @@ button:focus {
   margin-bottom: 5px;
 }
 
-.mainBook {
-    display: inline-block;
-    vertical-align: top;
-    margin: -90px 40px 0 0;
-    z-index: 5;
-}
-
-.mainBook img{
-    height: 180px;
-}
-
-.mainTitle{
-    display: block;
-    width: 90px;
-    text-align: center;
-    margin: 0 auto;
-    height: 42px;
-/*    text-overflow: ellipsis;*/
-    overflow: hidden;
-/*    white-space: nowrap;*/
-    font-weight: bold;
-    line-height: 14px;
-}
-
-.moreTitles{
-    margin: 70px 0 0 0;
-}
-
-.mainBook cite:after {
-    content: '...';
-}
-
-
 /*----------------home page styling-----------------*/
 #home {
   display: inline-block;
@@ -181,6 +152,37 @@ button:focus {
   z-index: 5;
 }
 
+.mainBook {
+    display: inline-block;
+    vertical-align: top;
+    margin: -90px 40px 0 0;
+    z-index: 5;
+}
+
+.mainBook img{
+    height: 180px;
+}
+
+.mainTitle{
+    display: block;
+    width: 90px;
+    text-align: center;
+    margin: 0 auto;
+    height: 42px;
+/*    text-overflow: ellipsis;*/
+    overflow: hidden;
+/*    white-space: nowrap;*/
+    font-weight: bold;
+    line-height: 14px;
+}
+
+.moreTitles{
+    margin: 70px 0 0 0;
+}
+
+.mainBook cite:after {
+    content: '...';
+}
 /*--------------profile view--------*/
 
 .myLibraryView {
@@ -200,7 +202,7 @@ button:focus {
   border: 1px solid lightgrey;
   text-align: center;
 }
-
+l
 .books {
   height: 260px;
   border: 1px solid pink;
@@ -209,4 +211,40 @@ button:focus {
 
 #myLibraryView button {
   margin-top: 5px;
+}
+
+<!--                search results page  -->
+#searchTitle {
+  padding-left: 20px;
+  font-size: 130%;
+}
+
+#searchResults {
+  padding-left: 20px;
+}
+
+.column1 {
+  margin: 10px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.column2 {
+  display: inline-block;
+  width: 800px;
+  padding-top: 15px;
+}
+
+.column3 {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+
+}
+
+#searchResults button {
+  width: 120px;
+  padding: 3px;
+  margin: 10px;
 }
