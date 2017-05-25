@@ -213,9 +213,9 @@ l
   margin-top: 5px;
 }
 
-<!--                search results page  -->
+/*                search results page  */
 #searchTitle {
-  padding-left: 20px;
+  margin: 10px;
   font-size: 130%;
 }
 
