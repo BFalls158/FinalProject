@@ -6,20 +6,18 @@
   <div class="pcol">
     <h3>Library</h3>
       <div class="books">
-      <div ng-repeat="book in myLibrary">
-        <img ng-src="{{ book.thumbnailurl }}">
-        <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-        <button type="button" class="wishlist-delete" ng-click="deleteLibrary(book.id)">Delete</button>
-
-      </div>
+          <div class="bookList" ng-repeat="book in myLibrary">
+            <img ng-src="{{ book.thumbnailurl }}">
+            <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
+            <button type="button" class="wishlist-delete" ng-click="deleteLibrary(book.id)">Delete</button>
+          </div>
       </div>
     </div>
-
 <!---Right column with books I want-->
   <div class="pcol">
     <h3>Watchlist</h3>
     <div class="books">
-      <div ng-repeat="book in myWatchlist">
+      <div class="bookList" ng-repeat="book in myWatchlist">
         <img ng-src="{{ book.thumbnailurl }}">
         <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
         <button type="button" class="wishlist-delete" ng-click="deleteWatchlist(book.id)">Delete</button>
