@@ -3,12 +3,8 @@ angular.module("BookBuddiesMod")
 
         $scope.user = dbService.setCurrentUser();
 
-<<<<<<< HEAD
-
-=======
         $scope.matches;
-        
->>>>>>> d07330394a53f62eb7c0eff439e6a6a46ae8c60c
+
     	$scope.popularBooks = [
     	{
     		author:"F. Scott Fitzgerald",
