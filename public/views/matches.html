@@ -1,5 +1,5 @@
 <div id="searchResult">
   <h3>Matches</h3>
-  <!-- <p ng-repeat=""><a href="#!/matchProfile">{{ username }}</a>: Book Title: {{  }}<p> -->
+  <p ng-repeat="match in matches"><a href="#!/matchProfile">{{ match.username }}</a>: Book Title: {{ match.title }}</p>
     <!--Clicking on the username match will direct to the matchProfile-->
 </div>
