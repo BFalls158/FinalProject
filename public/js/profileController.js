@@ -10,14 +10,12 @@ angular.module("BookBuddiesMod")
     	$scope.getLibrary = function(){
     		dbService.getLibrary($scope.user).then(function(response){
     		$scope.myLibrary = response;
-    		console.log(response);
     		});
     	}
 
     	$scope.getWatchlist = function(){
     		dbService.getWatchlist($scope.user).then(function(response){
     		$scope.myWatchlist = response;
-    		console.log(response);
     		});
     	}
 

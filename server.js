@@ -177,3 +177,14 @@ var port = process.env.PORT || 3030;
 app.listen(port, function() {
 	console.log('Server is running on ' + port);
 });
+
+//SQL Query to return matches.
+
+// SELECT library.username
+// FROM library
+// INNER JOIN watchlist ON watchlist.title = library.title
+// WHERE watchlist.username = 'BFalls';
+
+// SELECT library.username, library.title
+// FROM library, watchlist 
+// WHERE watchlist.title = library.title AND watchlist.username = 'BFalls';
