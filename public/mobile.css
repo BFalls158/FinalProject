@@ -1,27 +1,97 @@
-@ media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
     
+    html{
+        max-width: 480px;
+    }
+    
+    body {
+/*      overflow-x: hidden;*/
+      text-align: center;  
+    }
+
     .header{
         width: 100%;
-        height: 120px;
+        height: 200px;
         display: block;
+    }
+
+    .b1, .b2{
+        font-size: 70px;
+        text-align: center;
         margin: 0 auto;
+        display: block;
     }
     
     .appTitle{
-        float: none;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 14px;
-        width: 200px;
-        
+        margin: 10px 0 0 0;
     }
     
-    .b1, .b2{
-        font-size: 14px;
+    .search{
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .searchForm{
         text-align: center;
+    }
+
+    
+    /*----------------home page styling-----------------*/
+    
+    #mainBack, #mainList, .moreTitles{
+        display: none;
+    }
+    
+    #mainBack{
+        height: auto;
+    }
+    
+    #home {
+        height: 1000px;
+    }
+    
+    #home .column1 {
+        position: relative;
+        min-width: 200px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #home h4 {
+        text-align: center;
+    }
+    
+    #home .column2 {
+/*        top: 200px;*/
+        display: block;
+        min-width: 200px;
+        width: 100%;
         margin: 0 auto;
     }
     
+    .column1, .column2 {
+        border: none;
+    }
+    
+    .mainBook {
+        display: block;
+        margin: 0 20px 0 0;
+    }    
+    
+    .moreTitles{
+    margin: 0;
+}
+    
+    /*----------------profile view-----------------*/
+
+
+    .pcol {
+        width: 100%;
+    }
+    
+    /*----------------search results-----------------*/
     
     
     
