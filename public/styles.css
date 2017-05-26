@@ -46,12 +46,15 @@ h3 {
   color: #51A754;
 }
 
-#profileLink a {
+#profileLink p {
   position: absolute;
   top: 170px;
-  right: 12%;
+  right: 9%;
   color: white;
   font-size: 120%;
+}
+#profileLink a {
+  color: #51A754;
 }
 /*---------------------home screen search---------*/
 .search {
