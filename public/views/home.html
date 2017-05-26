@@ -17,5 +17,6 @@
         <h3>Matches</h3>
         <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
+      <button type="button" class="btn btn-lg" name="button" ng-click="tradeToggle('lg')">Trade Books</button>
     </div>
 </div>

@@ -3,6 +3,15 @@ angular.module("BookBuddiesMod")
 
         $scope.user = dbService.setCurrentUser();
 
+        $scope.tradeToggle = function(size) {
+          var uibmodalInstance = $uibModal.open({
+              animation: $scope.animationsEnabled,
+              templateUrl: 'views/requestTrade.html',
+              controller: 'tradeController'
+          })
+
+        }
+
         $scope.matches;
 
         $scope.setSearch = function(search){
@@ -45,16 +54,19 @@ angular.module("BookBuddiesMod")
 			description:"Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be presented on stage. The play received its world premiere in London’s West End on 30th July 2016. It was always difficult being Harry Potter and it isn’t much easier now that he is an overworked employee of the Ministry of Magic, a husband and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.",
 			thumbnail:"http://books.google.com/books/content?id=tcSMCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
 			title:"Harry Potter and the Cursed Child – Parts One and Two (Special Rehearsal Edition)"
-    	}];
+    	}
 
     	//TODO Make call to dbService getting popular books (most instances of books in libraries)
 
-        $scope.setTradeUser = function(user) {
-            dbService.setTradeUser(user);
-        }
+    ]
 
-        dbService.setMatches($scope.user).then(function(response) {
-            $scope.matches = dbService.getMatches();
-        });
+    $scope.setTradeUser = function(user) {
+        dbService.setTradeUser(user);
+    }
 
+    dbService.setMatches($scope.user).then(function(response) {
+        $scope.matches = dbService.getMatches();
     });
+
+
+  });

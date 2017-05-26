@@ -72,6 +72,8 @@ angular.module("BookBuddiesMod")
             $scope.sendEmail(user1, user2);
 
             $location.path('/');
+
+  };
         }
 
     	$scope.sendEmail = function(user1, user2) {
