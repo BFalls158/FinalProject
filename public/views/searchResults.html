@@ -3,8 +3,8 @@
   <div id="searchResults" ng-repeat="book in list">
     <img ng-src="{{ book.thumbnail }}" class="column1">
     <div class="column2">
-      <cite>{{ book.title }} by </cite><p>{{ book.author }}<br>
-      {{ book.description }}</p></div>
+        <cite><span class="mobileTitle">"{{ book.title }}</span> by </cite><p><span class="mobileAuthor">"{{ book.author }}</span><br>
+      <span class="mobileDescription">{{ book.description }}</span></p></div>
     <div class="column3"><button type="button" ng-click="addToLibrary(book)">Add to Library</button>
   	<!--Add to watchlist --><br>
     <button type="button" ng-click="addToWatchlist(book)">Add to Watchlist</button></div>
