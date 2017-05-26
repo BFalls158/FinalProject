@@ -1,6 +1,12 @@
 angular.module("BookBuddiesMod")
     .controller("searchController", function($scope, $location, apiService, dbService){
 
+    $scope.status = dbService.getStatus();
+
+    if (!$scope.status) {
+      $location.path('/home');
+    }
+
     $scope.user = dbService.setCurrentUser();
 
  		$scope.list = [];

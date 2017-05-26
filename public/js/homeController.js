@@ -1,6 +1,8 @@
 angular.module("BookBuddiesMod")
   .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location){
 
+        $scope.status = dbService.getStatus();
+
         $scope.user = dbService.setCurrentUser();
 
         $scope.tradeToggle = function(size, user) {
@@ -17,8 +19,8 @@ angular.module("BookBuddiesMod")
         $scope.setSearch = function(search){
             apiService.setSearchedBooks(search)
                 .then(function() {
-                  $scope.list = [];
                     $location.path("/searchResults");
+                    $scope.list = [];
                     $scope.showResults();
                 });
             $scope.search = null;
