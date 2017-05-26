@@ -11,9 +11,9 @@
       </div>
     </div>
 
+<!--Column right-->
     <div id="mainDirectives" class="column2">
-      <!--Column right-->
-      <div id="searchResult">
+        <div id="matches">
         <h3>Matches</h3>
         <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} has Book Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
