@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-  .controller("homeController", function($scope, $uibModal, $http, apiService, dbService, $log) {
+  .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location){
 
         $scope.user = dbService.setCurrentUser();
 
@@ -13,6 +13,16 @@ angular.module("BookBuddiesMod")
         }
 
         $scope.matches;
+
+        $scope.setSearch = function(search){
+            apiService.setSearchedBooks(search)
+                .then(function() {
+                  $scope.list = [];
+                    $location.path("/searchResults");
+                    $scope.showResults();
+                });
+            $scope.search = null;
+        }
 
     	$scope.popularBooks = [
     	{
