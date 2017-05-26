@@ -58,6 +58,31 @@ h2, h3, h4, p, cite, span {
 #profileLink a {
   color: rgb(105,105,105);
 }
+
+/*---------------------login---------*/
+
+.loginCol1, .loginCol2{
+    display: inline-block;
+    width: 38%;
+}
+
+loginCol2{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.loginP1, .loginP2{
+    width: 48%;
+}
+
+.loginP1{
+    float: left;
+}
+
+.loginP2{
+    float: right;
+}
+
 /*---------------------home screen search---------*/
 .search {
   float: right;
