@@ -5,7 +5,7 @@
       <h4>Popular Books</h4>
       <div id="mainBooks">
         <div id="mainBack"></div>
-        <div class="mainBook" ng-repeat="book in popularBooks">
+        <div class="mainBook" ng-repeat="book in popularBooks" ng-click="setSearch(book.title)">
           <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle">{{ book.title }}</cite>
         </div>
       </div>
@@ -15,7 +15,7 @@
     <div id="mainDirectives" class="column2">
         <div id="matches">
         <h3>Matches</h3>
-        <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} has Book Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
+        <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
     </div>
 </div>
