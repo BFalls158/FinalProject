@@ -10,13 +10,13 @@ angular.module('BookBuddiesMod')
     return {
       restrict: 'E',
       replace: true,
-      templateUrl: '/views/matches.html'
+      templateUrl: 'views/matches.html'
     }
   })
   .directive('tradeForm', function() {
     return {
       restrict: 'E',
       replace: false,
-      templateUrl: '/../views/requestTrade.html'
+      templateUrl: 'views/requestTrade.html'
     }
   });

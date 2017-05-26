@@ -45,9 +45,19 @@ angular.module("BookBuddiesMod")
         });
 
 
+        $scope.deleteFromUserTrade = function(obj) {
+            var index = $scope.userTrade.indexOf(obj);
+            $scope.userLibrary.push($scope.userTrade[index]);
+            $scope.userTrade.splice(index, 1);
+        }
+
+        $scope.deleteFromTradeUserTrade = function(obj) {
+            var index = $scope.tradeUserTrade.indexOf(obj);
+            $scope.tradeUserLibrary.push($scope.tradeUserTrade[index]);
+            $scope.tradeUserTrade.splice(index, 1);
+        }
+
         $scope.proposeTrade =  function() {
-            console.log(userInfo.email);
-            console.log(tradeUserInfo.email);
         	var user1 = {
         		name: userInfo.username,
         		email: userInfo.email,
@@ -69,4 +79,5 @@ angular.module("BookBuddiesMod")
     		console.log('Success'); //user message here
     	   });
         }
+
     });

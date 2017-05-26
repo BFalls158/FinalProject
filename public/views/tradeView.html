@@ -12,7 +12,7 @@
                 </div> -->
                 <div class="trade-box">
                     <h3>Trade</h3>
-                <p ng-repeat="item in userTrade">{{ item.title }} - {{ item.author }}</p>
+                <p ng-repeat="item in userTrade">{{ item.title }} - {{ item.author }} <button ng-click="deleteFromUserTrade(item)">-</button></p>
 
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 </div> -->
                 <div class="trade-box">
                     <h3>Trade</h3>
-                    <p ng-repeat="item in tradeUserTrade">{{ item.title}} - {{ item.author }}</p>
+                    <p ng-repeat="item in tradeUserTrade">{{ item.title}} - {{ item.author }} <button ng-click="deleteFromTradeUserTrade(item)">-</button></p>
                     
                 </div>
             </div>

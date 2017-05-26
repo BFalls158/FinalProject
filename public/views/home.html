@@ -5,7 +5,7 @@
       <h4>Popular Books</h4>
       <div id="mainBooks">
         <div id="mainBack"></div>
-        <div class="mainBook" ng-repeat="book in popularBooks">
+        <div class="mainBook" ng-repeat="book in popularBooks" ng-click="setSearch(book.title)">
           <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle">{{ book.title }}</cite>
         </div>
       </div>
