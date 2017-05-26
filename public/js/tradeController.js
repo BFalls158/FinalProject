@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("tradeController", function($scope, $location, apiService, dbService, emailService){
+    .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance){
 
         $scope.user = dbService.setCurrentUser();
 
@@ -68,12 +68,14 @@ angular.module("BookBuddiesMod")
         		email: tradeUserInfo.email,
         		title: $scope.tradeUserTrade[0].title
         	}
+        
+            $scope.sendEmail(user1, user2);   
 
-            $scope.sendEmail(user1, user2);
+            $scope.ok(); //Closes modal
+        }
 
-            $location.path('/');
-
-  };
+        $scope.ok = function() {
+            $uibModalInstance.close();
         }
 
     	$scope.sendEmail = function(user1, user2) {

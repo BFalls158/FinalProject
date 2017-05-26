@@ -3,13 +3,13 @@ angular.module("BookBuddiesMod")
 
         $scope.user = dbService.setCurrentUser();
 
-        $scope.tradeToggle = function(size) {
-          var uibmodalInstance = $uibModal.open({
-              animation: $scope.animationsEnabled,
-              templateUrl: 'views/requestTrade.html',
-              controller: 'tradeController'
-          })
-
+        $scope.tradeToggle = function(size, user) {
+            $scope.setTradeUser(user);
+            var uibmodalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'views/requestTrade.html',
+                controller: 'tradeController'
+            })
         }
 
         $scope.matches;

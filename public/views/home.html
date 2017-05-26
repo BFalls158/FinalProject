@@ -15,8 +15,8 @@
     <div id="mainDirectives" class="column2">
         <div id="matches">
         <h3>Matches</h3>
-        <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
+        <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
-      <button type="button" class="btn btn-lg" name="button" ng-click="tradeToggle('lg')">Trade Books</button>
+      <!-- <button type="button" class="btn btn-lg" name="button" ">Trade Books</button> -->
     </div>
 </div>

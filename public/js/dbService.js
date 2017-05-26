@@ -11,7 +11,6 @@ angular.module("BookBuddiesMod")
 
       this.setTradeUser = function(user) {
         tradeUser = user;
-        $location.path('/trade');
       }
 
       this.getTradeUser = function() {

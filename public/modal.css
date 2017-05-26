@@ -16,17 +16,15 @@
 
 
 .modal{
-    transition: all linear 1s;
-    opacity:1;
-
-
-  }
+  transition: all linear .03s;
+  opacity:1;
+}
 
 .col1, .col2 {
-    vertical-align: top;
-    border: 1px solid grey;
-    height: 400px;
-    display: inline-block;
+  vertical-align: top;
+  border: 1px solid grey;
+  height: 400px;
+  display: inline-block;
 }
 
 .modal-open .modal{
