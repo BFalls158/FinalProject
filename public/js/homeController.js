@@ -1,5 +1,6 @@
 angular.module("BookBuddiesMod")
   .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location){
+
         $scope.user = dbService.setCurrentUser();
 
         $scope.matches;
