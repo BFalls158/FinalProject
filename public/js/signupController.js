@@ -10,4 +10,11 @@ angular.module("BookBuddiesMod")
           })
       }
 
+    $scope.submitForm = function(formValid) {
+    if(formValid) {
+      console.log('This form is valid.');
+      console.log($scope.user);
+    }
+  }
+    
     });
