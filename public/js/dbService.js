@@ -3,9 +3,18 @@ angular.module("BookBuddiesMod")
 
       var matches = [];
       var tradeUser;
+      var isLoggedIn = false;
+
+      this.setStatus = function(status) {
+        isLoggedIn = status;
+      }
+
+      this.getStatus = function () {
+        return isLoggedIn;
+      }
 
       //Sets the dummy user
-      this.setCurrentUser = function() {
+      this.setCurrentUser = function(user) {
         return 'BFalls';
       }
 
