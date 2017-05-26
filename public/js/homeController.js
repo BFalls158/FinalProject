@@ -3,16 +3,16 @@ angular.module("BookBuddiesMod")
 
         $scope.user = dbService.setCurrentUser();
 
-        // $scope.tradeShow = false;
-
         $scope.tradeToggle = function(size) {
           var uibmodalInstance = $uibModal.open({
               animation: $scope.animationsEnabled,
               templateUrl: 'views/requestTrade.html',
               controller: 'tradeController'
           })
+
         }
 
+        $scope.matches;
 
     	$scope.popularBooks = [
     	{
@@ -49,4 +49,14 @@ angular.module("BookBuddiesMod")
     	//TODO Make call to dbService getting popular books (most instances of books in libraries)
 
     ]
+
+    $scope.setTradeUser = function(user) {
+        dbService.setTradeUser(user);
+    }
+
+    dbService.setMatches($scope.user).then(function(response) {
+        $scope.matches = dbService.getMatches();
+    });
+
+
   });

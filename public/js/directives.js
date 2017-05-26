@@ -3,13 +3,13 @@ angular.module('BookBuddiesMod')
     return {
       restrict: 'C',
       replace: false,
-      templateUrl: '/views/login'
+      templateUrl: 'views/login'
     }
   })
   .directive('matchFeed', function() {
     return {
       restrict: 'E',
-      replace: false,
+      replace: true,
       templateUrl: '/views/matches.html'
     }
   })
@@ -17,6 +17,6 @@ angular.module('BookBuddiesMod')
     return {
       restrict: 'E',
       replace: false,
-      templateUrl: '/views/requestTrade.html'
+      templateUrl: '/../views/requestTrade.html'
     }
   });
