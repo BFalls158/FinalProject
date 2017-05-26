@@ -36,13 +36,13 @@
         <a href="#!/"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
       </div>
       <div id="profileLink">
-        <p>Hello {{ user }}!<br><a href="#!/profile">view library</a></p>
+        <a href="#!/profile">Hello {{ user }}!</a>
       </div>
 
       <div class="search">
         <form class="searchForm" ng-submit="setSearch(search)">
-          <input class="input" placeholder="..." ng-model="search">
-          <button type="submit" name="sr">Find Books</button>
+            <input class="input" placeholder="Find Books" ng-model="search">
+            <button type="submit" name="sr">Find Books</button>
         </form>
       </div>
     </div>
