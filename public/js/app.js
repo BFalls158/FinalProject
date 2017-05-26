@@ -11,6 +11,11 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
         .when("/searchResults", {
             templateUrl: "views/searchResults.html"
         })
+    
+        .when("/signup", {
+            templateUrl: "views/signup.html",
+            controller: "signupController"
+        })
         // .when("/trade", {
         //   templateUrl: "views/tradeView.html",
         //   controller: "tradeController"
