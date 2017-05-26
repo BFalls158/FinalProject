@@ -1,8 +1,21 @@
 angular.module("BookBuddiesMod")
-    .service("dbService", function($http){
+    .service("dbService", function($http, $location){
 
+      var matches = [];
+      var tradeUser;
+
+      //Sets the dummy user
       this.setCurrentUser = function() {
-        return 'JNaasz';
+        return 'BFalls';
+      }
+
+      this.setTradeUser = function(user) {
+        tradeUser = user;
+        $location.path('/trade');
+      }
+
+      this.getTradeUser = function() {
+        return tradeUser;
       }
 
       //this retrieves the library of every user
@@ -88,13 +101,24 @@ angular.module("BookBuddiesMod")
             data: item
         }).then(function(response) {
             return response;
-        })
+        });
       };
 
-      // this.getMatches = function() {
-      //   return $http({
-      //     method: 'GET',
-      //     url: '/db/matches',
-      //   })
-      // }
+
+      // Retrieves matches for the logged in user.
+      this.setMatches = function(user) {
+        return $http({
+          method: 'GET',
+          url: '/db/matches/' + user
+        }).then(function(response){
+          matches = response.data;
+          return response.data;
+        });
+      }
+
+      // Sends the matches to controller
+      this.getMatches = function() {
+        return matches;
+      }
+
     });

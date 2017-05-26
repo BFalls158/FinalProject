@@ -19,7 +19,7 @@
         font-size: 70px;
         text-align: center;
         margin: 0 auto;
-        display: block;
+        display: inline-block;
     }
 
     .appTitle{
@@ -69,6 +69,7 @@
         min-width: 200px;
         width: 100%;
         margin: 0 auto;
+        vertical-align: bottom;
     }
 
     .column1, .column2 {

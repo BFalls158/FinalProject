@@ -1,9 +1,34 @@
-/*.col1, .col2 {
+/*.modal.ng-hide{
+   opacity:0;
+}*/
+#tradeForm button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+#tradeForm{
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  width: 100%;
+}
+
+
+.modal{
+    transition: all linear 1s;
+    opacity:1;
+
+
+  }
+
+.col1, .col2 {
     vertical-align: top;
-    height: 80%;
+    border: 1px solid grey;
+    height: 400px;
     display: inline-block;
 }
 
-.modal {
-    display: block;
-}*/
+.modal-open .modal{
+  background-color: transparent;
+}
