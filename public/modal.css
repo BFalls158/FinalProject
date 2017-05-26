@@ -1,18 +1,18 @@
 /*.modal.ng-hide{
    opacity:0;
 }*/
-#tradeForm button {
+/*#tradeForm button {
   display: block;
   margin: 0 auto;
   margin-top: 5px;
-}
+}*/
 
-#tradeForm{
+/*#tradeForm{
   text-align: center;
   margin: 0 auto;
   display: inline-block;
   width: 100%;
-}
+}*/
 
 
 .modal{
@@ -20,12 +20,12 @@
   opacity:1;
 }
 
-.col1, .col2 {
+/*.col1, .col2 {
   vertical-align: top;
   border: 1px solid grey;
   height: 400px;
   display: inline-block;
-}
+}*/
 
 .modal-open .modal{
   background-color: transparent;

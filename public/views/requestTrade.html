@@ -1,24 +1,26 @@
 <div  class="modal-content container" id="tradeForm">
-        <div class="modal-header row" id="tradeBox">
+        <div class="modal-header row" id="trade box">
                                             <!--Yours-->
             <div class="col1 col-lg-6">
                 <h3>Your Library</h3>
-                <p ng-repeat="item in userLibrary">{{ item.title }} - {{ item.author }} <button ng-click="addToUserTrade(item)">+</button></p>
-
-                <div class="trade-box">
+                <div class="toTrade">
+                <p ng-repeat="item in userLibrary"><button ng-click="addToUserTrade(item)">+</button> {{ item.title }} - {{ item.author }} </p>
+              </div>
+                <div class="tradeBox">
                     <h3>Trade</h3>
-                <p ng-repeat="item in userTrade">{{ item.title }} - {{ item.author }} <button ng-click="deleteFromUserTrade(item)" class="remove">-</button></p>
+                <p ng-repeat="item in userTrade"><button ng-click="deleteFromUserTrade(item)" class="remove">-</button> {{ item.title }} - {{ item.author }} </p>
 
                 </div>
             </div>
                                             <!--Theirs-->
             <div class="col2 col-lg-6">
                 <h3>Their Library</h3>
-                <p ng-repeat="item in tradeUserLibrary">{{ item.title}} - {{ item.author }} <button ng-click="addToTradeUserTrade(item)">+</button></p>
-
-                <div class="trade-box">
+                <div class="toTrade">
+                <p ng-repeat="item in tradeUserLibrary"><button ng-click="addToTradeUserTrade(item)">+</button> {{ item.title}} - {{ item.author }}</p>
+              </div>
+                <div class="tradeBox">
                     <h3>Trade</h3>
-                    <p ng-repeat="item in tradeUserTrade">{{ item.title}} - {{ item.author }} <button ng-click="deleteFromTradeUserTrade(item)">-</button></p>
+                    <p ng-repeat="item in tradeUserTrade"><button ng-click="deleteFromTradeUserTrade(item)">-</button> {{ item.title}} - {{ item.author }} </p>
 
                 </div>
             </div>

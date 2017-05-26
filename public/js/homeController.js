@@ -10,7 +10,8 @@ angular.module("BookBuddiesMod")
             var uibmodalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'views/requestTrade.html',
-                controller: 'tradeController'
+                controller: 'tradeController',
+                windowClass: 'center-modal'
             })
         }
 
