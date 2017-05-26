@@ -1,34 +1,44 @@
-
-    <div class="modal-content">
-        <div class="modal-header">
+<div  id="tradeForm">
+        <div id="trade box">
 <!--            Yours-->
             <div class="col1">
                 <h3>Your Library</h3>
-                <div>
+                <p ng-repeat="item in userLibrary">{{ item.title }} - {{ item.author }} <button ng-click="addToUserTrade(item)">+</button></p>
+                <!-- <div class="toTrade">
                     <label>
                         <input type="checkbox">
                         {{ item.book }}{{ item.author }}
                     </label>
-                </div>
+                </div> -->
                 <div class="trade-box">
                     <h3>Trade</h3>
-                    <p>{{ item.book }}{{ item.author }}</p>
+                <p ng-repeat="item in userTrade">{{ item.title }} - {{ item.author }}</p>
+
                 </div>
             </div>
 <!--            Theirs-->
             <div class="col2">
                 <h3>Their Library</h3>
-                <div>
+                <p ng-repeat="item in tradeUserLibrary">{{ item.title}} - {{ item.author }} <button ng-click="addToTradeUserTrade(item)">+</button></p>
+                <!-- <div class="toTrade">
                     <label>
                         <input type="checkbox">
                         {{ item.book }}{{ item.author }}
                     </label>
-                </div>
+                </div> -->
                 <div class="trade-box">
                     <h3>Trade</h3>
-                    <p>{{ item.book}}{{ item.author }}</p>
+                    <p ng-repeat="item in tradeUserTrade">{{ item.title}} - {{ item.author }}</p>
+
                 </div>
             </div>
-            <button type="submit">
+            <div> <!-- Bottom left proposed trade box-->
+
+            </div>
+
+            <div> <!-- Bottom right proposed trade box -->
+
+            </div>
+            <button type="button" ng-click="proposeTrade()">Propose Trade</button>
         </div>
-    </div>
+</div>
