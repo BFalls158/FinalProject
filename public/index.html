@@ -32,18 +32,20 @@
   <body ng-app="BookBuddiesMod" ng-controller="searchController">
 <!--==============header=====================-->
     <div class="header">
-      <div class="appTitle">
-        <a href="#!/" alt="Home Page"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
-      </div>
-      <div id="profileLink">
-        <p>Hello {{ user }}!<a href="#!/profile"> View Profile</a></p>
-      </div>
+      <div class="layer">
+        <div class="appTitle">
+          <a href="#!/" alt="Home Page"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
+        </div>
+        <div id="profileLink">
+          <p>Hello {{ user }}!<a href="#!/profile"> View Profile</a></p>
+        </div>
 
-      <div class="search">
-        <form class="searchForm" ng-submit="setSearch(search)">
-          <input class="input" placeholder="..." ng-model="search">
-          <button type="submit" name="sr">Find Books</button>
-        </form>
+        <div class="search">
+          <form class="searchForm" ng-submit="setSearch(search)">
+            <input class="input" placeholder="..." ng-model="search">
+            <button type="submit" name="sr">Find Books</button>
+          </form>
+        </div>
       </div>
     </div>
 
