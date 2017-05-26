@@ -1,9 +1,5 @@
 @media screen and (max-width: 480px) {
 
-    html{
-        max-width: 480px;
-    }
-
     body {
       text-align: center;
     }
@@ -83,13 +79,15 @@
 
     #mainBooks img{
         height: 120px;
+        display: inline-block;
     }
 
     #mainBooks{
-      width: 170px;
-      display: inline-block;
-    }
-
+      height: auto;
+      overflow-x: scroll;
+      height: 100px;
+      display: inline;
+     }
 
     #home .column2 {
         display: block;
@@ -106,7 +104,8 @@
     }
 
     .mainBook {
-        display: block;
+        display: inline-block;
+        width: 170px;
         margin: 0 20px 0 0;
     }
 
@@ -119,20 +118,20 @@
     .pcol {
         width: 100%;
     }
-    
+
     .pcol:nth-child(1){
         width: 100%;
         border-radius: 0;
     }
 
     /*----------------search results-----------------*/
-    
+
     .column2 {
         text-align: center;
         width: auto;
         display: block;
     }
-    
+
     .mobileTitle{
         display: block;
     }

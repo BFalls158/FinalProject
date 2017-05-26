@@ -12,13 +12,12 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
         .when("/searchResults", {
             templateUrl: "views/searchResults.html"
         })
-<<<<<<< HEAD
-    
+
         .when("/signup", {
             templateUrl: "views/signup.html",
             controller: "signupController"
         })
-            
+
         .when("/login", {
             templateUrl: "views/login.html",
         })
@@ -26,7 +25,6 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
         //   templateUrl: "views/tradeView.html",
         //   controller: "tradeController"
         // });
-=======
+
         .otherwise("/home");
->>>>>>> 041f630897141e21427a54043362a6309616ed23
     });
