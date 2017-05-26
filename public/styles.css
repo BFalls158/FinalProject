@@ -58,6 +58,33 @@ h2, h3, h4, p, cite, span {
 #profileLink a {
   color: rgb(105,105,105);
 }
+
+/*---------------------login---------*/
+
+.loginCol1, .loginCol2{
+    display: inline-block;
+    width: 38%;
+}
+
+.loginCol2{
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: top;
+    margin: 50px; 0 0 0;
+}
+
+.loginP1, .loginP2{
+    min-width: 48%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.loginP1{
+    margin: 30px; 0 0 0;
+}
+
+
 /*---------------------home screen search---------*/
 .search {
   float: right;
@@ -68,6 +95,12 @@ h2, h3, h4, p, cite, span {
   padding: 40px 40px;
   border-radius: 10px;
   border: solid white 1px;
+}
+
+.search .glyphicon{
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
 }
 
 button {
@@ -144,6 +177,7 @@ button:focus {
   width: 100%;
   height: 200px;
 }
+
 #matches {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
@@ -281,13 +315,7 @@ button:focus {
     min-height: 80px;
     text-align: center;
     margin-left: 12px;
-}
-
-.bookList p{
     max-width: 80%;
-    height: 80px;
-    text-align: center;
-    overflow: hidden;
 }
 
 .bookList .remove {
@@ -298,6 +326,7 @@ button:focus {
     left: 60%;
     width: 40px;
 }
+
 .bookList:hover .remove {
     display: inline-block;
 }
@@ -346,8 +375,9 @@ button:focus {
 
 
 /*-----------trade view------------*/
+
 #tradeForm button {
-  /*display: block;*/
+
   margin: 0 auto;
   margin-top: 5px;
 }
@@ -367,7 +397,6 @@ button:focus {
   margin-top: 10px;
   padding: 10px;
   display: inline-block;
-  vertical-align: top;
 }
 
 .toTrade {

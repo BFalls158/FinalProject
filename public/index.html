@@ -9,9 +9,7 @@
     <!--Our Style Sheets-->
     <link href="styles.css" type="text/css" rel="stylesheet">
     <link href="modal.css" type="text/css" rel="stylesheet">
-
     <link href="mobile.css" type="text/css" rel="stylesheet">
-
     <!--External JS Links-->
     <script src="libs/angular.min.js"></script>
     <script src="libs/angular-route.min.js"></script>
@@ -19,6 +17,7 @@
     <script src="libs/bootstrap-3.3.7-dist/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
     <!-- Our script files-->
     <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
     <script src="js/apiService.js"></script>
     <script src="js/dbService.js"></script>
     <script src="js/emailService.js"></script>
@@ -40,14 +39,14 @@
           <p>Hello {{ user }}!<a href="#!/profile"> View Profile</a></p>
         </div>
 
-        <div class="search">
-          <form class="searchForm" ng-submit="setSearch(search)">
-            <input class="input" placeholder="..." ng-model="search">
+      <div class="search">
+        <form class="searchForm" ng-submit="setSearch(search)">
+            <input class="input" placeholder="Find Books" ng-model="search">
             <button type="submit" name="sr">Find Books</button>
-          </form>
-        </div>
+        </form>
       </div>
     </div>
+  </div>
 
     <ng-view></ng-view>
     <!-- <input type="radio" name="sr" value="title" id="r1"><label for="r1">Title</label>

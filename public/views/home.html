@@ -1,4 +1,4 @@
-<div id="home" ng-controller="homeController">
+<div id="home">
     <!-- Column left -->
     <div id="main" class="column1">
       <h2>Available Books</h2>
@@ -15,7 +15,7 @@
     <div id="mainDirectives" class="column2">
         <div id="matches">
         <h3>Matches</h3>
-        <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
+        <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
     </div>
 </div>
