@@ -25,11 +25,11 @@
         </p>
     </div>
     <div class="loginCol2">
-      <form class="loginForm" name="login" ng-submit="">
-          <label>Username<input type="text" name="username" value="Username" ng-model="user.username"></label>
-          <label>Password<input type="text" name="password" value="Password" ng-model="user.password"></label>
+      <form class="loginForm" name="loginForm" ng-submit="logIn(logInUser)">
+          <label>Username<input type="text" name="username" value="Username" ng-model="logInUser.username"></label>
+          <label>Password<input type="password" name="password" value="Password" ng-model="logInUser.password"></label>
           <button type="submit" class="loginButton">Log in</button>
-          <p ng-if="loginerror">Please fill out entire form!</p>
+          <p ng-if="loginError">Incorrect username and/or password</p>
       </form>
     </div>
 </div>
