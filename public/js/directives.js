@@ -9,7 +9,11 @@ angular.module('BookBuddiesMod')
   .directive('matchFeed', function() {
     return {
       restrict: 'E',
+<<<<<<< HEAD
       replace: true,
+=======
+      replace: false,
+>>>>>>> master
       templateUrl: 'views/matches.html'
     }
   })

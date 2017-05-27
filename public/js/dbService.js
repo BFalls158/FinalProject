@@ -3,15 +3,23 @@ angular.module("BookBuddiesMod")
 
       var matches = [];
       var tradeUser;
+      var isLoggedIn = false;
+
+      this.setStatus = function(status) {
+        isLoggedIn = status;
+      }
+
+      this.getStatus = function () {
+        return isLoggedIn;
+      }
 
       //Sets the dummy user
-      this.setCurrentUser = function() {
+      this.setCurrentUser = function(user) {
         return 'BFalls';
       }
 
       this.setTradeUser = function(user) {
         tradeUser = user;
-        $location.path('/trade');
       }
 
       this.getTradeUser = function() {
@@ -121,4 +129,34 @@ angular.module("BookBuddiesMod")
         return matches;
       }
 
-    });
+
+      this.newUser = function(user) {
+        return $http({
+          method: 'POST',
+          url: '/db/signup/',
+          data: user
+        }).then(function(response) {
+          return response;
+        });
+      }
+
+      this.checkUser = function(user) {
+        return $http({
+          method: 'GET',
+          url: '/db/signup/' + user,
+        }).then(function(response) {
+          return response.data;
+        });
+      }
+
+      this.login = function(user) {
+        return $http({
+          method: 'POST',
+          url: '/db/login',
+          data: user
+        }).then(function(response) {
+          console.log(response.data);
+          return response.data;
+        });
+      }
+});

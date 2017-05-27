@@ -19,6 +19,7 @@
     <script src="libs/bootstrap-3.3.7-dist/ui-bootstrap-tpls-2.5.0.min.js" charset="utf-8"></script>
     <!-- Our script files-->
     <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
     <script src="js/apiService.js"></script>
     <script src="js/dbService.js"></script>
     <script src="js/emailService.js"></script>
@@ -33,16 +34,16 @@
 <!--==============header=====================-->
     <div class="header">
       <div class="appTitle">
-        <a href="#!/"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
+        <a href="#!/" alt="Home Page"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
       </div>
       <div id="profileLink">
-        <a href="#!/profile">Hello {{ user }}!</a>
+        <p>Hello {{ user }}!<a href="#!/profile"> View Profile</a></p>
       </div>
 
       <div class="search">
         <form class="searchForm" ng-submit="setSearch(search)">
-          <input class="input" placeholder="..." ng-model="search">
-          <button type="submit" name="sr">Find Books</button>
+            <input class="input" placeholder="Find Books" ng-model="search">
+            <button type="submit" name="sr">Find Books</button>
         </form>
       </div>
     </div>
