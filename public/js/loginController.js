@@ -5,4 +5,10 @@ angular.module("BookBuddiesMod")
 
     	$scope.user = dbService.setCurrentUser();
 
+
+    	$scope.logIn = function(user, password) {
+    		dbService.getUserInfo(user).then(function(response) {
+
+    		})
+    	}	
     });

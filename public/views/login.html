@@ -25,9 +25,10 @@
         </p>
     </div>
     <div class="loginCol2">
-      <form class="loginForm" action="index.html" method="post">
-          <label>Username<input type="text" name="" value=""></label>
-          <label>Password<input type="text" name="" value=""></label>
+      <form class="loginForm" name="login" ng-submit="">
+          <label>Username<input type="text" name="username" value="Username" ng-model="user.username"></label>
+          <label>Password<input type="text" name="password" value="Password" ng-model="user.password"></label>
+          <button type="submit" class="loginButton">Log in</button>
           <p ng-if="loginerror">Please fill out entire form!</p>
       </form>
     </div>
