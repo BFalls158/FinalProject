@@ -129,4 +129,34 @@ angular.module("BookBuddiesMod")
         return matches;
       }
 
-    });
+
+      this.newUser = function(user) {
+        return $http({
+          method: 'POST',
+          url: '/db/signup/',
+          data: user
+        }).then(function(response) {
+          return response;
+        });
+      }
+
+      this.checkUser = function(user) {
+        return $http({
+          method: 'GET',
+          url: '/db/signup/' + user,
+        }).then(function(response) {
+          return response.data;
+        });
+      }
+
+      this.login = function(user) {
+        return $http({
+          method: 'POST',
+          url: '/db/login',
+          data: user
+        }).then(function(response) {
+          console.log(response.data);
+          return response.data;
+        });
+      }
+});
