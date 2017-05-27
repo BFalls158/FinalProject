@@ -17,16 +17,6 @@ angular.module("BookBuddiesMod")
 
         $scope.matches;
 
-        $scope.setSearch = function(search){
-            apiService.setSearchedBooks(search)
-                .then(function() {
-                    $location.path("/searchResults");
-                    $scope.list = [];
-                    $scope.showResults();
-                });
-            $scope.search = null;
-        }
-
     	$scope.popularBooks = [
     	{
     		author:"F. Scott Fitzgerald",
