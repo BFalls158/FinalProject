@@ -15,7 +15,7 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
         .when("/signup", {
             templateUrl: "views/signup.html",
             controller: "signupController"
-        })  
+        })
         .when("/login", {
             templateUrl: "views/login.html",
             controller: "loginController"
