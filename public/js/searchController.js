@@ -1,6 +1,12 @@
 angular.module("BookBuddiesMod")
     .controller("searchController", function($scope, $location, apiService, dbService, $uibModal){
 
+    $scope.status = dbService.getStatus();
+
+    // if (!$scope.status) {
+    //   $location.path('/home');
+    // }
+
     $scope.user = dbService.setCurrentUser();
 
  		$scope.list = [];
@@ -57,7 +63,7 @@ angular.module("BookBuddiesMod")
                 animation: $scope.animationsEnabled,
                 templateUrl: 'views/signup.html',
                 controller: 'signupController',
-                windowClass: 'center-modal'
+                // windowClass: 'center-modal'
             })
         }
     });

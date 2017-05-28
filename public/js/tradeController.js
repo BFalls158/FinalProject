@@ -1,6 +1,12 @@
 angular.module("BookBuddiesMod")
     .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance){
 
+        $scope.status = dbService.getStatus();
+
+        if (!$scope.status) {
+            $location.path('/home');
+        }
+
         $scope.user = dbService.setCurrentUser();
 
         $scope.tradeUser = dbService.getTradeUser();

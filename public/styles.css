@@ -4,7 +4,7 @@
 }
 
 h2, h3, h4, p, cite, span {
-  margin-top: 0px !important;
+  margin-top: 0px;
   cursor: default;
 }
 
@@ -58,6 +58,33 @@ h2, h3, h4, p, cite, span {
 #profileLink a {
   color: rgb(105,105,105);
 }
+
+/*---------------------login---------*/
+
+.loginCol1, .loginCol2{
+    display: inline-block;
+    width: 38%;
+}
+
+.loginCol2{
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: top;
+    margin: 50px; 0 0 0;
+}
+
+.loginP1, .loginP2{
+    min-width: 48%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 30px;
+}
+
+.loginP1{
+    margin: 30px; 0 0 0;
+}
+
+
 /*---------------------home screen search---------*/
 .search {
   float: right;
@@ -116,6 +143,11 @@ button:focus {
   font-weight: bold;
 }
 
+#unmanagedMatches{
+  margin-top: 10px;
+  text-align: center;
+}
+
 #home h4 {
   font-family: serif;
   font-weight: bold;
@@ -124,7 +156,7 @@ button:focus {
 #home .column1 {
   width: 67%;
   min-width: 500px;
-  height: 420px;
+  height: 400px;
   margin: 10px;
   margin-left: 20px;
   display: inline-block;
@@ -135,7 +167,7 @@ button:focus {
 #home .column2 {
   width: 28%;
   min-width: 200px;
-  height: 420px;
+  height: 400px;
   margin: 10px;
   display: inline-block;
   vertical-align: top;
@@ -341,77 +373,3 @@ button:focus {
   padding: 3px;
   margin: 10px;
 }
-
-/*-----------trade view------------*/
-
-#tradeForm button {
-
-  margin: 0 auto;
-  margin-top: 5px;
-}
-
-#tradeForm{
-  text-align: center;
-  margin-top: 10px;
-  margin: 0 auto;
-  width: auto;
-
-
-}
-
-#tradeForm .col1, .col2 {
-  width: 45%;
-  /*min-width: 400px;*/
-  height: 450px;
-  border: 1px solid grey;
-  margin: 0 auto;
-  margin-top: 10px;
-  margin-left: 20px;
-  padding: 10px;
-  display: inline-block;
-}
-
-.toTrade {
-  margin: 20px;
-  padding-left: 8%;
-  height: 220px;
-  overflow: auto;
-  text-align: left;
-}
-
-.tradeBox{
-  border-top: 1px solid grey;
-  height: 150px;
-  padding-top: 10px;
-  overflow: auto;
-  text-align: left;
-  margin: 20px;
-  padding-left: 8%;
-}
-
-.tradeBox button {
-  background-color: red;
-}
-
-.toTrade button {
-  display: inline-block;
-}
-
-.tradeButton{
-  display: block;
-  margin-left: 0 auto;
-  margin-top: 5px;
-  float: bottom;
-}
-/*
-.center-modal {
-  position: fixed;
-  top: 10%;
-  left: 5%;
-  z-index: 1050;
-  width: 80%;
-  height: 80%;
-  margin-left: -10%;
-}*/
-
-/*-----------signup modal------------*/

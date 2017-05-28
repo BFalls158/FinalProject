@@ -1,6 +1,8 @@
 angular.module("BookBuddiesMod")
   .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location){
 
+        $scope.status = dbService.getStatus();
+
         $scope.user = dbService.setCurrentUser();
 
         $scope.tradeToggle = function(size, user) {
@@ -14,16 +16,6 @@ angular.module("BookBuddiesMod")
         }
 
         $scope.matches;
-
-        $scope.setSearch = function(search){
-            apiService.setSearchedBooks(search)
-                .then(function() {
-                  $scope.list = [];
-                    $location.path("/searchResults");
-                    $scope.showResults();
-                });
-            $scope.search = null;
-        }
 
     	$scope.popularBooks = [
     	{
@@ -67,7 +59,10 @@ angular.module("BookBuddiesMod")
 
     dbService.setMatches($scope.user).then(function(response) {
         $scope.matches = dbService.getMatches();
+        $scope.numberOfMatches = $scope.matches.length;
     });
+
+
 
 
   });

@@ -1,6 +1,35 @@
-<div class="">
-  <form class="loginForm" action="index.html" method="post">
-      <label>Username<input type="text" name="" value=""></label>
-      <label>Password<input type="text" name="" value=""></label>
-  </form>
+<div>
+    <div class="loginCol1">
+        <div class="loginP1">
+            <h2>Do you like Books?</h2>
+            <p>
+                Deserunt ex officia, commodo ipsum tamen nam sunt.
+                Appellat hic probant ab est duis irure amet cernantur.
+                Mandaremus illum pariatur, senserit eu dolore fabulas.
+                Velit ab proident ita veniam, ea do illum veniam dolor.
+                Est quorum commodo, o sint laborum vidisse.
+            </p> 
+        </div>
+        <div class="loginP2">
+            <h2>Trade your books with other Bibliophiles</h2>
+            <p>
+                Deserunt ex officia, commodo ipsum tamen nam sunt.
+                Appellat hic probant ab est duis irure amet cernantur.
+                Mandaremus illum pariatur, senserit eu dolore fabulas.
+                Velit ab proident ita veniam, ea do illum veniam dolor.
+                Est quorum commodo, o sint laborum vidisse.
+            </p>  
+        </div>    
+        <p>
+
+        </p>
+    </div>
+    <div class="loginCol2">
+      <form class="loginForm" name="loginForm" ng-submit="logIn(logInUser)">
+          <label>Username<input type="text" name="username" value="Username" ng-model="logInUser.username"></label>
+          <label>Password<input type="password" name="password" value="Password" ng-model="logInUser.password"></label>
+          <button type="submit" class="loginButton">Log in</button>
+          <p ng-if="loginError">Incorrect username and/or password</p>
+      </form>
+    </div>
 </div>

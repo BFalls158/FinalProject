@@ -60,15 +60,13 @@ app.get('/db/userinfo/:username', function(req, res) {
     });
 });
 
-app.post('/db/userinfo/', function(req, res) {
-    console.log("connected");
+app.post('/db/signup/', function(req, res) {
     //add user to database
     var item = req.body;
     var sql = "INSERT INTO userinfo(username, email, password)" +
     "VALUES ($1::text, $2::text, $3::text)";
     var entry = [item.username, item.email, item.password];
     pool.query(sql, entry).then(function() {
-        res.status(201);
         res.send("INSTERTED");
     });
 });
@@ -144,9 +142,34 @@ app.get('/db/matches/:username', function(req, res) {
     });
 });
 
-/**
-* This call sends an email to one recipient, using a validated sender address
-* Do not forget to update the sender address used in the sample
+app.post('/db/login', function(req, res) {
+	var body = req.body;
+	pool.query("SELECT * FROM userinfo WHERE username=$1::text", [req.body.username]).then(function(result) {
+		if (result.rows[0].password === body.password) {
+			res.send('Success');
+		} else {
+			res.send('Invalid');
+		}
+	}).catch(function(error) {
+		res.send('User not found');
+	});
+});
+
+app.get('/db/signup/:username', function (req, res) {
+	var username = req.params.username;
+	pool.query("SELECT username FROM userinfo WHERE username=$1::text", [username]).then(function(result) {
+		if(result.rows[0].username === username) {
+			res.send('Username taken');
+		} else {
+			res.send('Username available');
+		}
+	}).catch(function(error) {
+		res.send('Username available');
+	});
+});
+
+/*
+This call sends an email to one recipient, using a validated sender address
 */
 
 var mailjet = require ('node-mailjet')

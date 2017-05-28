@@ -9,7 +9,7 @@
           <div class="bookList" ng-repeat="book in myLibrary">
             <img ng-src="{{ book.thumbnailurl }}">
             <p><cite>{{ book.title }}</cite> <br> {{ book.author }}.</p>
-            <input type="image" src="images/remove.png" alt="remove" class="remove" ng-click="deleteLibrary(book.id)">
+            <input type="image" src="images/x.png" alt="remove" class="remove" ng-click="deleteLibrary(book.id)">
           </div>
       </div>
     </div>
