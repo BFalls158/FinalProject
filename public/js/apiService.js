@@ -16,12 +16,39 @@ angular.module("BookBuddiesMod")
                 }
             }).then(function(response){
                 books = response.data;
-                // console.log(response.data);
+                console.log(books);
+                cleanData(books.items);
+                console.log(books);
             })
         return promise;
         };
 
-       this.getSearchedBooks = function() {
+        this.getSearchedBooks = function() {
         return books;
-       }
+        }
+
+
+        function cleanData(arr) {
+            arr.forEach(function(book) {
+                if (book.volumeInfo.title === undefined) {
+                    book.volumeInfo.title = "No title available";
+                }
+                if (book.volumeInfo.authors === undefined) {
+                    book.volumeInfo.authors = "No author available";
+                }
+                if (book.volumeInfo.description === undefined) {
+                    book.volumeInfo.description = "No description available";
+                }
+                if (!book.volumeInfo.imageLinks){
+                    book.volumeInfo.imageLinks = "";
+                    //need thumbnail placeholder
+                } else if (book.volumeInfo.imageLinks.thumbnail && book.volumeInfo.imageLinks.smallThumbnail === undefined) {
+                    book.volumeInfo.imageLinks.thumbnail = "";
+                    //need thumbnail placeholder
+                } else if (book.volumeInfo.imageLinks.thumbnail === undefined && book.volumeInfo.imageLinks.smallThumbnail !== undefined) {
+                    book.volumeInfo.imageLinks.thumbnail = book.volumeInfo.imageLinks.smallThumbnail;
+                }
+            })
+        }
+
     });
