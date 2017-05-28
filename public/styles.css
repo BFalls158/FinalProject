@@ -4,7 +4,7 @@
 }
 
 h2, h3, h4, p, cite, span {
-  margin-top: 0px !important;
+  margin-top: 0px;
   cursor: default;
 }
 
@@ -143,6 +143,11 @@ button:focus {
   font-weight: bold;
 }
 
+#unmanagedMatches{
+  margin-top: 10px;
+  text-align: center;
+}
+
 #home h4 {
   font-family: serif;
   font-weight: bold;
@@ -151,7 +156,7 @@ button:focus {
 #home .column1 {
   width: 67%;
   min-width: 500px;
-  height: 420px;
+  height: 400px;
   margin: 10px;
   margin-left: 20px;
   display: inline-block;
@@ -162,7 +167,7 @@ button:focus {
 #home .column2 {
   width: 28%;
   min-width: 200px;
-  height: 420px;
+  height: 400px;
   margin: 10px;
   display: inline-block;
   vertical-align: top;

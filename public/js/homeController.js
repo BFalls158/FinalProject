@@ -59,7 +59,10 @@ angular.module("BookBuddiesMod")
 
     dbService.setMatches($scope.user).then(function(response) {
         $scope.matches = dbService.getMatches();
+        $scope.numberOfMatches = $scope.matches.length;
     });
+
+
 
 
   });
