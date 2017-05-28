@@ -16,9 +16,7 @@ angular.module("BookBuddiesMod")
                 }
             }).then(function(response){
                 books = response.data;
-                console.log(books);
                 cleanData(books.items);
-                console.log(books);
             })
         return promise;
         };
