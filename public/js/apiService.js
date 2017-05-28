@@ -42,7 +42,7 @@ angular.module("BookBuddiesMod")
                 if (!book.volumeInfo.imageLinks){
                     book.volumeInfo.imageLinks = "";
                     //need thumbnail placeholder
-                } else if (book.volumeInfo.imageLinks.thumbnail && book.volumeInfo.imageLinks.smallThumbnail === undefined) {
+                } else if (book.volumeInfo.imageLinks.thumbnail === undefined && book.volumeInfo.imageLinks.smallThumbnail === undefined) {
                     book.volumeInfo.imageLinks.thumbnail = "";
                     //need thumbnail placeholder
                 } else if (book.volumeInfo.imageLinks.thumbnail === undefined && book.volumeInfo.imageLinks.smallThumbnail !== undefined) {
