@@ -16,14 +16,9 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
             templateUrl: "views/signup.html",
             controller: "signupController"
         })
-
         .when("/login", {
             templateUrl: "views/login.html",
             controller: "loginController"
         })
-        // .when("/trade", {
-        //   templateUrl: "views/tradeView.html",
-        //   controller: "tradeController"
-        // });
         .otherwise("/home");
     });

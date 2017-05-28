@@ -1,7 +1,7 @@
 <div  class="modal-content container" id="tradeForm">
         <div class="modal-header row" id="trade box">
                                             <!--Yours-->
-            <div class="col1 col-lg-6">
+            <div class="col1">
                 <h3>Your Library</h3>
                 <div class="toTrade">
                 <p ng-repeat="item in userLibrary"><button ng-click="addToUserTrade(item)">+</button> {{ item.title }} - {{ item.author }} </p>
@@ -13,7 +13,7 @@
                 </div>
             </div>
                                             <!--Theirs-->
-            <div class="col2 col-lg-6">
+            <div class="col2">
                 <h3>Their Library</h3>
                 <div class="toTrade">
                 <p ng-repeat="item in tradeUserLibrary"><button ng-click="addToTradeUserTrade(item)">+</button> {{ item.title}} - {{ item.author }}</p>
