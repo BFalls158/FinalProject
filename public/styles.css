@@ -144,13 +144,18 @@ button:focus {
 }
 
 #unmanagedMatches{
-  margin-top: 10px;
+  margin: 0px;
+  padding: 10px;
   text-align: center;
+  background-color: #bb9995;
+  font-family: serif;
+  font-weight: bold;
 }
 
 #home h4 {
   font-family: serif;
   font-weight: bold;
+  font-size: 200%;
 }
 
 #home .column1 {
@@ -161,7 +166,7 @@ button:focus {
   margin-left: 20px;
   display: inline-block;
   vertical-align: top;
-  border-right: 3px solid grey;
+  border-right: 3px solid #bb9995;
 }
 
 #home .column2 {
@@ -240,9 +245,7 @@ button:focus {
     margin-bottom: 3px;
 }
 
-.mainBook img:hover{
-    border: 5px solid #51A754;
-    border-radius: 10px;
+.mainBook:hover{
     background-color: white;
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -268,8 +271,8 @@ button:focus {
 .mainBook cite:after {
     content: '...';
 }
-/*--------------profile view--------*/
 
+/*--------------profile view--------*/
 .myLibraryView {
     height:420px;
     width: 100%;
@@ -285,7 +288,6 @@ button:focus {
     margin: 5px;
     padding: 10px;
     padding-top: -20px;
-    border: 1px solid lightgrey;
     text-align: center;
 }
 
@@ -327,8 +329,8 @@ button:focus {
     display: none;
     margin 0 0 0 0;
     position: absolute;
-    top: 0px;
-    left: 60%;
+    top: 7px;
+    left: 53%;
     width: 40px;
 }
 
@@ -397,7 +399,6 @@ button:focus {
   width: 45%;
   min-width: 400px;
   height: 400px;
-  border: 1px solid grey;
   margin: 0 auto;
   margin-top: 10px;
   padding: 10px;

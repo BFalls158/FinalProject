@@ -61,6 +61,18 @@
     #home {
         height: auto;
         position: relative;
+        overflow-x: hidden;
+    }
+
+    #unmanagedMatches{
+      background-color: #51A754;
+      color: black;
+      padding: 10px;
+      margin-top: 0px;
+    }
+
+    #home h4 {
+        text-align: center;
     }
 
     .column1, .column2 {
@@ -74,22 +86,8 @@
         height: auto;
         margin: 0 auto;
         vertical-align: super;
-        /*float: bottom;*/
+        border-right: none;
     }
-
-    #mainBooks img{
-        height: 120px;
-        display: inline-block;
-    }
-
-    #mainBooks{
-      height: auto;
-      overflow-x: scroll;
-      height: 100px;
-      display: inline;
-      white-space: nowrap;
-      border: none;
-     }
 
     #home .column2 {
         display: block;
@@ -101,27 +99,33 @@
         border: none;
     }
 
-    #unmanagedMatches{
-      background-color: #51A754;
-      color: black;
-      padding: 10px;
-      margin-top: 0px;
+    #mainBooks img{
+        height: 120px;
+        display: inline-block;
+    }
+
+    #mainBooks{
+      height: auto;
+      height: 170px;
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      border: none;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
     }
 
 
-    #home h4 {
-        text-align: center;
-    }
+     #mainBooks::-webkit-scrollbar {
+       display: none;
+     }
 
     .mainBook {
         display: inline-block;
-        width: 170px;
+        width: 100px;
         margin: 0 20px 0 0;
     }
 
-    .moreTitles{
-        margin: 0;
-}
 
     /*----------------profile view-----------------*/
 
