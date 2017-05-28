@@ -1,21 +1,25 @@
-<div id="submitForm">
-    <form ng-submit="" novalidate="">
+<div  class="modal-content container" id="">
+  <div class="modal-header row" id="">
+    <div class="col-lg-12"id="submitForm">
+      <form ng-submit="" novalidate="">
         <label>Username
-            <input name="newName" type="text" required="">
-            <span ng-show="submitForm.newName.$touched && submitForm.newName.$invalid">Password must be 7-25 characters.</span>
+          <input name="newName" type="text" required="">
+          <span ng-show="submitForm.newName.$touched && submitForm.newName.$invalid">Password must be 7-25 characters.</span>
         </label><br>
         <label>Email
-            <input name="newEmail" type="email" required="">
-            <span ng-show="submitForm.newEmail.$touched && submitForm.newEmail.$invalid">Please enter valid email.</span>
+          <input name="newEmail" type="email" required="">
+          <span ng-show="submitForm.newEmail.$touched && submitForm.newEmail.$invalid">Please enter valid email.</span>
         </label><br>
         <label>Password
-            <input name="newPass" type="password" ng-minlength="7" ng-maxlength="30" required="">
-            <span ng-show="submitForm.newPass.$touched && submitForm.newPass.$invalid">Password must be 7-30 characters.</span>
+          <input name="newPass" type="password" ng-minlength="7" ng-maxlength="30" required="">
+          <span ng-show="submitForm.newPass.$touched && submitForm.newPass.$invalid">Password must be 7-30 characters.</span>
         </label><br>
         <label>Password Confirm
-            <input name="passConfirm" type="password" required="">
-            <span ng-show="submitForm.passConfirm.$touched && submitForm.passConfirm.$invalid">Passwords must match.</span>
+          <input name="passConfirm" type="password" required="">
+          <span ng-show="submitForm.passConfirm.$touched && submitForm.passConfirm.$invalid">Passwords must match.</span>
         </label><br>
         <input type="submit">
-    </form>
-</div>    
+      </form>
+    </div>
+  </div>
+</div>
