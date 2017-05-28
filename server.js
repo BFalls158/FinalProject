@@ -155,6 +155,7 @@ app.post('/db/login', function(req, res) {
 	});
 });
 
+ // Sign-up user verification
 app.get('/db/signup/:username', function (req, res) {
 	var username = req.params.username;
 	pool.query("SELECT username FROM userinfo WHERE username=$1::text", [username]).then(function(result) {
@@ -167,6 +168,8 @@ app.get('/db/signup/:username', function (req, res) {
 		res.send('Username available');
 	});
 });
+
+
 
 /*
 This call sends an email to one recipient, using a validated sender address

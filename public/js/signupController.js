@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("signupController", function($scope, apiService, dbService, $location){
+  .controller("signupController", function($scope, $uibModal, $http, apiService, dbService, $location){
 
     	$scope.status = dbService.getStatus();
 
