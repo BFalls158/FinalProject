@@ -248,12 +248,11 @@ button:focus {
     height: 180px;
     border: 5px solid transparent;
     margin-bottom: 3px;
+    transition: all .2s ease-in-out;
 }
 
-.mainBook:hover{
-    background-color: white;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+.mainBook img:hover{
+    transform: scale(1.1);
 }
 
 .mainTitle{
