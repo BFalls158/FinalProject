@@ -1,21 +1,21 @@
-<div id="home" ng-controller="homeController">
+<div id="home">
+    <h3 class="unmanagedMatches">Welcome back {{user}}, you have {{numberOfMatches}} unmanaged matches</h3>
     <!-- Column left -->
     <div id="main" class="column1">
-      <h2>Available Books</h2>
       <h4>Popular Books</h4>
       <div id="mainBooks">
         <div id="mainBack"></div>
-        <div class="mainBook" ng-repeat="book in popularBooks">
+        <div class="mainBook" ng-repeat="book in popularBooks" ng-click="setSearch(book.title)">
           <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle">{{ book.title }}</cite>
         </div>
       </div>
     </div>
 
+<!--Column right-->
     <div id="mainDirectives" class="column2">
-      <!--Column right-->
-      <div id="searchResult">
-        <h3>Matches</h3>
-        <p ng-repeat="match in matches" ng-click="setTradeUser(match.username)">User: {{ match.username }} has Book Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
+        <div id="matches">
+        <h3>Match Library</h3>
+        <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
     </div>
 </div>

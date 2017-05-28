@@ -1,5 +1,11 @@
 angular.module("BookBuddiesMod")
-    .controller("searchController", function($scope, $location, apiService, dbService){
+    .controller("searchController", function($scope, $location, apiService, dbService, $uibModal){
+
+    $scope.status = dbService.getStatus();
+
+    // if (!$scope.status) {
+    //   $location.path('/home');
+    // }
 
     $scope.user = dbService.setCurrentUser();
 
@@ -10,7 +16,7 @@ angular.module("BookBuddiesMod")
                 .then(function() {
                 	$scope.list = [];
                     $location.path("/searchResults");
-                    $scope.showResults();  
+                    $scope.showResults();
                 });
             $scope.search = null;
         }
@@ -20,13 +26,16 @@ angular.module("BookBuddiesMod")
 
           var books = apiService.getSearchedBooks();
           console.log(books);
-          
+
           books.items.forEach(function(book) {
-              $scope.list.push({author: book.volumeInfo.authors[0],
-               thumbnail: book.volumeInfo.imageLinks.thumbnail,
-               title: book.volumeInfo.title, 
-               description: book.volumeInfo.description});
-              })
+              $scope.list.push(
+                {
+                    author: book.volumeInfo.authors[0],
+                    thumbnail: book.volumeInfo.imageLinks.thumbnail,
+                    title: book.volumeInfo.title, 
+                    description: book.volumeInfo.description});
+                }
+              )
           console.log($scope.list);
         }
 
@@ -50,5 +59,14 @@ angular.module("BookBuddiesMod")
         		thumbnailurl: book.thumbnail
         	}
         	dbService.addToWatchlist(entry);
+        }
+
+        $scope.signupToggle = function(size) {
+            var uibmodalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'views/signup.html',
+                controller: 'signupController',
+                // windowClass: 'center-modal'
+            })
         }
     });

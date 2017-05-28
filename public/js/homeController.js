@@ -1,13 +1,26 @@
 angular.module("BookBuddiesMod")
-  .controller("homeController", function($scope, $http, apiService, dbService, $uibModal){
+  .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location){
+
+        $scope.status = dbService.getStatus();
+
         $scope.user = dbService.setCurrentUser();
 
+        $scope.tradeToggle = function(size, user) {
+            $scope.setTradeUser(user);
+            var uibmodalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'views/requestTrade.html',
+                controller: 'tradeController',
+                windowClass: 'center-modal'
+            })
+        }
+
         $scope.matches;
-        
+
     	$scope.popularBooks = [
     	{
     		author:"F. Scott Fitzgerald",
-			  description:"So we beat on, boats against the current, borne back ceaselessly into the past. ‘F. Scott Fitzgerald’s novel The Great Gatsby was first published on April 10, 1925. Set on Long Island’s North Shore and in New York City during the summer of 1922, it is the story of an attractive young man, hopelessly in love, who, having worked so hard to improve himself so he can win back the woman he loves, finds himself in a world where money has replaced humility and despair has replaced hope. For me, the novel is a comment on the values and cynicism of east coast America almost a hundred years ago, a time when a section of society had suddenly become very wealthy and the American Dream was for most, nothing more than the mere pursuit of money.’ Peter Joucla ‘Peter Joucla’s surprisingly clear-eyed adaptation cuts to the heart of Fitzgerald’s text while preserving a very decent amount of it.’ 4 stars –Evening Standard ‘Evoking all the glamour and atmosphere of the roaring twenties, Wilton’s brings Gatsby to glorious, all-singing, all-dancing life (jazz hands optional). A must-see’ – welovethisbook.com ‘An unashamed nostalgia party for a world we never knew... This is a show that majors in fun; and it’s no surprise to see it’s a cult hit.’ Telegraph",
+			description:"So we beat on, boats against the current, borne back ceaselessly into the past. ‘F. Scott Fitzgerald’s novel The Great Gatsby was first published on April 10, 1925. Set on Long Island’s North Shore and in New York City during the summer of 1922, it is the story of an attractive young man, hopelessly in love, who, having worked so hard to improve himself so he can win back the woman he loves, finds himself in a world where money has replaced humility and despair has replaced hope. For me, the novel is a comment on the values and cynicism of east coast America almost a hundred years ago, a time when a section of society had suddenly become very wealthy and the American Dream was for most, nothing more than the mere pursuit of money.’ Peter Joucla ‘Peter Joucla’s surprisingly clear-eyed adaptation cuts to the heart of Fitzgerald’s text while preserving a very decent amount of it.’ 4 stars –Evening Standard ‘Evoking all the glamour and atmosphere of the roaring twenties, Wilton’s brings Gatsby to glorious, all-singing, all-dancing life (jazz hands optional). A must-see’ – welovethisbook.com ‘An unashamed nostalgia party for a world we never knew... This is a show that majors in fun; and it’s no surprise to see it’s a cult hit.’ Telegraph",
 			thumbnail:"http://books.google.com/books/content?id=0XYA1SlYNeMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
 			title:"The Great Gatsby"
     	},
@@ -34,16 +47,22 @@ angular.module("BookBuddiesMod")
 			description:"Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be presented on stage. The play received its world premiere in London’s West End on 30th July 2016. It was always difficult being Harry Potter and it isn’t much easier now that he is an overworked employee of the Ministry of Magic, a husband and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.",
 			thumbnail:"http://books.google.com/books/content?id=tcSMCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
 			title:"Harry Potter and the Cursed Child – Parts One and Two (Special Rehearsal Edition)"
-    	}];
+    	}
 
     	//TODO Make call to dbService getting popular books (most instances of books in libraries)
 
-        $scope.setTradeUser = function(user) {
-            dbService.setTradeUser(user);
-        }
+    ]
 
-        dbService.setMatches($scope.user).then(function(response) {
-            $scope.matches = dbService.getMatches();
-        });
+    $scope.setTradeUser = function(user) {
+        dbService.setTradeUser(user);
+    }
 
+    dbService.setMatches($scope.user).then(function(response) {
+        $scope.matches = dbService.getMatches();
+        $scope.numberOfMatches = $scope.matches.length;
     });
+
+
+
+
+  });

@@ -1,23 +1,24 @@
-<div class="modal fade" id="submitForm" role="dialog">
-    <div class="modal-dialog">
-    <form ng-submit="">
+<div id="signupFormDiv">
+  <div class="formDiv">
+    <form id="signup" name="signupForm" ng-submit="submitForm(newUser)" novalidate="">
         <label>Username
-            <input name="newName" type="text" ng-model="" required>
-            <span ng-show="submitForm.newName.$touched && submitForm.newName.$invalid">Password must be 7-25 characters.</span>
+            <input class="signupInput" name="username" type="text" required="" ng-model="newUser.username">
+            <span ng-show="signupForm.username.$touched && signupForm.username.$error.required">Invalid Username</span>
         </label><br>
         <label>Email
-            <input name="newEmail" type="email" ng-model="" required>
-            <span ng-show="submitForm.newEmail.$touched && submitForm.newEmail.$invalid">Please enter valid email.</span>
+            <input class="signupInput" name="email" type="email" required="" ng-model="newUser.email">
+            <span ng-show="signupForm.email.$touched && signupForm.email.$invalid">Please enter a valid email.</span>
         </label><br>
         <label>Password
-            <input name="newPass" type="password" ng-model="" required>
-            <span ng-show="submitForm.newPass.$touched && submitForm.newPass.$invalid">Password must be 7-30 characters.</span>
+            <input class="signupInput" name="password" type="password" ng-minlength="7" ng-maxlength="30" required="" ng-model="newUser.password">
+            <span ng-show="signupForm.password.$touched && signupForm.password.$invalid">Password must be 7-30 characters.</span>
         </label><br>
         <label>Password Confirm
-            <input name="passConfirm" type="password" ng-model="" required>
-            <span ng-show="submitForm.passConfirm.$touched && submitForm.passConfirm.$invalid">Passwords must match.</span>
+            <input class="signupInput" name="passConfirm" type="password" required=""  ng-model="newUser.passConfirm">
+            <span ng-show="signupForm.passConfirm.$touched && signupForm.passConfirm.$invalid">Passwords must match.</span>
         </label><br>
-        <input type="submit">
+        <button id="create" type="submit">Submit</button>
+        <p ng-if="!userAvailable">User name unavailable</p>
     </form>
-    </div>
-</div>    
+  </div>
+</div>

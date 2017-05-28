@@ -1,5 +1,11 @@
 angular.module("BookBuddiesMod")
-    .controller("tradeController", function($scope, $location, apiService, dbService, emailService){
+    .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance){
+
+        $scope.status = dbService.getStatus();
+
+        if (!$scope.status) {
+            $location.path('/home');
+        }
 
         $scope.user = dbService.setCurrentUser();
 
@@ -7,7 +13,7 @@ angular.module("BookBuddiesMod")
 
         //get user info
         var userInfo;
-        var tradeUserInfo; 
+        var tradeUserInfo;
         dbService.getUserInfo($scope.user).then(function(response) {
             userInfo = response[0];
         });
@@ -45,9 +51,19 @@ angular.module("BookBuddiesMod")
         });
 
 
+        $scope.deleteFromUserTrade = function(obj) {
+            var index = $scope.userTrade.indexOf(obj);
+            $scope.userLibrary.push($scope.userTrade[index]);
+            $scope.userTrade.splice(index, 1);
+        }
+
+        $scope.deleteFromTradeUserTrade = function(obj) {
+            var index = $scope.tradeUserTrade.indexOf(obj);
+            $scope.tradeUserLibrary.push($scope.tradeUserTrade[index]);
+            $scope.tradeUserTrade.splice(index, 1);
+        }
+
         $scope.proposeTrade =  function() {
-            console.log(userInfo.email);
-            console.log(tradeUserInfo.email);
         	var user1 = {
         		name: userInfo.username,
         		email: userInfo.email,
@@ -58,15 +74,20 @@ angular.module("BookBuddiesMod")
         		email: tradeUserInfo.email,
         		title: $scope.tradeUserTrade[0].title
         	}
+        
+            $scope.sendEmail(user1, user2);   
 
-            $scope.sendEmail(user1, user2);
-
-            $location.path('/');
+            $scope.ok(); //Closes modal
         }
 
-    	$scope.sendEmail = function(user1, user2) { 
+        $scope.ok = function() {
+            $uibModalInstance.close();
+        }
+
+    	$scope.sendEmail = function(user1, user2) {
             emailService.sendEmail(user1, user2).then(function() {
     		console.log('Success'); //user message here
     	   });
         }
+
     });

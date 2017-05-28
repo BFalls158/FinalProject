@@ -1,9 +1,115 @@
-/*.col1, .col2 {
-    vertical-align: top;
-    height: 80%;
-    display: inline-block;
+/*-----------trade view------------*/
+
+#tradeForm button {
+
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
-.modal {
-    display: block;
-}*/
+#tradeForm{
+  text-align: center;
+  margin-top: 10px;
+  margin: 0 auto;
+  width: 800px;
+  left: 50%;
+  margin-left: -400px;
+  background-image: url('images/books.jpg');
+}
+
+#tradeForm .col1, .col2 {
+  width: 45%;
+  height: 450px;
+  border: 1px solid grey;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 5px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.toTrade {
+  margin: 20px;
+  padding-left: 8%;
+  height: 220px;
+  overflow: auto;
+  text-align: left;
+}
+
+h3 {
+  text-align: center;
+}
+
+.tradeBox{
+  border-top: 1px solid grey;
+  height: 150px;
+  padding-top: 10px;
+  overflow: auto;
+  text-align: left;
+  margin: 20px;
+  padding-left: 8%;
+}
+
+.tradeBox button {
+  background-color: red;
+}
+
+.toTrade button {
+  display: inline-block;
+}
+
+.tradeButton{
+  display: block;
+  margin-left: 0 auto;
+  margin-top: 5px;
+  float: bottom;
+}
+
+.modal-lg {
+  width: 100%;
+}
+
+.modal{
+  transition: all linear .03s;
+  opacity:1;
+}
+
+
+.modal-open .modal{
+  background-color: transparent;
+}
+
+
+/*--------login modal--------*/
+
+#signupFormDiv{
+  text-align: center;
+  margin-top: 10px;
+  margin: 0 auto;
+  /*width: 800px;*/
+  left: 50%;
+  /*margin-left: -400px;*/
+  /*background-color: yellow;*/
+  /*background-image: url('images/books.jpg');*/
+
+}
+
+#signup {
+  text-align: left;
+  padding: 20px;
+  width: auto;
+  margin: 10px;
+  /*background-color: rgba(255, 255, 255, 0.7);*/
+
+}
+
+.signupInput {
+  padding-left: 25%;
+}
+
+#create {
+  display: block;
+  margin-left: 0 auto;
+  margin-top: 5px;
+  float: bottom;
+}

@@ -1,18 +1,14 @@
 @media screen and (max-width: 480px) {
 
-    html{
-        max-width: 480px;
-    }
-
     body {
-/*      overflow-x: hidden;*/
       text-align: center;
     }
 
     .header{
         width: 100%;
-        height: 200px;
+        height: 250px;
         display: block;
+        position: relative;
     }
 
     .b1, .b2{
@@ -26,10 +22,29 @@
         margin: 10px 0 0 0;
     }
 
+    #profileLink{
+      float: top;
+      position: static;
+    }
+
+    #profileLink p {
+      position: static;
+      color: #51A754;
+      font-size: 120%;
+    }
+
+    .layer {
+      background-color: rgba(255, 255, 255, 0.4);
+      height: 100%;
+      width: 100%;
+    }
+
     .search{
         margin: 0 auto;
         width: 100%;
         padding: 0;
+        background-color: transparent;
+        border: none;
     }
 
     .searchForm{
@@ -43,67 +58,94 @@
         display: none;
     }
 
-    #mainBack{
-        height: auto;
-    }
-
     #home {
-        height: 1000px;
+        height: auto;
+        position: relative;
+        overflow-x: hidden;
     }
 
-    #home .column1 {
-        position: relative;
-        min-width: 200px;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
+    #unmanagedMatches{
+      background-color: #51A754;
+      color: black;
+      padding: 10px;
+      margin-top: 0px;
     }
 
     #home h4 {
         text-align: center;
     }
 
-    #home .column2 {
-/*        top: 200px;*/
-        display: block;
-        min-width: 200px;
-        width: 100%;
-        margin: 0 auto;
-        vertical-align: bottom;
-    }
-
     .column1, .column2 {
         border: none;
     }
 
-    .mainBook {
+    #home .column1 {
+        position: static;
+        min-width: 200px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        vertical-align: super;
+        border-right: none;
+    }
+
+    #home .column2 {
         display: block;
+        min-width: 200px;
+        width: 100%;
+        margin: 0 auto;
+        vertical-align: sub;
+        float: top;
+        border: none;
+    }
+
+    #mainBooks img{
+        height: 120px;
+        display: inline-block;
+    }
+
+    #mainBooks{
+      height: auto;
+      height: 170px;
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      border: none;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+    }
+
+
+     #mainBooks::-webkit-scrollbar {
+       display: none;
+     }
+
+    .mainBook {
+        display: inline-block;
+        width: 100px;
         margin: 0 20px 0 0;
     }
 
-    .moreTitles{
-    margin: 0;
-}
 
     /*----------------profile view-----------------*/
 
     .pcol {
         width: 100%;
     }
-    
+
     .pcol:nth-child(1){
         width: 100%;
         border-radius: 0;
     }
 
     /*----------------search results-----------------*/
-    
+
     .column2 {
         text-align: center;
         width: auto;
         display: block;
     }
-    
+
     .mobileTitle{
         display: block;
     }
