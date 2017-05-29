@@ -3,9 +3,16 @@
     src: url(baduy/BADUY.otf);
 }
 
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Amiri', serif;
+}
+
 body {
   background-color: #d3d7d2;
-  font-family: 'Oswald', sans-serif;
 }
 
 h2, h3, h4, p, cite, span {
@@ -35,22 +42,26 @@ h2, h3, h4, p, cite, span {
 .appTitle {
   float: left;
   display: inline;
-  margin-top: 55px;
-  margin-left: 30px;
-  text-shadow: 5px 5px 30px rgba(56, 40, 56, 0.47);;
+  margin: 30px 0 0 30px;
+  text-shadow: 5px 5px 30px rgb(46, 40, 46);
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  padding: 10px 10px 10px ;
+  border-radius: 10px 10px 0 0;
+  border: solid white 1px;
 }
 
 .b1{
   display: inline;
   font-family: baduy;
-  font-size: 90px;
-  color: rgb(105,105,105);
+  font-size: 130px;
+  color: rgb(44, 40, 40);
 }
 
 .b2{
   display: inline;
   font-family: baduy;
-  font-size: 90px;
+  font-size: 130px;
   color: #51A754;
 }
 
@@ -63,6 +74,11 @@ h2, h3, h4, p, cite, span {
 }
 #profileLink a {
   color: rgb(105,105,105);
+}
+
+.bookTitle{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*---------------------login---------*/
@@ -143,26 +159,17 @@ button:focus {
   background-color: #d3d7d2;
 }
 
-#home h2 {
-  color: #48a858;
-  font-family: serif;
-  font-weight: bold;
-}
-
 .unmanagedMatches{
   margin: 0;
   padding: 10px;
   text-align: center;
-  background-color: #bb9995;
-  font-family: serif;
-  font-weight: bold;
+  background-color: #342e2e;
   width: 100%;
-  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);;
+  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
+  color: #e1ffe2;
 }
 
 #home h4 {
-  font-family: serif;
-  font-weight: bold;
   font-size: 200%;
 }
 
@@ -191,6 +198,10 @@ button:focus {
   background-size: cover;
 }
 
+#home .column2 .bookTitle{
+    color: #51A754;
+}
+
 #mainBooks {
   width: 100%;
   height: 200px;
@@ -205,8 +216,6 @@ button:focus {
 
 #matches h3 {
   text-align: center;
-  font-family: serif;
-  font-weight: bold;
   width: 100%;
   border-bottom: 2px solid grey;
   padding-bottom: 3px;
@@ -216,6 +225,7 @@ button:focus {
   cursor: pointer;
   padding-left: 5px;
   margin: 8px;
+  border-bottom: 1px dotted black;
 }
 
 #matches p:hover {
@@ -250,7 +260,6 @@ button:focus {
 
 .mainBook img{
     height: 180px;
-    border: 5px solid transparent;
     margin-bottom: 3px;
     box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 ;
@@ -268,9 +277,7 @@ button:focus {
     text-align: center;
     margin: 0 auto;
     height: 42px;
-/*    text-overflow: ellipsis;*/
     overflow: hidden;
-/*    white-space: nowrap;*/
     font-weight: bold;
     line-height: 14px;
 }
@@ -292,7 +299,6 @@ button:focus {
 
 #profile a {
   color: black;
-  font-family: serif;
 }
 
 .unmanagedMatches:hover {
@@ -332,454 +338,6 @@ button:focus {
     margin: 10px 0 30px 0;
     padding: 10px;
     vertical-align: top;
-    horizontal-align: middle;
-    height: 200px;
-    position: relative;
-}
-
-.bookList p{
-    margin: 0;
-    width: 120px;
-    min-height: 80px;
-    text-align: center;
-    margin-left: 12px;
-    max-width: 80%;
-}
-
-.bookList .remove {
-    display: none;
-    margin 0 0 0 0;
-    position: absolute;
-    top: 7px;
-    left: 53%;
-    width: 40px;
-}
-
-.bookList:hover .remove {
-    display: inline-block;
-}
-
-
-/*              search results page       */
-
-#searchTitle{
-  margin: 20px 0 0 20px;
-  font-size: 130%;
-}
-
-#searchResults {
-  padding-left: 20px;
-}
-
-.column1 {
-  margin: 10px;
-  margin-right: 5px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.column2 {
-  display: inline-block;
-  width: 800px;
-  padding-top: 15px;
-}
-
-.column3 {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 30px;
-
-}
-
-#searchResults button {
-  width: 120px;
-  padding: 3px;
-  margin: 10px;
-}
-
-/*-----------trade view------------*/
-
-#tradeForm button {
-
-  margin: 0 auto;
-  margin-top: 5px;
-}
-
-#tradeForm{
-  text-align: center;
-  margin-top: 10px;
-  margin: 0 auto;
-}
-
-#tradeForm .col1, .col2 {
-  width: 45%;
-  min-width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 10px;
-  display: inline-block;
-}
-
-.toTrade {
-  margin: 20px;
-  padding-left: 8%;
-  height: 220px;
-  overflow: auto;
-  text-align: left;
-}
-
-.tradeBox{
-  border-top: 1px solid grey;
-  padding-top: 10px;
-}
-
-.tradeBox button {
-  background-color: red;
-}
-
-.toTrade button {
-  display: inline-block;
-}
-
-.tradeButton{
-  display: block;
-  margin-left: 0 auto;
-  margin-top: 5px;
-  float: bottom;
-}
-@font-face {
-    font-family: baduy;
-    src: url(baduy/BADUY.otf);
-}
-
-body {
-  background-color: #d3d7d2;
-}
-
-h2, h3, h4, p, cite, span {
-  margin-top: 0px;
-  cursor: default;
-}
-
-.header {
-  background-image: url("images/bookbg.jpg");
-  background-size: cover cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-}
-
-.header a:hover {
-  text-decoration: none;
-  cursor: pointer important!;
-}
-
-.header a:focus {
-  text-decoration: none;
-}
-
-.appTitle {
-  float: left;
-  display: inline;
-  margin-top: 55px;
-  margin-left: 30px;
-}
-
-.b1{
-  display: inline;
-  font-family: baduy;
-  font-size: 90px;
-  color: rgb(105,105,105);
-}
-
-.b2{
-  display: inline;
-  font-family: baduy;
-  font-size: 90px;
-  color: #51A754;
-}
-
-#profileLink p {
-  position: absolute;
-  top: 140px;
-  right: 8.5%;
-  color: #51A754;
-  font-size: 120%;
-}
-#profileLink a {
-  color: rgb(105,105,105);
-}
-
-/*---------------------login---------*/
-
-.loginCol1, .loginCol2{
-    display: inline-block;
-    width: 38%;
-}
-
-.loginCol2{
-    text-align: center;
-    margin: 0 auto;
-    vertical-align: top;
-    margin: 50px; 0 0 0;
-}
-
-.loginP1, .loginP2{
-    min-width: 48%;
-    margin: 0 auto;
-    padding: 20px;
-    margin-left: 30px;
-}
-
-.loginP1{
-    margin: 30px; 0 0 0;
-}
-
-
-/*---------------------home screen search---------*/
-.search {
-  float: right;
-  display: inline;
-  margin-top: 30px;
-  margin-right: 30px;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 40px 40px;
-  border-radius: 10px;
-  border: solid white 1px;
-}
-
-.search .glyphicon{
-    position: absolute;
-    padding: 10px;
-    pointer-events: none;
-}
-
-button {
-  background-color: #51A754;
-  border-radius: 10px;
-  padding: 2px 7px;
-}
-
-button:focus {
-  outline: none;
-}
-
-.input {
-  border-radius: 10px;
-  padding-left: 10px;
-  margin-right: 8px;
-}
-
-.input:focus {
-  outline: none;
-}
-
- .searchForm label {
-  margin-right: 7px;
-  margin-left: 4px;
-  margin-bottom: 5px;
-}
-
-/*----------------home page styling-----------------*/
-#home {
-  display: inline-block;
-  width: 100%;
-  margin: 0px;
-  background-color: #d3d7d2;
-}
-
-#home h2 {
-  color: #48a858;
-  font-family: serif;
-  font-weight: bold;
-}
-
-.unmanagedMatches{
-  margin: 0px;
-  padding: 10px;
-  text-align: center;
-  background-color: #bb9995;
-  font-family: serif;
-  font-weight: bold;
-  width: 100%;
-}
-
-#home h4 {
-  font-family: serif;
-  font-weight: bold;
-  font-size: 200%;
-}
-
-#home .column1 {
-  width: 67%;
-  min-width: 500px;
-  height: 400px;
-  margin: 10px;
-  margin-left: 20px;
-  display: inline-block;
-  vertical-align: top;
-  border-right: 3px solid #bb9995;
-}
-
-#home .column2 {
-  width: 28%;
-  min-width: 200px;
-  height: 400px;
-  margin: 10px;
-  display: inline-block;
-  vertical-align: top;
-  border: 2px solid lightgrey;
-  background-image: url("images/books.png");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#mainBooks {
-  width: 100%;
-  height: 200px;
-}
-
-#matches {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  margin: 20px;
-  border: 5px solid rgba(36, 33, 42, 0.33);
-  border-radius: 10px;
-  border-style: inset;
-
-}
-
-#matches h3 {
-  text-align: center;
-  font-family: serif;
-  font-weight: bold;
-  width: 100%;
-  border-bottom: 2px solid grey;
-  padding-bottom: 3px;
-}
-
-#matches p{
-  cursor: pointer;
-  padding-left: 5px;
-  margin: 8px;
-}
-
-#matches p:hover {
-  color: #51A754;
-  font-weight: bold;
-}
-
-#mainList {
-  width: 100%;
-  height: 85px;
-  border: 1px solid lightgrey;
-}
-
-#mainBack {
-  background-color: #a1978e;
-  width: 95%;
-  height: 60%;
-  margin-left: -30px;
-  border-radius: 15px;
-  margin-top: 0px;
-  z-index: 5;
-}
-
-.mainBook {
-    display: inline-block;
-    vertical-align: top;
-    margin: -90px 40px 0 0;
-    z-index: 5;
-    cursor: pointer;
-}
-
-.mainBook img{
-    height: 180px;
-    border: 5px solid transparent;
-    margin-bottom: 3px;
-}
-
-.mainBook:hover{
-    background-color: white;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-}
-
-.mainTitle{
-    display: block;
-    width: 90px;
-    text-align: center;
-    margin: 0 auto;
-    height: 42px;
-/*    text-overflow: ellipsis;*/
-    overflow: hidden;
-/*    white-space: nowrap;*/
-    font-weight: bold;
-    line-height: 14px;
-}
-
-.moreTitles{
-    margin: 70px 0 0 0;
-}
-
-.mainBook cite:after {
-    content: '...';
-}
-
-/*--------------profile view--------*/
-#myLibraryView {
-    height:100%;
-    width: 100%;
-    margin: 0;
-}
-
-#profile a {
-  color: black;
-  font-family: serif;
-}
-
-.unmanagedMatches:hover {
-  cursor: pointer;
-}
-
-.pcol {
-    display: inline-block;
-    min-height: 350px;
-    height: auto;
-    width: 49%;
-    min-width: 300px;
-    vertical-align: top;
-    margin: 5px;
-    padding: 10px;
-    padding-top: 0px;
-    text-align: center;
-}
-
-.pcol:nth-child(1){
-    background-color: #a1978e;
-    border-radius: 0 20px 20px 0;
-    margin-left: -20px;
-}
-
-.books {
-    width: 100%;
-    display: inline-block;
-}
-
-.books img{
-    height: 120px;
-}
-
-.bookList{
-    display: inline-block;
-    margin: 10px 0 30px 0;
-    padding: 10px;
-    vertical-align: top;
-    horizontal-align: middle;
     height: 200px;
     position: relative;
 }
