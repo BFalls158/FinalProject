@@ -128,6 +128,10 @@ button {
   margin-right: 8px;
   display: block;
 }
+.col-sm-6 {
+     width: inherit;
+     float: right;
+}
 
 .input:focus {
   outline: none;
