@@ -169,7 +169,12 @@ app.get('/db/signup/:username', function (req, res) {
 	});
 });
 
-
+// Retrieve popular books
+app.get('/db/popularBooks', function(req, res) {
+    pool.query("SELECT title, author, thumbnailurl, count(title) FROM watchlist GROUP BY title, author, thumbnailurl ORDER BY count DESC LIMIT 10").then(function(result) {
+        res.send(result.rows);
+    });
+})
 
 /*
 This call sends an email to one recipient, using a validated sender address
@@ -185,11 +190,11 @@ function handleError (err) {
 function sendEmail (user1, user2) {
 	email = {};
 	email['FromName'] = 'Book Buddies';
-	email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com	';
+	email['FromEmail'] = 'Book.Buddies.Exchange.App@gmail.com';
 	email['Subject'] = user1.name + ' has requested a trade!';
 	email['Recipients'] = [{Email: user2.email}];
-	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange their book '
-	+ user1.title + ' for your book called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
+	email['Text-Part'] = 'Hello, ' + user2.name + '. ' + user1.name + ' has proposed a trade with you. They would like to exchange their book(s) '
+	+ user1.title + ' for your book(s) called ' + user2.title + '. Please contact this user at ' + user1.email + ' if you wish to trade.';
 
     mailjet.post('send')
     	.request(email)
