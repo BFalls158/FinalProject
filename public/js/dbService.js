@@ -3,7 +3,8 @@ angular.module("BookBuddiesMod")
 
       var matches = [];
       var tradeUser;
-      var isLoggedIn = false;
+      var selectedMatch;
+      var isLoggedIn = true;
 
       this.setStatus = function(status) {
         isLoggedIn = status;
@@ -15,15 +16,20 @@ angular.module("BookBuddiesMod")
 
       //Sets the dummy user
       this.setCurrentUser = function(user) {
-        return 'BFalls';
+        return 'ENelson';
       }
 
-      this.setTradeUser = function(user) {
+      this.setTradeUser = function(user, match) {
         tradeUser = user;
+        selectedMatch = match;
       }
 
       this.getTradeUser = function() {
         return tradeUser;
+      }
+
+      this.getSelectedMatch = function() {
+        return selectedMatch;
       }
 
       //this retrieves the library of every user
@@ -158,5 +164,14 @@ angular.module("BookBuddiesMod")
           console.log(response.data);
           return response.data;
         });
+      }
+
+      this.popularBooks = function() {
+        return $http({
+          method: 'GET',
+          url: '/db/popularBooks',
+        }).then(function(response) {
+          return response.data;
+        })
       }
 });

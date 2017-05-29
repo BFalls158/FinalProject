@@ -3,10 +3,6 @@ angular.module("BookBuddiesMod")
 
     	$scope.status = dbService.getStatus();
 
-    	if($scope.status) {
-    		$location.path('/home');
-    	}
-
     	$scope.userAvailable = true;
 
     	// if ($scope.status) {
