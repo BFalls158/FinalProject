@@ -6,7 +6,7 @@
 
     .header{
         width: 100%;
-        height: 250px;
+        height: 240px;
         display: block;
         position: relative;
     }
@@ -20,17 +20,8 @@
 
     .appTitle{
         margin: 10px 0 0 0;
-    }
-
-    #profileLink{
-      float: top;
-      position: static;
-    }
-
-    #profileLink p {
-      position: static;
-      color: #51A754;
-      font-size: 120%;
+        border: none;
+        background-color: transparent;
     }
 
     .layer {
@@ -45,6 +36,7 @@
         padding: 0;
         background-color: transparent;
         border: none;
+        height: 30px;
     }
 
     .searchForm{
@@ -188,14 +180,28 @@
 
     /*----------------search results-----------------*/
 
+    .column1 {
+      margin-top: 5px;
+      float: none;
+    }
+
     .column2 {
         text-align: center;
         width: auto;
-        display: block;
-    }
+        overflow: scroll;
+        display: flex;
+        overflow: auto;
+        border: none;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        vertical-align: super;
+        float: none;
+      }
 
-    .mobileTitle{
-        display: block;
-    }
+      .column2::-webkit-scrollbar {
+         display: none;
+         max-height: 200;
+      }
+
 
 }
