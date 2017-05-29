@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance){
+    .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance, $uibModal){
 
         $scope.status = dbService.getStatus();
 
@@ -81,8 +81,22 @@ angular.module("BookBuddiesMod")
         }
 
         $scope.ok = function() {
+          //opens confirmation modal
+          $scope.confirmTrade = function(size) {
+              var uibmodalInstance = $uibModal.open({
+                  animation: $scope.animationsEnabled,
+                  templateUrl: 'views/confirmation.html',
+                  controller: 'tradeController'
+              })
+          }
             $uibModalInstance.close();
         }
+        //cancel button function
+        $scope.cancel = function() {
+            $uibModalInstance.dismiss('cancel');
+        }
+
+
 
     	$scope.sendEmail = function(user1, user2) {
             emailService.sendEmail(user1, user2).then(function() {
