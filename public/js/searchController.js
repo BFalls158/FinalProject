@@ -3,10 +3,6 @@ angular.module("BookBuddiesMod")
 
     $scope.status = dbService.getStatus();
 
-    // if (!$scope.status) {
-    //   $location.path('/home');
-    // }
-
     $scope.user = dbService.setCurrentUser();
 
  		$scope.list = [];
@@ -32,7 +28,7 @@ angular.module("BookBuddiesMod")
                 {
                     author: book.volumeInfo.authors[0],
                     thumbnail: book.volumeInfo.imageLinks.thumbnail,
-                    title: book.volumeInfo.title, 
+                    title: book.volumeInfo.title,
                     description: book.volumeInfo.description});
                 }
               )
@@ -48,6 +44,7 @@ angular.module("BookBuddiesMod")
         		thumbnailurl: book.thumbnail
         	}
         	dbService.addToLibrary(entry);
+          alert("Book Successfully Added to Library");
         }
 
         $scope.addToWatchlist = function (book) {
@@ -59,6 +56,8 @@ angular.module("BookBuddiesMod")
         		thumbnailurl: book.thumbnail
         	}
         	dbService.addToWatchlist(entry);
+          alert("Book Successfully Added to Watchlist");
+
         }
 
     });

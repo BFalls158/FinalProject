@@ -3,10 +3,6 @@ angular.module("BookBuddiesMod")
 
         $scope.status = dbService.getStatus();
 
-        if (!$scope.status) {
-            $location.path('/home');
-        }
-
         $scope.user = dbService.setCurrentUser();
 
         $scope.tradeUser = dbService.getTradeUser();
@@ -42,37 +38,45 @@ angular.module("BookBuddiesMod")
             $scope.tradeUserLibrary.splice(index, 1);
         }
 
+        //Call DB to get user's library
         dbService.getLibrary($scope.user).then(function(response) {
             $scope.userLibrary = response;
         });
-
+        //call DB to get other user's library
         dbService.getLibrary($scope.tradeUser).then(function(response) {
             $scope.tradeUserLibrary = response;
+            var match = dbService.getSelectedMatch();
+            $scope.tradeUserLibrary.forEach(function(curr) {
+                if (curr.title === match) {
+                    $scope.addToTradeUserTrade(curr);
+                }
+            })
         });
-
-
+        //moves a book back to it's user's library
         $scope.deleteFromUserTrade = function(obj) {
             var index = $scope.userTrade.indexOf(obj);
             $scope.userLibrary.push($scope.userTrade[index]);
             $scope.userTrade.splice(index, 1);
         }
-
+        //moves a book back to it's user's library
         $scope.deleteFromTradeUserTrade = function(obj) {
             var index = $scope.tradeUserTrade.indexOf(obj);
             $scope.tradeUserLibrary.push($scope.tradeUserTrade[index]);
             $scope.tradeUserTrade.splice(index, 1);
         }
-
+        //Propose trade button function to send email
         $scope.proposeTrade =  function() {
+            var title1 = concatArr($scope.userTrade);
+            var title2 = concatArr($scope.tradeUserTrade);
         	var user1 = {
         		name: userInfo.username,
         		email: userInfo.email,
-        		title: $scope.userTrade[0].title
+        		title: title1
         	}
         	var user2 = {
         		name: tradeUserInfo.username,
         		email: tradeUserInfo.email,
-        		title: $scope.tradeUserTrade[0].title
+        		title: title2
         	}
 
             $scope.sendEmail(user1, user2);
@@ -102,6 +106,14 @@ angular.module("BookBuddiesMod")
             emailService.sendEmail(user1, user2).then(function() {
     		console.log('Success'); //user message here
     	   });
+        }
+
+       function concatArr(arr) {
+            var newArr = [];
+            arr.forEach(function(curr) {
+                newArr.push(curr.title);
+            })
+            return newArr.join(', ');
         }
 
     });

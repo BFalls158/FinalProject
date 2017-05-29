@@ -1,12 +1,14 @@
 
   <h3 id="searchTitle">Search Results</h3>
-  <div id="searchResults" ng-repeat="book in list">
+  <div id="searchResults" ng-repeat="book in list" ng-mouseover="addBook = 'show'" ng-mouseout="addBook = 'none'">
     <img ng-src="{{ book.thumbnail }}" class="column1">
     <div class="column2">
-        <cite><span class="mobileTitle">"{{ book.title }}</span> by </cite><p><span class="mobileAuthor">"{{ book.author }}</span><br>
-      <span class="mobileDescription">{{ book.description }}</span></p></div>
-    <div class="column3"><button type="button" ng-click="addToLibrary(book)">Add to Library</button>
+        <p class="mobileTitle"><cite>"{{ book.title }}"</cite></p>
+        <p class="mobileAuthor">by {{ book.author }}</p>
+        <p class="mobileDescription">{{ book.description }}</p>
+    </div>
+    <div class="column3"><button type="button" ng-click="addToLibrary(book)" class="{{addBook}}">Add to Library</button>
   	<!--Add to watchlist --><br>
-    <button type="button" ng-click="addToWatchlist(book)">Add to Watchlist</button></div>
+    <button type="button" ng-click="addToWatchlist(book)" class="{{addBook}}">Add to Watchlist</button></div>
     <!--Link to module with list of users offering book, possible stretch goal -->
   </div>
