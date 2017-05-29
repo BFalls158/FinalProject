@@ -193,7 +193,7 @@ button:focus {
   vertical-align: top;
   border: 2px solid lightgrey;
   background-image: url("images/books.png");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
