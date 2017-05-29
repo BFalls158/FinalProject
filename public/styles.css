@@ -7,10 +7,6 @@
     font-family: 'Oswald', sans-serif;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Amiri', serif;
-}
-
 body {
   background-color: #d3d7d2;
 }
@@ -18,6 +14,10 @@ body {
 h2, h3, h4, p, cite, span {
   margin-top: 0px;
   cursor: default;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Amiri', serif;
 }
 
 .header {
@@ -46,9 +46,9 @@ h2, h3, h4, p, cite, span {
   text-shadow: 5px 5px 30px rgb(46, 40, 46);
   background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
-  padding: 10px 10px 10px ;
+  padding: 10px 10px 20px ;
   border-radius: 10px 10px 0 0;
-  border: solid white 1px;
+  border: solid white 2px;
 }
 
 .b1{
@@ -75,6 +75,8 @@ h2, h3, h4, p, cite, span {
 #profileLink a {
   color: rgb(105,105,105);
 }
+
+
 
 .bookTitle{
     font-size: 16px;
@@ -131,27 +133,10 @@ button {
   padding: 2px 7px;
 }
 
-button:focus {
-  outline: none;
-}
-
 .input {
   border-radius: 10px;
   padding-left: 10px;
   margin-right: 8px;
-}
-
-* {
-  font-family: 'Oswald', sans-serif;
-}
-
-body {
-  background-color: #d3d7d2;
-}
-
-h2, h3, h4, p, cite, span {
-  margin-top: 0px;
-  cursor: default;
 }
 
 .header {
@@ -173,37 +158,18 @@ h2, h3, h4, p, cite, span {
   text-decoration: none;
 }
 
-.appTitle {
-  float: left;
-  display: inline;
-  margin-top: 55px;
-  margin-left: 30px;
-  text-shadow: 5px 5px 30px rgba(56, 40, 56, 0.47);;
-}
-
 .b1{
   display: inline;
   font-family: baduy;
-  font-size: 90px;
-  color: rgb(105,105,105);
+  font-size: 120px;
+  color: #26bc2c;
 }
 
 .b2{
   display: inline;
   font-family: baduy;
-  font-size: 90px;
-  color: #51A754;
-}
-
-#profileLink p {
-  position: absolute;
-  top: 140px;
-  right: 8.5%;
-  color: #51A754;
-  font-size: 120%;
-}
-#profileLink a {
-  color: rgb(105,105,105);
+  font-size: 120px;
+  color: rgb(49, 45, 45);
 }
 
 /*----------------home page styling-----------------*/
@@ -214,9 +180,9 @@ h2, h3, h4, p, cite, span {
   background-color: #d3d7d2;
 }
 
-#home h2 {
-  color: #48a858;
-  font-weight: bold;
+#home h2:nth-child(1){
+    font-size: 40px !important;
+    margin: 10px 0 0 0;
 }
 
 .unmanagedMatches{
@@ -227,11 +193,12 @@ h2, h3, h4, p, cite, span {
   width: 100%;
   box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
   color: #e1ffe2;
+  z-index: 100;
 }
 
 #home h4 {
   width: 100%;
-  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);;
+  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
   font-size: 200%;
 }
 
@@ -362,6 +329,11 @@ h2, h3, h4, p, cite, span {
     margin: 0;
 }
 
+#profile h2{
+    margin: 10px 0 0 0;
+    font-size: 40px !important;
+}
+
 #profile a {
   color: black;
 }
@@ -387,6 +359,7 @@ h2, h3, h4, p, cite, span {
     background-color: #a1978e;
     border-radius: 0 20px 20px 0;
     margin-left: -20px;
+    box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 }
 
 .books {
