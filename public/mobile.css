@@ -6,7 +6,7 @@
 
     .header{
         width: 100%;
-        height: 250px;
+        height: 240px;
         display: block;
         position: relative;
     }
@@ -20,17 +20,8 @@
 
     .appTitle{
         margin: 10px 0 0 0;
-    }
-
-    #profileLink{
-      float: top;
-      position: static;
-    }
-
-    #profileLink p {
-      position: static;
-      color: #51A754;
-      font-size: 120%;
+        border: none;
+        background-color: transparent;
     }
 
     .layer {
@@ -45,6 +36,7 @@
         padding: 0;
         background-color: transparent;
         border: none;
+        height: 30px;
     }
 
     .searchForm{
@@ -131,23 +123,87 @@
 
     .pcol {
         width: 100%;
+        height: 230px;
+        min-height: 230px;
+        margin: 0;
+        padding: 8px 0px;
     }
 
     .pcol:nth-child(1){
         width: 100%;
         border-radius: 0;
+        padding-right: 0;
+        margin-right: 0;
+        margin: 0 auto;
     }
+
+    .books{
+      height: auto;
+      height: 180px;
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      border: none;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+    }
+
+     .books::-webkit-scrollbar {
+       display: none;
+     }
+
+     .books p {
+       font-size: 80%;
+       text-align: center;
+       width: 115px;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       vertical-align: middle;
+       margin: 0 auto;
+       padding-top: 3px;
+     }
+
+     .books cite {
+       font-style: normal;
+       font-weight: bold;
+     }
+
+     .bookList {
+       width: 100px;
+     }
+
+     .bookList img {
+       height: 100px;
+     }
+
 
     /*----------------search results-----------------*/
 
-    .column2 {
+    #searchResults.column1 {
+      margin-top: 5px;
+      clear: right;
+    }
+
+    #searchResults.column2 {
         text-align: center;
         width: auto;
         display: block;
-    }
+        overflow: scroll;
+        display: flex;
+        overflow: auto;
+        border: none;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        vertical-align: super;
+        margin-top: 0px;
+        padding-top: 0px;
+      }
 
-    .mobileTitle{
-        display: block;
-    }
+      #searchResults.column2::-webkit-scrollbar {
+         display: none;
+         max-height: 200;
+      }
+
 
 }

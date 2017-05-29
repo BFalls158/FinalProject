@@ -3,6 +3,10 @@
     src: url(baduy/BADUY.otf);
 }
 
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
 body {
   background-color: #d3d7d2;
 }
@@ -10,6 +14,18 @@ body {
 h2, h3, h4, p, cite, span {
   margin-top: 0px;
   cursor: default;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Amiri', serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
 }
 
 .header {
@@ -34,33 +50,32 @@ h2, h3, h4, p, cite, span {
 .appTitle {
   float: left;
   display: inline;
-  margin-top: 55px;
-  margin-left: 30px;
+  margin: 30px 0 0 30px;
+  text-shadow: 5px 5px 30px rgb(46, 40, 46);
+  background-color: rgba(255, 255, 255, 0.3);
+  /*position: absolute;*/
+  padding: 10px 10px 20px ;
+  border-radius: 10px 10px 0 0;
+  border: solid white 2px;
 }
 
 .b1{
   display: inline;
   font-family: baduy;
-  font-size: 90px;
-  color: 	rgb(105,105,105);
+  font-size: 120px;
+  color: #26bc2c;
 }
 
 .b2{
   display: inline;
   font-family: baduy;
-  font-size: 90px;
-  color: #51A754;
+  font-size: 120px;
+  color: rgb(49, 45, 45);
 }
 
-#profileLink p {
-  position: absolute;
-  top: 140px;
-  right: 8.5%;
-  color: #51A754;
-  font-size: 120%;
-}
-#profileLink a {
-  color: rgb(105,105,105);
+.bookTitle{
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*---------------------login---------*/
@@ -88,7 +103,6 @@ h2, h3, h4, p, cite, span {
     margin: 30px; 0 0 0;
 }
 
-
 /*---------------------home screen search---------*/
 .search {
   float: right;
@@ -112,24 +126,10 @@ button {
   padding: 2px 7px;
 }
 
-button:focus {
-  outline: none;
-}
-
 .input {
   border-radius: 10px;
   padding-left: 10px;
   margin-right: 8px;
-}
-
-.input:focus {
-  outline: none;
-}
-
- .searchForm label {
-  margin-right: 7px;
-  margin-left: 4px;
-  margin-bottom: 5px;
 }
 
 /*----------------home page styling-----------------*/
@@ -140,25 +140,25 @@ button:focus {
   background-color: #d3d7d2;
 }
 
-#home h2 {
-  color: #48a858;
-  font-family: serif;
-  font-weight: bold;
+#home h2:nth-child(1){
+    font-size: 40px !important;
+    margin: 10px 0 0 0;
 }
 
 .unmanagedMatches{
-  margin: 0px;
+  margin: 0;
   padding: 10px;
   text-align: center;
-  background-color: #bb9995;
-  font-family: serif;
-  font-weight: bold;
+  background-color: #342e2e;
   width: 100%;
+  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
+  color: #e1ffe2;
+  z-index: 100;
 }
 
 #home h4 {
-  font-family: serif;
-  font-weight: bold;
+  width: 100%;
+  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
   font-size: 200%;
 }
 
@@ -182,9 +182,13 @@ button:focus {
   vertical-align: top;
   border: 2px solid lightgrey;
   background-image: url("images/books.png");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#home .column2 .bookTitle{
+    color: #51A754;
 }
 
 #mainBooks {
@@ -197,12 +201,11 @@ button:focus {
   padding: 10px;
   margin: 20px;
   border-radius: 10px;
+  transition: all .2s ease-in-out;
 }
 
 #matches h3 {
   text-align: center;
-  font-family: serif;
-  font-weight: bold;
   width: 100%;
   border-bottom: 2px solid grey;
   padding-bottom: 3px;
@@ -212,6 +215,7 @@ button:focus {
   cursor: pointer;
   padding-left: 5px;
   margin: 8px;
+  border-bottom: 1px dotted black;
 }
 
 #matches p:hover {
@@ -219,10 +223,15 @@ button:focus {
   font-weight: bold;
 }
 
+
+.highlight {
+  background-color: white !important;
+  /*transform: scale(1.1);*/
+}
+
 #mainList {
   width: 100%;
   height: 85px;
-  border: 1px solid lightgrey;
 }
 
 #mainBack {
@@ -233,6 +242,7 @@ button:focus {
   border-radius: 15px;
   margin-top: 0px;
   z-index: 5;
+  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 }
 
 .mainBook {
@@ -245,14 +255,13 @@ button:focus {
 
 .mainBook img{
     height: 180px;
-    border: 5px solid transparent;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
+    transition: all .2s ease-in-out;
+    box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 }
 
-.mainBook:hover{
-    background-color: white;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+.mainBook img:hover{
+    transform: scale(1.1);
 }
 
 .mainTitle{
@@ -260,10 +269,8 @@ button:focus {
     width: 90px;
     text-align: center;
     margin: 0 auto;
-    height: 42px;
-/*    text-overflow: ellipsis;*/
+    height: 45px;
     overflow: hidden;
-/*    white-space: nowrap;*/
     font-weight: bold;
     line-height: 14px;
 }
@@ -283,9 +290,13 @@ button:focus {
     margin: 0;
 }
 
+#profile h2{
+    margin: 10px 0 0 0;
+    font-size: 40px !important;
+}
+
 #profile a {
   color: black;
-  font-family: serif;
 }
 
 .unmanagedMatches:hover {
@@ -309,6 +320,7 @@ button:focus {
     background-color: #a1978e;
     border-radius: 0 20px 20px 0;
     margin-left: -20px;
+    box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 }
 
 .books {
@@ -325,7 +337,6 @@ button:focus {
     margin: 10px 0 30px 0;
     padding: 10px;
     vertical-align: top;
-    horizontal-align: middle;
     height: 200px;
     position: relative;
 }
@@ -357,35 +368,49 @@ button:focus {
 
 #searchTitle{
   margin: 20px 0 0 20px;
-  font-size: 130%;
+  font-size: 150%;
+}
+
+.mobileTitle {
+  font-size: 120%;
+  margin-top: 5px;
 }
 
 #searchResults {
   padding-left: 20px;
+  position: relative;
 }
 
-.column1 {
+#searchResults .column1 {
   margin: 10px;
   margin-right: 5px;
   display: inline-block;
   vertical-align: top;
 }
 
-.column2 {
+#searchResults .column2 {
   display: inline-block;
-  width: 800px;
+  width: auto;
+  max-width: 1100px;
   padding-top: 15px;
+  overflow: hidden;
 }
 
-.column3 {
+#searchResults .column3 {
   display: inline-block;
-  vertical-align: top;
-  margin-top: 30px;
-
+  /*vertical-align: top;*/
+  position: absolute;
+  left: 20px;
+  top: 30%;
 }
 
 #searchResults button {
   width: 120px;
   padding: 3px;
-  margin: 10px;
+  margin: 0px;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible !important;
 }

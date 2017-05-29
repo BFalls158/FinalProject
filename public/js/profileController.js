@@ -1,5 +1,11 @@
 angular.module("BookBuddiesMod")
-    .controller("profileController", function($scope, apiService, dbService){
+    .controller("profileController", function($scope, apiService, dbService, $location){
+
+        $scope.status = dbService.getStatus();
+
+        if(!$scope.status) {
+            $location.path('/login');
+        }
 
     	$scope.user = dbService.setCurrentUser();
 
@@ -23,7 +29,6 @@ angular.module("BookBuddiesMod")
 			dbService.deleteWatchlist(id).then(function(){
                 $scope.myWatchlist = [];
                 $scope.getWatchlist();
-
 			});
     	}
 
@@ -34,6 +39,12 @@ angular.module("BookBuddiesMod")
     		});
     	}
 
-        $scope.getLibrary();
-        $scope.getWatchlist();
+      $scope.getLibrary();
+      $scope.getWatchlist();
+
+      dbService.setMatches($scope.user).then(function(response) {
+          $scope.matches = dbService.getMatches();
+          $scope.numberOfMatches = $scope.matches.length;
+      });
+
     });
