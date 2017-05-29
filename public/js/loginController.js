@@ -18,7 +18,6 @@ angular.module("BookBuddiesMod")
     	$scope.logIn = function(user) {
     		console.log('function is clicking');
     		dbService.login(user).then(function(response) {
-    			console.log(response);
     			if(response === "Success"){
     				dbService.setCurrentUser(user.username);
 					$scope.loginError = false;
