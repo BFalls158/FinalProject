@@ -27,4 +27,8 @@ angular.module("BookBuddiesMod")
 	    		}
 	    	})
 	    }
+      //cancel button function
+    $scope.cancel = function() {
+        $uibModalInstance.dismiss('cancel');
+    }
     });
