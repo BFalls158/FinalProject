@@ -141,14 +141,69 @@ button:focus {
   margin-right: 8px;
 }
 
-.input:focus {
-  outline: none;
+* {
+  font-family: 'Oswald', sans-serif;
 }
 
- .searchForm label {
-  margin-right: 7px;
-  margin-left: 4px;
-  margin-bottom: 5px;
+body {
+  background-color: #d3d7d2;
+}
+
+h2, h3, h4, p, cite, span {
+  margin-top: 0px;
+  cursor: default;
+}
+
+.header {
+  background-image: url("images/bookbg.jpg");
+  background-size: cover cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+}
+
+.header a:hover {
+  text-decoration: none;
+  cursor: pointer important!;
+}
+
+.header a:focus {
+  text-decoration: none;
+}
+
+.appTitle {
+  float: left;
+  display: inline;
+  margin-top: 55px;
+  margin-left: 30px;
+  text-shadow: 5px 5px 30px rgba(56, 40, 56, 0.47);;
+}
+
+.b1{
+  display: inline;
+  font-family: baduy;
+  font-size: 90px;
+  color: rgb(105,105,105);
+}
+
+.b2{
+  display: inline;
+  font-family: baduy;
+  font-size: 90px;
+  color: #51A754;
+}
+
+#profileLink p {
+  position: absolute;
+  top: 140px;
+  right: 8.5%;
+  color: #51A754;
+  font-size: 120%;
+}
+#profileLink a {
+  color: rgb(105,105,105);
 }
 
 /*----------------home page styling-----------------*/
@@ -157,6 +212,11 @@ button:focus {
   width: 100%;
   margin: 0px;
   background-color: #d3d7d2;
+}
+
+#home h2 {
+  color: #48a858;
+  font-weight: bold;
 }
 
 .unmanagedMatches{
@@ -170,6 +230,8 @@ button:focus {
 }
 
 #home h4 {
+  width: 100%;
+  box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);;
   font-size: 200%;
 }
 
@@ -212,6 +274,7 @@ button:focus {
   padding: 10px;
   margin: 20px;
   border-radius: 10px;
+  transition: all .2s ease-in-out;
 }
 
 #matches h3 {
@@ -233,10 +296,14 @@ button:focus {
   font-weight: bold;
 }
 
+
+.highlight {
+  transform: scale(1.1);
+}
+
 #mainList {
   width: 100%;
   height: 85px;
-  border: 1px solid lightgrey;
 }
 
 #mainBack {
@@ -261,14 +328,12 @@ button:focus {
 .mainBook img{
     height: 180px;
     margin-bottom: 3px;
+    transition: all .2s ease-in-out;
     box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
-;
 }
 
-.mainBook:hover{
-    background-color: white;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+.mainBook img:hover{
+    transform: scale(1.1);
 }
 
 .mainTitle{
@@ -453,3 +518,5 @@ button:focus {
   margin-top: 5px;
   float: bottom;
 }
+=======
+>>>>>>> jennifer
