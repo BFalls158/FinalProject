@@ -35,6 +35,4 @@ angular.module("BookBuddiesMod")
     dbService.popularBooks().then(function(response) {
         $scope.popularBooks = response;
     });
-
-
   });
