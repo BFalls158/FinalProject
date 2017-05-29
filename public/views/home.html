@@ -1,5 +1,5 @@
 <div id="home">
-    <h3 class="unmanagedMatches">Welcome back {{user}}, you have {{numberOfMatches}} unmanaged matches</h3>
+    <h3 class="unmanagedMatches" ng-mouseover="mouseClass = 'highlight'" ng-mouseout="mouseClass = 'none'">Welcome back {{user}}, you have {{numberOfMatches}} unmanaged matches</h3>
     <!-- Column left -->
     <div id="main" class="column1">
       <h4>Popular Books</h4>
@@ -13,7 +13,7 @@
 
 <!--Column right-->
     <div id="mainDirectives" class="column2">
-        <div id="matches">
+        <div id="matches" class="{{mouseClass}}">
         <h3>Match Library</h3>
         <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>

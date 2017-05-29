@@ -62,7 +62,4 @@ angular.module("BookBuddiesMod")
         $scope.numberOfMatches = $scope.matches.length;
     });
 
-
-
-
   });

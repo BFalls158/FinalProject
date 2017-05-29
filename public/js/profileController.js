@@ -23,7 +23,6 @@ angular.module("BookBuddiesMod")
 			dbService.deleteWatchlist(id).then(function(){
                 $scope.myWatchlist = [];
                 $scope.getWatchlist();
-
 			});
     	}
 
@@ -34,6 +33,12 @@ angular.module("BookBuddiesMod")
     		});
     	}
 
-        $scope.getLibrary();
-        $scope.getWatchlist();
+      $scope.getLibrary();
+      $scope.getWatchlist();
+
+      dbService.setMatches($scope.user).then(function(response) {
+          $scope.matches = dbService.getMatches();
+          $scope.numberOfMatches = $scope.matches.length;
+      });
+
     });

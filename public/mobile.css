@@ -131,12 +131,60 @@
 
     .pcol {
         width: 100%;
+        height: 230px;
+        min-height: 230px;
+        margin: 0;
+        padding: 8px 0px;
     }
 
     .pcol:nth-child(1){
         width: 100%;
         border-radius: 0;
+        padding-right: 0;
+        margin-right: 0;
+        margin: 0 auto;
     }
+
+    .books{
+      height: auto;
+      height: 180px;
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      border: none;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: none;
+    }
+
+     .books::-webkit-scrollbar {
+       display: none;
+     }
+
+     .books p {
+       font-size: 80%;
+       text-align: center;
+       width: 115px;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap;
+       vertical-align: middle;
+       margin: 0 auto;
+       padding-top: 3px;
+     }
+
+     .books cite {
+       font-style: normal;
+       font-weight: bold;
+     }
+
+     .bookList {
+       width: 100px;
+     }
+
+     .bookList img {
+       height: 100px;
+     }
+
 
     /*----------------search results-----------------*/
 
