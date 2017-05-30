@@ -46,6 +46,13 @@
         text-align: center;
     }
 
+    .right-inner-addon i {
+      position: absolute;
+      right: 0px;
+      top: 20px;
+      padding: 10px 12px;
+      pointer-events: none;
+    }
 
     /*----------------home page styling-----------------*/
 
