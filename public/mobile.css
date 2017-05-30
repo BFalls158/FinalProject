@@ -33,7 +33,7 @@
       width: 100%;
     }
 
-    .big{
+    .rightSide{
       float: none;
     }
 
@@ -124,6 +124,8 @@
 
     #matches {
       margin-top: 20px;
+      display: inline-block;
+      width: 80%;
     }
 
     /*----------------profile view-----------------*/
