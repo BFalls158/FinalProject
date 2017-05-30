@@ -72,14 +72,16 @@ button:focus {
   border-right: solid white 3px;
 }
 
+/*
 .b1{
   display: inline;
   font-family: baduy;
   font-size: 120px;
-  color: #26bc2c;
+  color: #9cd366;
 }
+*/
 
-.b2{
+.b1, .b2{
   display: inline;
   font-family: baduy;
   font-size: 120px;
