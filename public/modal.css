@@ -11,10 +11,8 @@
   border: 2px solid #f2de72;
 }
 
-
 #tradeForm button:hover {
   background-color: #f2de72;
-
 }
 
 #tradeForm{
@@ -147,7 +145,7 @@ h3 {
 #create:hover {
   background-color: #f2de72;
  }
- 
+
 .cancel {
   display: inline-block;
   margin-left: 0 auto;
@@ -157,7 +155,7 @@ h3 {
   background-color: white;
   color: black;
  }
- 
+
 .cancel:hover {
    background-color: #f2de72;
 }
@@ -188,7 +186,7 @@ h3 {
 
 .closeButt button:hover {
   background-color: #f2de72;
-} 
+}
 
 .modal-content {
   background-color: transparent;
