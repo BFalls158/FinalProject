@@ -5,8 +5,8 @@
       <h2>Popular Books</h2>
       <div id="mainBooks">
         <div id="mainBack"></div>
-        <div class="mainBook" ng-repeat="book in popularBooks" ng-click="setSearch(book.title)">
-            <img ng-src="{{ book.thumbnail }}"><cite class="mainTitle"><span class="bookTitle">{{ book.title }}</span></cite>
+        <div class="mainBook" ng-repeat="book in popularBooks | limitTo: 5" ng-click="setSearch(book.title)">
+          <img ng-src="{{ book.thumbnailurl }}"><cite class="mainTitle">{{ book.title }}</cite>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
     <div id="mainDirectives" class="column2">
         <div id="matches" class="{{mouseClass}}">
         <h3>Match Library</h3>
-        <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username)">User: {{ match.username }} <br> Title: <span class="bookTitle">{{ match.title }}</span></p>    <!--Clicking on the username match will direct to the matchProfile-->
+        <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username, match.title)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
       </div>
     </div>
 </div>
