@@ -32,6 +32,10 @@ button:focus {
   outline: none;
 }
 
+.glyphicon{
+    text-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
+}
+
 .glyphicon-plus, .glyphicon-minus{
     color: #26bc2c;
     margin-right: 8px;
@@ -47,7 +51,7 @@ button:focus {
 
 #searchResults .glyphicon:hover {
     display: block;
-}
+    }
 
 .glyphicon-heart{
     color: red;
@@ -495,6 +499,7 @@ button {
 }
 
 #searchResults .column1 {
+  min-height: 180px;
   margin: 10px;
   margin-right: 5px;
   display: inline-block;
@@ -513,8 +518,8 @@ button {
   display: inline-block;
   /*vertical-align: top;*/
   position: absolute;
-  left: 30px;
-  top: 70px;
+  left: 40px;
+  top: 40px;
 }
 
 #searchResults button {
@@ -527,5 +532,3 @@ button {
 .show {
   visibility: visible !important;
 }
-
-
