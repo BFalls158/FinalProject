@@ -6,13 +6,6 @@
 
   margin: 0 auto;
   margin-top: 5px;
-  border-radius: 2px;
-  background-color: white;
-  border: 2px solid #f2de72;
-}
-
-#tradeForm button:hover {
-  background-color: #f2de72;
 }
 
 #tradeForm{
@@ -22,8 +15,7 @@
   width: 800px;
   left: 50%;
   margin-left: -400px;
-  background-color: #363030;
-  border: 1px solid #f2de72;
+  background-color: #342e2e;
 }
 
 #tradeForm .col1, #tradeForm .col2 {
@@ -113,11 +105,8 @@ h3 {
   /*width: 800px;*/
   left: 50%;
   /*margin-left: -400px;*/
-  background-color: #363030;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  border: 1px solid #f2de72;
-  color: white;
-  font-size: 18px;
 
 }
 
@@ -135,31 +124,10 @@ h3 {
 }
 
 #create {
-  display: inline-block;
+  display: block;
   margin-left: 0 auto;
   margin-top: 5px;
-  border-radius: 2px;
-  border: 2px solid #f2de72;
-  background-color: white;
-  color: black;
-}
-
-#create:hover {
-  background-color: #f2de72;
-}
-
-.cancel {
-  display: inline-block;
-  margin-left: 0 auto;
-  margin-top: 5px;
-  border-radius: 2px;
-  border: 2px solid #f2de72;
-  background-color: white;
-  color: black;
-}
-
-.cancel:hover {
-  background-color: #f2de72;
+  float: bottom;
 }
 
 
@@ -169,25 +137,13 @@ h3 {
   width: 250px;
   height: 100px;
   margin: auto;
-  background-color: #363030;
+  background-color: white;
   border-radius: 5px;
-  border: 1px solid #f2de72;
-  color: white;
-  font-size: 18px;
 }
 
 .closeButt {
   display: block;
-  margin: 0 auto;
-  margin-top: 5px;
-  border-radius: 2px;
-  border: 2px solid #f2de72;
-  background-color: white;
-  color: black;
-}
-
-.closeButt button:hover {
-  background-color: #f2de72;
+  margin: auto;
 }
 
 .modal-content {

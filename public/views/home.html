@@ -6,7 +6,7 @@
       <div id="mainBooks">
         <div id="mainBack"></div>
         <div class="mainBook" ng-repeat="book in popularBooks | limitTo: 5" ng-click="setSearch(book.title)">
-          <img ng-src="{{ book.thumbnailurl }}"><cite class="mainTitle">{{ book.title | limitTo: 50 }}</cite>
+          <img ng-src="{{ book.thumbnailurl }}"><cite class="mainTitle">{{ book.title }}</cite>
         </div>
       </div>
     </div>
