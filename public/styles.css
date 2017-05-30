@@ -238,6 +238,7 @@ button {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 5px;
 }
 
 #home .column2 .bookTitle{
@@ -253,7 +254,8 @@ button {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  height: 350px;
   transition: all .2s ease-in-out;
 }
 
