@@ -129,7 +129,9 @@ h3 {
 }
 
 .signupInput {
-  padding-left: 25%;
+  /*padding-left: 25%;*/
+  color: black;
+  text-align: left;
 }
 
 #create {
@@ -198,5 +200,3 @@ h3 {
   padding-top: 20px;
   text-align: center;
 }
-
-
