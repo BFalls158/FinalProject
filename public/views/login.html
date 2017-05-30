@@ -1,4 +1,4 @@
-<div>
+<div id="login">
     <div class="loginCol1">
         <div class="loginP1">
             <h2>Do you like Books?</h2>
@@ -21,16 +21,23 @@
             </p>  
         </div>    
         <p>
-
         </p>
     </div>
     <div class="loginCol2">
       <form class="loginForm" name="loginForm" ng-submit="logIn(logInUser)">
-          <label>Username<input type="text" name="username" value="Username" ng-model="logInUser.username"></label>
-          <label>Password<input type="password" name="password" value="Password" ng-model="logInUser.password"></label>
+          <h2>Login</h2>
+          <label><input type="text" name="username" value="Username" placeholder="Username" ng-model="logInUser.username"></label>
+          <br>
+          <label><input type="password" name="password" value="Password" placeholder="Password" ng-model="logInUser.password"></label>
+          <br>
           <button type="submit" class="loginButton">Log in</button>
           <p ng-if="loginError">Incorrect username and/or password</p>
       </form>
+        <p>
+            Forgot Password?<br>
+            Contact our <a>Dev Team.</a>
+        </p>
+      <br>
       <button type="button" ng-click="signupToggle('lg')">Sign Up</button>
 
     </div>
