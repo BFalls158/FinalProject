@@ -28,6 +28,11 @@ button:focus {
   outline: none;
 }
 
+.glyphicon-plus, .glyphicon-minus{
+    color: #26bc2c;
+    margin-right: 8px;
+}
+
 .header {
   background-image: url("images/bookbg.jpg");
   background-size: cover cover;
