@@ -7,7 +7,7 @@ angular.module("BookBuddiesMod")
             $location.path('/login');
         }
 
-        $scope.user = dbService.setCurrentUser();
+        $scope.user = dbService.getCurrentUser();
 
         $scope.tradeToggle = function(size, user, title) {
             $scope.setTradeUser(user, title);

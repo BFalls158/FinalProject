@@ -1,11 +1,23 @@
 angular.module("BookBuddiesMod")
     .controller("searchController", function($scope, $location, apiService, dbService, $uibModal){
 
-    $scope.status = dbService.getStatus();
+        $scope.status = dbService.getStatus();
 
-    $scope.user = dbService.setCurrentUser();
+        $scope.user = dbService.getCurrentUser();
+
+        $scope.library = [];
+
+        $scope.watchlist = [];
 
  		$scope.list = [];
+
+        dbService.getLibrary($scope.user).then(function(response) {
+            $scope.library = response;
+        });
+
+        dbService.getWatchlist($scope.user).then(function(response) {
+            $scope.watchlist = response;
+        });
 
         $scope.setSearch = function(search){
             apiService.setSearchedBooks(search)

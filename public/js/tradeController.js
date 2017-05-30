@@ -3,7 +3,7 @@ angular.module("BookBuddiesMod")
 
         $scope.status = dbService.getStatus();
 
-        $scope.user = dbService.setCurrentUser();
+        $scope.user = dbService.getCurrentUser();
 
         $scope.tradeUser = dbService.getTradeUser();
 

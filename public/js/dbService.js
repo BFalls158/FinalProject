@@ -4,7 +4,8 @@ angular.module("BookBuddiesMod")
       var matches = [];
       var tradeUser;
       var selectedMatch;
-      var isLoggedIn = true;
+      var isLoggedIn = false;
+      var currentUser;
 
       this.setStatus = function(status) {
         isLoggedIn = status;
@@ -15,8 +16,12 @@ angular.module("BookBuddiesMod")
       }
 
       //Sets the dummy user
-      this.setCurrentUser = function(user) {
-        return 'ENelson';
+      this.getCurrentUser = function() {
+        return currentUser;
+      }
+
+      this.setCurrentUser = function (user) {
+        currentUser = user;
       }
 
       this.setTradeUser = function(user, match) {
