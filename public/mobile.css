@@ -227,9 +227,6 @@
                   /* ------- modals --------- */
 
     #tradeForm{
-      text-align: center;
-      margin-top: 10px;
-      margin: 0 auto;
       width: 350px;
       left: 50%;
       margin-left: -175px;
@@ -238,13 +235,6 @@
     #tradeForm .col1, #tradeForm .col2 {
       width: 90%;
       height: auto;
-      border: 1px solid grey;
-      margin: 0 auto;
-      margin-top: 10px;
-      margin-left: 5px;
-      padding: 5px;
-      display: inline-block;
-      background-color: rgba(255, 255, 255, 0.7);
       overflow: auto;
     }
 
@@ -253,31 +243,18 @@
     }
 
     #tradeForm .col1{
-      margin-right: 0px;
+      margin-right: auto;
     }
-
-
 
     .toTrade {
       margin: 20px;
-      padding-left: 8%;
       height: auto;
       overflow: auto;
-      text-align: left;
-    }
-
-    h3 {
-      text-align: center;
     }
 
     .tradeBox{
-      border-top: 1px solid grey;
       height: auto;
-      padding-top: 10px;
       overflow: auto;
-      text-align: left;
-      margin: 20px;
-      padding-left: 8%;
     }
 
 }
