@@ -46,12 +46,15 @@
         text-align: center;
     }
 
+    .right-inner-addon {
+      width: 100%
+    }
+
     .right-inner-addon i {
       position: absolute;
-      right: 0px;
-      top: 20px;
-      padding: 10px 12px;
-      pointer-events: none;
+      right: 10px;
+      top: 22px;
+      z-index: 900;
     }
 
     /*----------------home page styling-----------------*/
@@ -196,30 +199,30 @@
 
     /*----------------search results-----------------*/
 
-    #searchResults.column1 {
-      margin-top: 5px;
-      clear: right;
+    #searchTitle {
+      margin-bottom: 10px;
     }
 
-    #searchResults.column2 {
-        text-align: center;
-        width: auto;
-        display: block;
-        overflow: scroll;
-        display: flex;
-        overflow: auto;
-        border: none;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: none;
-        vertical-align: super;
-        margin-top: 0px;
-        padding-top: 0px;
-      }
+    #searchResults .column1 {
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
 
-      #searchResults.column2::-webkit-scrollbar {
-         display: none;
-         max-height: 200;
-      }
+    #searchResults .column2 {
+        text-align: center;
+        width: 90%;
+        height: auto;
+        display: block;
+        overflow: hidden;
+        border-bottom: solid 2px silver;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    #searchResults .column3 {
+      left: 41.5%;
+      top:
+    }
 
 
 }

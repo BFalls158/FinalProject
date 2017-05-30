@@ -454,8 +454,8 @@ button {
   display: inline-block;
   /*vertical-align: top;*/
   position: absolute;
-  left: 20px;
-  top: 30%;
+  left: 30px;
+  top: 70px;
 }
 
 #searchResults button {

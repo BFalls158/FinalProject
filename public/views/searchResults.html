@@ -1,7 +1,9 @@
 
   <h3 id="searchTitle">Search Results</h3>
   <div id="searchResults" ng-repeat="book in list" ng-mouseover="addBook = 'show'" ng-mouseout="addBook = 'none'">
-    <img ng-src="{{ book.thumbnail }}" class="column1">
+    <div class="column1">
+      <img ng-src="{{ book.thumbnail }}">
+    </div>
     <div class="column2">
         <p class="mobileTitle"><cite>"{{ book.title }}"</cite></p>
         <p class="mobileAuthor">by {{ book.author }}</p>
