@@ -28,6 +28,11 @@ button:focus {
   outline: none;
 }
 
+.glyphicon-plus, .glyphicon-minus{
+    color: #26bc2c;
+    margin-right: 8px;
+}
+
 .header {
   background-image: url("images/bookbg.jpg");
   background-size: cover cover;
@@ -36,6 +41,13 @@ button:focus {
   width: 100%;
   height: 200px;
   background-size: cover;
+  overflow: hidden;
+}
+
+.header p {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
 }
 
 .header a:hover {
@@ -50,13 +62,14 @@ button:focus {
 .appTitle {
   float: left;
   display: inline;
-  margin: 30px 0 0 30px;
+  margin: 30px 0 0 20px;
   text-shadow: 5px 5px 30px rgb(46, 40, 46);
-  background-color: rgba(255, 255, 255, 0.3);
-  /*position: absolute;*/
-  padding: 10px 10px 20px ;
-  border-radius: 10px 10px 0 0;
-  border: solid white 2px;
+  background-color: rgba(255, 255, 255, 0.68);
+  padding: 20px 10px 10px ;
+  border-radius: 30px 30px 0 0;
+  border-top: solid white 6px;
+  border-left: solid white 3px;
+  border-right: solid white 3px;
 }
 
 .b1{
@@ -147,7 +160,7 @@ button {
   display: block;
 }
 
-.big {
+.rightSide {
      width: inherit;
      float: right;
 }
@@ -158,6 +171,7 @@ button {
 
 .right-inner-addon {
   position: relative;
+  float: left;
 }
 
 .right-inner-addon input {
@@ -220,7 +234,7 @@ button {
   display: inline-block;
   vertical-align: top;
   border: 2px solid lightgrey;
-  background-image: url("images/books.png");
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/3f/89/31/3f8931ccba1eea1787cd397bb535902d.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -369,6 +383,7 @@ button {
 
 .books img{
     height: 120px;
+    box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 }
 
 .bookList{

@@ -1,5 +1,7 @@
 /*-----------trade view------------*/
-
+.modal-header{
+  border: none;
+}
 #tradeForm button {
 
   margin: 0 auto;
@@ -13,7 +15,7 @@
   width: 800px;
   left: 50%;
   margin-left: -400px;
-  background-image: url('images/books.jpg');
+  background-color: #342e2e;
 }
 
 #tradeForm .col1, #tradeForm .col2 {
