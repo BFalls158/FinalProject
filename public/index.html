@@ -39,21 +39,20 @@
           <a href="#!/" alt="Home Page"><h1 class="b1">Book</h1> <h1 class="b2">Buddies</h1></a>
         </div>
         <div id="profileLink">
+            <div class="rightSide">
+            <div class="right-inner-addon searchDiv">
+              <p><a href="#!/profile"> View Your Library </a></p>
+              <p>or</p>
+              <p ng-click="logOut()"> Log Out</p>
 
-
-
-        <div class="rightSide">
-          <p><a href="#!/profile"> View Your Library</a></p>
-        <div class="right-inner-addon searchDiv">
-
-          <i class="icon-search"></i>
-            <form class="searchForm" ng-submit="setSearch(search)">
-                <input type="search" class="form-control input" placeholder="Search for Title/Author" ng-model="search">
-                <!-- <button type="submit" name="sr">Find Books</button> -->
-            </form>
+              <i class="icon-search"></i>
+                <form class="searchForm" ng-submit="setSearch(search)">
+                    <input type="search" class="form-control input" placeholder="Search for Title/Author" ng-model="search">
+                    <!--<button type="submit" name="sr">Find Books</button> -->
+                </form>
+              </div>
+            <br>
           </div>
-        <br>
-      </div>
       </div>
     </div>
   </div>

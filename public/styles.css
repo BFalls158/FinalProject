@@ -44,6 +44,12 @@ button:focus {
   overflow: hidden;
 }
 
+.header p {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+}
+
 .header a:hover {
   text-decoration: none;
   cursor: pointer important!;
@@ -134,6 +140,7 @@ button:focus {
   margin-top: 100px;
   margin-right: 30px;
 
+
   /*padding messes up the search icon so i just removed the background altogether.
   it looks cleaner that way anyway*/
 
@@ -152,7 +159,8 @@ button {
   margin-right: 8px;
   display: block;
 }
-.col-sm-6 {
+
+.rightSide {
      width: inherit;
      float: right;
 }
@@ -163,6 +171,7 @@ button {
 
 .right-inner-addon {
   position: relative;
+  float: left;
 }
 
 .right-inner-addon input {
@@ -459,4 +468,3 @@ button {
 .show {
   visibility: visible !important;
 }
-

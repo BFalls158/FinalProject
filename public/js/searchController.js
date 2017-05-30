@@ -21,7 +21,6 @@ angular.module("BookBuddiesMod")
         $scope.showResults = function(){
 
           var books = apiService.getSearchedBooks();
-          console.log(books);
 
           books.items.forEach(function(book) {
               $scope.list.push(
@@ -60,4 +59,9 @@ angular.module("BookBuddiesMod")
 
         }
 
+        $scope.logOut = function() {
+            dbService.setStatus(false);
+            dbService.setCurrentUser(null);
+            $location.path('/login');
+        }
     });
