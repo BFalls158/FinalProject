@@ -257,6 +257,11 @@ button {
   background-image: url("https://s-media-cache-ak0.pinimg.com/originals/3f/89/31/3f8931ccba1eea1787cd397bb535902d.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
+<<<<<<< HEAD
+=======
+  background-size: cover;
+  border-radius: 5px;
+>>>>>>> 3d83a3b876187980ae2d9fad30c5065b42e98986
 }
 
 #home .column2 .bookTitle{
@@ -272,7 +277,8 @@ button {
   background-color: rgba(255, 255, 255, 0.83);
   padding: 10px;
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+  height: 350px;
   transition: all .2s ease-in-out;
 }
 
@@ -472,8 +478,8 @@ button {
   display: inline-block;
   /*vertical-align: top;*/
   position: absolute;
-  left: 20px;
-  top: 30%;
+  left: 30px;
+  top: 70px;
 }
 
 #searchResults button {
