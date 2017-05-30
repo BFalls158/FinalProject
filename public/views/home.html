@@ -12,10 +12,5 @@
     </div>
 
 <!--Column right-->
-    <div id="mainDirectives" class="column2">
-        <div id="matches" class="{{mouseClass}}">
-        <h3>Match Library</h3>
-        <p ng-repeat="match in matches" ng-click="tradeToggle('lg', match.username, match.title)">User: {{ match.username }} <br> Title: {{ match.title }}</p>    <!--Clicking on the username match will direct to the matchProfile-->
-      </div>
-    </div>
+    <match-feed></match-feed>
 </div>
