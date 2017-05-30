@@ -5,9 +5,9 @@ angular.module("BookBuddiesMod")
 
     	$scope.userAvailable = true;
 
-    	// if ($scope.status) {
-    	// 	$location.path('/home');
-    	// }
+    	$scope.ok = function() {
+            $uibModalInstance.close();
+        }
 
 	    $scope.submitForm = function(userInfo) {
 	    	dbService.checkUser(userInfo.username).then(function(response) {
@@ -27,4 +27,8 @@ angular.module("BookBuddiesMod")
 	    		}
 	    	})
 	    }
+      //cancel button function
+    $scope.cancel = function() {
+        $uibModalInstance.dismiss('cancel');
+    }
     });

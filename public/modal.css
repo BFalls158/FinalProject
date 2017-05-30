@@ -117,3 +117,29 @@ h3 {
   margin-top: 5px;
   float: bottom;
 }
+
+
+/*---------confirmation modal-------*/
+
+.confirmContainer {
+  width: 250px;
+  height: 100px;
+  margin: auto;
+  background-color: white;
+}
+
+.closeButt {
+  display: block;
+  margin: auto;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+}
+
+.confirmMessage {
+  padding-top: 20px;
+  text-align: center;
+}
