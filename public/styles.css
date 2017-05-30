@@ -38,6 +38,12 @@ button:focus {
   background-size: cover;
 }
 
+.header p {
+  display: inline;
+  font-size: 18px;
+  text-align: center;
+}
+
 .header a:hover {
   text-decoration: none;
   cursor: pointer important!;
@@ -145,6 +151,7 @@ button {
   margin-right: 8px;
   display: block;
 }
+
 .col-sm-6 {
      width: inherit;
      float: right;
@@ -156,6 +163,7 @@ button {
 
 .right-inner-addon {
   position: relative;
+  float: left;
 }
 
 .right-inner-addon input {
@@ -451,4 +459,3 @@ button {
 .show {
   visibility: visible !important;
 }
-
