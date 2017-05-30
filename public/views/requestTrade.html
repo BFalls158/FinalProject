@@ -1,26 +1,26 @@
 <div  class="modal-content container" id="tradeForm">
         <div class="modal-header row" id="trade box">
-                                            <!--Yours-->
+<!--Yours-->
             <div class="col1">
                 <h3>Your Library</h3>
                 <div class="toTrade">
-                <p ng-repeat="item in userLibrary"><button ng-click="addToUserTrade(item)">+</button> {{ item.title }} - {{ item.author }} </p>
+                    <p ng-repeat="item in userLibrary"><span class="glyphicon glyphicon-plus" ng-click="addToUserTrade(item)"></span><span class="bookTitle">{{ item.title }}</span><br> <span class="authorIndent">{{ item.author }}</span></p>
               </div>
                 <div class="tradeBox">
                     <h3>Trade</h3>
-                <p ng-repeat="item in userTrade"><button ng-click="deleteFromUserTrade(item)" class="remove">-</button> {{ item.title }} - {{ item.author }} </p>
+                    <p ng-repeat="item in userTrade"><span ng-click="deleteFromUserTrade(item)" class="remove glyphicon glyphicon-minus"></span> <span class="bookTitle">{{ item.title }}</span><br> {{ item.author }} </p>
 
                 </div>
             </div>
-                                            <!--Theirs-->
+<!--Theirs-->
             <div class="col2">
                 <h3>Their Library</h3>
                 <div class="toTrade">
-                <p ng-repeat="item in tradeUserLibrary"><button ng-click="addToTradeUserTrade(item)">+</button> {{ item.title}} - {{ item.author }}</p>
+                    <p ng-repeat="item in tradeUserLibrary"><span class="glyphicon glyphicon-plus" ng-click="addToTradeUserTrade(item)"></span><span class="bookTitle">{{ item.title}}</span><br> <span class="authorIndent">{{ item.author }}</span></p>
               </div>
                 <div class="tradeBox">
                     <h3>Trade</h3>
-                    <p ng-repeat="item in tradeUserTrade"><button ng-click="deleteFromTradeUserTrade(item)">-</button> {{ item.title}} - {{ item.author }} </p>
+                    <p ng-repeat="item in tradeUserTrade"><span ng-click="deleteFromTradeUserTrade(item)" class="remove glyphicon glyphicon-minus"><span class="bookTitle">{{ item.title}}</span><br> {{ item.author }}</p>
 
                 </div>
             </div>

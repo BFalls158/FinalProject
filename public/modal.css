@@ -16,7 +16,7 @@
   background-image: url('images/books.jpg');
 }
 
-#tradeForm .col1, .col2 {
+#tradeForm .col1, #tradeForm .col2 {
   width: 45%;
   height: 450px;
   border: 1px solid grey;
@@ -32,7 +32,7 @@
   margin: 20px;
   padding-left: 8%;
   height: 220px;
-  overflow: auto;
+  overflow: scroll;
   text-align: left;
 }
 
@@ -79,6 +79,10 @@ h3 {
   background-color: transparent;
 }
 
+.authorIndent{
+    margin-left: 35px;
+}
+
 
 /*--------login modal--------*/
 
@@ -89,8 +93,8 @@ h3 {
   /*width: 800px;*/
   left: 50%;
   /*margin-left: -400px;*/
-  /*background-color: yellow;*/
-  /*background-image: url('images/books.jpg');*/
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
 
 }
 
@@ -122,6 +126,7 @@ h3 {
   height: 100px;
   margin: auto;
   background-color: white;
+  border-radius: 5px;
 }
 
 .closeButt {

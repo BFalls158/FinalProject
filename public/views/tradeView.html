@@ -4,7 +4,7 @@
             <div class="col1">
                 <h3>Your Library</h3>
                 <div class="toTrade">
-                    <p ng-repeat="item in userLibrary">{{ item.title }} - {{ item.author }}<button ng-click="addToUserTrade(item)">+</button></p>
+                    <p ng-repeat="item in userLibrary"><span class="bookTitle">{{ item.title }}</span><br> {{ item.author }}<button ng-click="addToUserTrade(item)">+</button></p>
                 </div>
           <!-- Bottom left proposed trade box-->
                 <div class="tradeBox">
@@ -17,7 +17,7 @@
             <div class="col2">
                 <h3>Their Library</h3>
                 <div class="toTrade">
-                    <p ng-repeat="item in tradeUserLibrary">{{ item.title}} - {{ item.author }} <button ng-click="addToTradeUserTrade(item)">+</button></p>
+                    <p ng-repeat="item in tradeUserLibrary"><span class="bookTitle">{{ item.title}} </span><br> {{ item.author }} <button ng-click="addToTradeUserTrade(item)">+</button></p>
                 </div>
           <!-- Bottom right proposed trade box -->
                 <div class="tradeBox">
