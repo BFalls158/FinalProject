@@ -7,8 +7,18 @@
     font-family: 'Oswald', sans-serif;
 }
 
-a{
+a, .errorText{
     color: #ebcb1f;
+}
+
+.header a{
+    color: #ffd700;
+    text-shadow: 5px 5px 30px rgb(0, 0, 0);
+}
+
+#logout{
+    font-size: 20px;
+    color: black;
 }
 
 body {
@@ -30,6 +40,10 @@ input:focus {
 
 button:focus {
   outline: none;
+}
+
+.errorText{
+    font-size: 15px;
 }
 
 .glyphicon{

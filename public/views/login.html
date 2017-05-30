@@ -21,11 +21,11 @@
           <label><input type="password" name="password" value="Password" placeholder="Password" ng-model="logInUser.password"></label>
           <br>
           <button type="submit" class="loginButton">Log in</button>
-          <p ng-if="loginError">Incorrect username and/or password</p>
+          <p ng-if="loginError" class="errorText">Incorrect username and/or password</p>
       </form>
         <p>
-            Forgot Password?<br>
-            Contact our <a>Dev Team.</a>
+            Contact our <a>Dev Team</a><br>
+            for password help.
         </p>
       <br>
       <button class="signupButton" type="button" ng-click="signupToggle('lg')">Sign Up</button>

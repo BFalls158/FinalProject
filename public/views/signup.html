@@ -3,22 +3,22 @@
     <form id="signup" name="signupForm" ng-submit="submitForm(newUser)" novalidate="">
         <label>Username
             <input class="signupInput" name="username" type="text" required="" ng-model="newUser.username">
-            <span ng-show="signupForm.username.$touched && signupForm.username.$error.required">Invalid Username</span>
+            <span ng-show="signupForm.username.$touched && signupForm.username.$error.required" class="errorText">Invalid Username</span>
         </label><br>
         <label>Email
             <input class="signupInput" name="email" type="email" required="" ng-model="newUser.email">
-            <span ng-show="signupForm.email.$touched && signupForm.email.$invalid">Please enter a valid email.</span>
+            <span ng-show="signupForm.email.$touched && signupForm.email.$invalid" class="errorText">Please enter a valid email.</span>
         </label><br>
         <label>Password
             <input class="signupInput" name="password" type="password" ng-minlength="7" ng-maxlength="30" required="" ng-model="newUser.password">
-            <span ng-show="signupForm.password.$touched && signupForm.password.$invalid">Password must be 7-30 characters.</span>
+            <span ng-show="signupForm.password.$touched && signupForm.password.$invalid" class="errorText">Password must be 7-30 characters.</span>
         </label><br>
         <label>Password Confirm
             <input class="signupInput" name="passConfirm" type="password" required=""  ng-model="newUser.passConfirm">
-            <span ng-show="signupForm.passConfirm.$touched && signupForm.passConfirm.$invalid">Passwords must match.</span>
+            <span ng-show="signupForm.passConfirm.$touched && signupForm.passConfirm.$invalid" class="errorText">Passwords must match.</span>
         </label><br>
         <button id="create" type="submit">Submit</button>
-        <p ng-if="!userAvailable">User name unavailable</p>
+        <p ng-if="!userAvailable" class="errorText">User name unavailable</p>
         <button class="cancel" ng-click="cancel()">Cancel</button>
     </form>
   </div>
