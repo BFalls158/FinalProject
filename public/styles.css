@@ -72,16 +72,14 @@ button:focus {
   border-right: solid white 3px;
 }
 
-/*
 .b1{
   display: inline;
   font-family: baduy;
   font-size: 120px;
-  color: #9cd366;
+  color: #f2de72;
 }
-*/
 
-.b1, .b2{
+.b2{
   display: inline;
   font-family: baduy;
   font-size: 120px;
@@ -136,11 +134,11 @@ button:focus {
 }
 
 /*---------------------home screen search---------*/
-/*.searchDiv {
+.searchDiv {
   float: right;
   display: inline;
   margin-top: 100px;
-  margin-right: 30px;*/
+  margin-right: 30px;
 
 
   /*padding messes up the search icon so i just removed the background altogether.
