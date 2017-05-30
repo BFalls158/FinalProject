@@ -29,7 +29,12 @@ angular.module("BookBuddiesMod")
 
     dbService.setMatches($scope.user).then(function(response) {
         $scope.matches = dbService.getMatches();
-        $scope.numberOfMatches = $scope.matches.length;
+        if($scope.matches.length === 1) {
+          $scope.numberOfMatches = $scope.matches.length + " match";
+        } else if($scope.matches.length > 1) {
+          $scope.numberOfMatches = $scope.matches.length + " matches";
+        }
+
     });
 
     dbService.popularBooks().then(function(response) {
