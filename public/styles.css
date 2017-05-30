@@ -231,8 +231,6 @@ button {
   background-size: cover;
 }
 
-
-
 #home .column2 .bookTitle{
     color: #51A754;
 }
@@ -376,6 +374,7 @@ button {
 
 .books img{
     height: 120px;
+    box-shadow: 5px 5px 30px rgba(56, 40, 56, 0.4);
 }
 
 .bookList{
