@@ -6,6 +6,16 @@
 
   margin: 0 auto;
   margin-top: 5px;
+
+  border-radius: 2px;
+  background-color: white;
+  border: 2px solid #f2de72;
+}
+
+
+#tradeForm button:hover {
+  background-color: #f2de72;
+
 }
 
 #tradeForm{
