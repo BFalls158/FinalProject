@@ -1,6 +1,6 @@
 <div id="signupFormDiv">
   <div class="formDiv">
-    <form id="signup" name="signupForm" ng-submit="submitForm(newUser)" novalidate="">
+    <form id="signup" name="signupForm" ng-submit="submitForm(signupForm.$valid)" novalidate="">
         <label>Username
             <input class="signupInput" name="username" type="text" required="" ng-model="newUser.username">
             <span ng-show="signupForm.username.$touched && signupForm.username.$error.required" class="errorText">Invalid Username</span>
@@ -15,7 +15,7 @@
         </label><br>
         <label>Password Confirm
             <input class="signupInput" name="passConfirm" type="password" required=""  ng-model="newUser.passConfirm">
-            <span ng-show="signupForm.passConfirm.$touched && signupForm.passConfirm.$invalid" class="errorText">Passwords must match.</span>
+            <span ng-show="signupForm.passConfirm.$touched && signupForm.passConfirm.$invalid || newUser.password !== newUser.passConfirm" class="errorText">Passwords must match.</span>
         </label><br>
         <button id="create" type="submit">Submit</button>
         <p ng-if="!userAvailable" class="errorText">User name unavailable</p>

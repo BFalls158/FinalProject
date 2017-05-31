@@ -41,8 +41,7 @@ angular.module("BookBuddiesMod")
                     thumbnail: book.volumeInfo.imageLinks.thumbnail,
                     title: book.volumeInfo.title,
                     description: book.volumeInfo.description});
-                }
-              )
+          });
           console.log($scope.list);
         }
 
@@ -68,7 +67,6 @@ angular.module("BookBuddiesMod")
         	}
         	dbService.addToWatchlist(entry);
           alert("Book Successfully Added to Watchlist");
-
         }
 
         $scope.logOut = function() {

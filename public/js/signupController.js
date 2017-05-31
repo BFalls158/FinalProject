@@ -9,23 +9,26 @@ angular.module("BookBuddiesMod")
             $uibModalInstance.close();
         }
 
-	    $scope.submitForm = function(userInfo) {
-	    	dbService.checkUser(userInfo.username).then(function(response) {
-	    		if(response === "Username available") {
-	    			$scope.userAvailable = true;
-	    			dbService.newUser(userInfo).then(function() {
-	    				$scope.newUser = {};
-	    				//Log user in!!!!!
-	    				dbService.setCurrentUser(userInfo.username);
-	    				dbService.setStatus(true);
-	    				$location.path('/home');
-	    			}).catch(function(error) {
-	    				console.log('something went wrong...');
-	    			})
-	    		} else {
-	    			$scope.userAvailable = false;
-	    		}
-	    	})
+	    $scope.submitForm = function(validation) {
+	    	if (validation) {
+		    	dbService.checkUser($scope.newUser.username).then(function(response) {
+		    		if(response === "Username available") {
+		    			$scope.userAvailable = true;
+		    			dbService.newUser($scope.newUser).then(function() {
+		    				//Log user in!!!!!
+		    				dbService.setCurrentUser($scope.newUser.username);
+		    				dbService.setStatus(true);
+		    				$scope.newUser = {};
+		    				$location.path('/home');
+		    				$scope.cancel();
+		    			}).catch(function(error) {
+		    				console.log('something went wrong...');
+		    			})
+		    		} else {
+		    			$scope.userAvailable = false;
+		    		}
+		    	})
+	    	}
 	    }
       //cancel button function
     $scope.cancel = function() {
