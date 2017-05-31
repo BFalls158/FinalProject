@@ -1,28 +1,14 @@
 angular.module("BookBuddiesMod")
-    .controller("searchController", function($scope, $location, apiService, dbService, $uibModal){
+    .controller("searchController", function($scope, $location, apiService, dbService, $uibModal, $rootScope){
 
         $scope.status = dbService.getStatus();
 
-        $scope.user = dbService.getCurrentUser();
-
-        $scope.library = [];
-
-        $scope.watchlist = [];
-
- 		$scope.list = [];
-
-        dbService.getLibrary($scope.user).then(function(response) {
-            $scope.library = response;
-        });
-
-        dbService.getWatchlist($scope.user).then(function(response) {
-            $scope.watchlist = response;
-        });
+        $scope.list = [];
 
         $scope.setSearch = function(search){
             apiService.setSearchedBooks(search)
                 .then(function() {
-                	$scope.list = [];
+                    $scope.list = [];
                     $location.path("/searchResults");
                     $scope.showResults();
                 });
@@ -41,29 +27,35 @@ angular.module("BookBuddiesMod")
                     thumbnail: book.volumeInfo.imageLinks.thumbnail,
                     title: book.volumeInfo.title,
                     description: book.volumeInfo.description});
-          });
+                }
+              )
+          console.log($scope.list);
         }
 
         $scope.addToLibrary = function (book) {
-        	var entry = {
-        		username: $scope.user,
-        		title: book.title,
-        		author: book.author,
-        		description: book.description,
-        		thumbnailurl: book.thumbnail
-        	}
-        	dbService.addToLibrary(entry);
+            var entry = {
+                username: $rootScope.user,
+                title: book.title,
+                author: book.author,
+                description: book.description,
+                thumbnailurl: book.thumbnail
+            }
+            console.log(entry);
+            dbService.addToLibrary(entry);
+          alert("Book Successfully Added to Library");
         }
 
         $scope.addToWatchlist = function (book) {
-        	var entry = {
-        		username: $scope.user,
-        		title: book.title,
-        		author: book.author,
-        		description: book.description,
-        		thumbnailurl: book.thumbnail
-        	}
-        	dbService.addToWatchlist(entry);
+            var entry = {
+                username: $rootScope.user,
+                title: book.title,
+                author: book.author,
+                description: book.description,
+                thumbnailurl: book.thumbnail
+            }
+            dbService.addToWatchlist(entry);
+          alert("Book Successfully Added to Watchlist");
+
         }
 
         $scope.logOut = function() {

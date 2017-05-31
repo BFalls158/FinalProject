@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("profileController", function($scope, apiService, dbService, $location){
+    .controller("profileController", function($scope, apiService, dbService, $location, $rootScope){
 
         $scope.status = dbService.getStatus();
 
@@ -7,7 +7,7 @@ angular.module("BookBuddiesMod")
             $location.path('/login');
         }
 
-    	$scope.user = dbService.getCurrentUser();
+    	$scope.user = $rootScope.user;
 
     	$scope.myLibrary = [];
 

@@ -1,9 +1,7 @@
 angular.module("BookBuddiesMod")
-    .controller("loginController", function($scope, $http, apiService, dbService, $location, $uibModal){
+    .controller("loginController", function($scope, $http, apiService, dbService, $location, $uibModal, $rootScope){
 
     	$scope.status = dbService.getStatus();
-
-    	$scope.user = dbService.getCurrentUser();
 
         $scope.signupToggle = function(size) {
             var uibmodalInstance = $uibModal.open({
@@ -18,7 +16,8 @@ angular.module("BookBuddiesMod")
     	$scope.logIn = function(user) {
     		dbService.login(user).then(function(response) {
     			if(response === "Success"){
-    				dbService.setCurrentUser(user.username);
+    				$rootScope.user = user.username;
+                    console.log($rootScope.user);
                     dbService.setStatus(true);
 					$scope.loginError = false;
 					$location.path('/home');
