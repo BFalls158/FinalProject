@@ -17,7 +17,6 @@ angular.module("BookBuddiesMod")
     		dbService.login(user).then(function(response) {
     			if(response === "Success"){
     				$rootScope.user = user.username;
-                    console.log($rootScope.user);
                     dbService.setStatus(true);
 					$scope.loginError = false;
 					$location.path('/home');

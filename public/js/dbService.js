@@ -5,7 +5,7 @@ angular.module("BookBuddiesMod")
       var tradeUser;
       var selectedMatch;
       var isLoggedIn = false;
-      var currentUser = "";
+      var currentUser;
 
       this.setStatus = function(status) {
         isLoggedIn = status;
@@ -166,7 +166,6 @@ angular.module("BookBuddiesMod")
           url: '/db/login',
           data: user
         }).then(function(response) {
-          console.log(response.data);
           return response.data;
         });
       }

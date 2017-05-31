@@ -29,7 +29,6 @@ angular.module("BookBuddiesMod")
                     description: book.volumeInfo.description});
                 }
               )
-          console.log($scope.list);
         }
 
         $scope.addToLibrary = function (book) {
@@ -40,7 +39,6 @@ angular.module("BookBuddiesMod")
                 description: book.description,
                 thumbnailurl: book.thumbnail
             }
-            console.log(entry);
             dbService.addToLibrary(entry);
           alert("Book Successfully Added to Library");
         }
