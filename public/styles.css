@@ -19,6 +19,7 @@ a, .errorText{
 #logout{
     font-size: 20px;
     color: black;
+    cursor: pointer;
 }
 
 body {
@@ -199,11 +200,11 @@ button:focus {
   background-color: white;
   border: 2px solid #f2de72;
  }
- 
+
  .loginButton:hover {
   background-color: #f2de72;
  }
- 
+
  .signupButton {
   margin: 0 auto;
   margin-top: 5px;
@@ -211,7 +212,7 @@ button:focus {
   background-color: white;
   border: 2px solid #f2de72;
  }
- 
+
  .signupButton:hover {
   background-color: #f2de72;
  }
@@ -322,7 +323,7 @@ button {
 }
 
 #home .column2 .bookTitle{
-    
+
 }
 
 #mainBooks {
@@ -545,4 +546,9 @@ button {
 
 .show {
   visibility: visible !important;
+}
+
+
+.hide {
+  visibility: hidden !important;
 }

@@ -9,8 +9,8 @@
         <p class="mobileAuthor">by {{ book.author }}</p>
         <p class="mobileDescription">{{ book.description }}</p>
     </div>
-    <div class="column3"><span type="button" ng-click="addToLibrary(book)" class="glyphicon glyphicon-book {{addBook}}"></span>
+    <div class="column3"><span type="button" ng-click="addToLibrary(book) "hideButton = 'hide'"" class="glyphicon glyphicon-book {{addBook}}{{hideButton}}"></span>
   	<!--Add to watchlist --><br>
-    <span type="button" ng-click="addToWatchlist(book)" class="glyphicon glyphicon-heart {{addBook}}"></span></div>
+    <span type="button" ng-click="addToWatchlist(book) "hideButton = 'hide'"" class="glyphicon glyphicon-heart {{addBook}}{{hideButton}}"></span></div>
     <!--Link to module with list of users offering book, possible stretch goal -->
   </div>

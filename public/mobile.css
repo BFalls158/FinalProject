@@ -57,6 +57,27 @@
       z-index: 900;
     }
 
+    /*----------------login page styling----------------*/
+
+    .loginCol1, .loginCol2 {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      margin: 0 auto;
+    }
+
+    .loginP1, .loginP2 {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 0px;
+    }
+
+    .loginCol1 {
+      margin-bottom: 10px;
+    }
+
+    
+
     /*----------------home page styling-----------------*/
 
     #mainBack, #mainList, .moreTitles{
@@ -258,5 +279,3 @@
     }
 
 }
-
-
