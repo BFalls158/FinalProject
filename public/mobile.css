@@ -182,8 +182,9 @@
     .books{
       height: auto;
       height: 180px;
-      display: flex;
-      overflow: auto;
+      /*display: flex;*/
+      overflow-x: auto;
+      overflow-y: hidden;
       white-space: nowrap;
       border: none;
       -webkit-overflow-scrolling: touch;
