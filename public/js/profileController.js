@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("profileController", function($scope, apiService, dbService, $location){
+    .controller("profileController", function($scope, apiService, dbService, $location, $rootScope){
 
         $scope.status = dbService.getStatus();
 
@@ -7,7 +7,7 @@ angular.module("BookBuddiesMod")
             $location.path('/login');
         }
 
-    	$scope.user = dbService.getCurrentUser();
+    	$scope.user = $rootScope.user;
 
     	$scope.myLibrary = [];
 
@@ -45,6 +45,12 @@ angular.module("BookBuddiesMod")
       dbService.setMatches($scope.user).then(function(response) {
           $scope.matches = dbService.getMatches();
           $scope.numberOfMatches = $scope.matches.length;
+          $scope.matches = dbService.getMatches();
+          if($scope.matches.length === 1) {
+            $scope.numberOfMatches = $scope.matches.length + " match";
+          } else if($scope.matches.length > 1) {
+            $scope.numberOfMatches = $scope.matches.length + " matches";
+          }
       });
 
     });

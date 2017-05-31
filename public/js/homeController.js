@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-  .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location){
+  .controller("homeController", function($scope, $http, apiService, dbService, $uibModal, $location, $rootScope){
 
         $scope.status = dbService.getStatus();
 
@@ -7,7 +7,7 @@ angular.module("BookBuddiesMod")
             $location.path('/login');
         }
 
-        $scope.user = dbService.getCurrentUser();
+        $scope.user = $rootScope.user;
 
         $scope.tradeToggle = function(size, user, title) {
             $scope.setTradeUser(user, title);

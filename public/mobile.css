@@ -76,7 +76,9 @@
       margin-bottom: 10px;
     }
 
-    
+    #signup label input {
+      display: block;
+    }
 
     /*----------------home page styling-----------------*/
 

@@ -166,7 +166,6 @@ angular.module("BookBuddiesMod")
           url: '/db/login',
           data: user
         }).then(function(response) {
-          console.log(response.data);
           return response.data;
         });
       }

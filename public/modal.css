@@ -2,6 +2,13 @@
 .modal-header{
   border: none;
 }
+
+.directions p {
+  display: block;
+  color: white;
+  font-size: 16px;
+}
+
 #tradeForm button {
 
   margin: 0 auto;

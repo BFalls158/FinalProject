@@ -1,9 +1,9 @@
 angular.module("BookBuddiesMod")
-    .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance, $uibModal){
+    .controller("tradeController", function($scope, $location, apiService, dbService, emailService, $uibModalInstance, $uibModal, $rootScope){
 
         $scope.status = dbService.getStatus();
 
-        $scope.user = dbService.getCurrentUser();
+        $scope.user = $rootScope.user;
 
         $scope.tradeUser = dbService.getTradeUser();
 
