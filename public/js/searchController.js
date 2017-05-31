@@ -55,7 +55,7 @@ angular.module("BookBuddiesMod")
 
         $scope.logOut = function() {
             dbService.setStatus(false);
-            dbService.setCurrentUser(null);
+            $rootScope = null;
             $location.path('/login');
         }
     });
