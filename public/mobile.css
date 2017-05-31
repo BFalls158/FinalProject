@@ -146,6 +146,7 @@
         min-height: 230px;
         margin: 0;
         padding: 8px 0px;
+        overflow-y: hidden;
     }
 
     .pcol:nth-child(1){
@@ -159,8 +160,9 @@
     .books{
       height: auto;
       height: 180px;
-      display: flex;
+      /*display: flex;*/
       overflow: auto;
+      overflow-y: hidden
       white-space: nowrap;
       border: none;
       -webkit-overflow-scrolling: touch;
@@ -256,5 +258,32 @@
       height: auto;
       overflow: auto;
     }
+
+     /* ------------ Log in View ------------ */
+
+     .loginCol1 {
+       display: inline-block;
+       width: 90%;
+       margin: 0 auto;
+       border: none;
+     }
+
+     .loginCol2 {
+       display: inline-block;
+       width: 90%;
+       margin: 0 auto;
+       margin-bottom: 10px;
+     }
+
+     .loginP1 {
+       margin: 10px;
+       margin-bottom: 0px;
+     }
+
+     .loginP2 {
+       margin-left: auto;
+       margin: 0 auto;
+     }
+
 
 }
