@@ -38,10 +38,10 @@ angular.module("BookBuddiesMod")
                     book.volumeInfo.description = "No description available";
                 }
                 if (!book.volumeInfo.imageLinks){
-                    book.volumeInfo.imageLinks = "";
+                    book.volumeInfo.imageLinks = {thumbnail: "images/coverplaceholder.gif"};
                     //need thumbnail placeholder
                 } else if (book.volumeInfo.imageLinks.thumbnail === undefined && book.volumeInfo.imageLinks.smallThumbnail === undefined) {
-                    book.volumeInfo.imageLinks.thumbnail = "";
+                    book.volumeInfo.imageLinks.thumbnail = "images/coverplaceholder.gif";
                     //need thumbnail placeholder
                 } else if (book.volumeInfo.imageLinks.thumbnail === undefined && book.volumeInfo.imageLinks.smallThumbnail !== undefined) {
                     book.volumeInfo.imageLinks.thumbnail = book.volumeInfo.imageLinks.smallThumbnail;
