@@ -139,6 +139,7 @@ h3 {
   /*padding-left: 25%;*/
   color: black;
   text-align: left;
+  display: block;
 }
 
 #create {
