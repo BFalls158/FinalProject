@@ -1,5 +1,9 @@
 
   <h3 id="searchTitle">Search Results</h3>
+  <div class="iconLegend">
+      Add to Library <span class="glyphicon glyphicon-book"></span> |
+      Add to Watchlist <span class="glyphicon glyphicon-heart"></span>
+  </div>
   <div id="searchResults" ng-repeat="book in list" ng-mouseover="addBook = 'show'" ng-mouseout="addBook = 'none'">
     <div class="column1">
       <img ng-src="{{ book.thumbnail }}">
