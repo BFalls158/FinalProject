@@ -121,6 +121,8 @@
         display: block;
         min-width: 200px;
         width: 100%;
+        height: auto;
+        min-height: 80px;
         margin: 0 auto;
         vertical-align: sub;
         float: top;
@@ -137,11 +139,14 @@
       height: auto;
       height: 170px;
       display: flex;
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
       white-space: nowrap;
       border: none;
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: none;
+      padding-bottom: 20px;
+      margin-bottom: 0px;
     }
 
 
@@ -159,6 +164,8 @@
       margin-top: 20px;
       display: inline-block;
       width: 80%;
+      height: auto;
+      margin-bottom: 20px;
     }
 
     /*----------------profile view-----------------*/
