@@ -1,5 +1,5 @@
 angular.module("BookBuddiesMod")
-    .controller("searchController", function($scope, $location, apiService, dbService, $uibModal, $rootScope){
+    .controller("searchController", function($scope, $location, apiService, dbService, $uibModal, $rootScope, $uibModal){
 
         $scope.status = dbService.getStatus();
 
@@ -57,5 +57,13 @@ angular.module("BookBuddiesMod")
             dbService.setStatus(false);
             $rootScope = null;
             $location.path('/login');
+        }
+
+        $scope.confirmAdd = function(size) {
+              var uibmodalInstance = $uibModal.open({
+                  animation: $scope.animationsEnabled,
+                  templateUrl: 'views/libraryConfirmation.html',
+                  controller: 'tradeController'
+              })
         }
     });

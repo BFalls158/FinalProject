@@ -17,4 +17,7 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
             controller: "loginController"
         })
         .otherwise("/home");
-    });
+    })
+    .config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+    }]);

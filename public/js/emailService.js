@@ -14,7 +14,6 @@ angular.module("BookBuddiesMod")
 					title2: user2.title,
 				}
 			}).then(function(response){
-				console.log(response);
 				return response.data;
 			});
 		}
