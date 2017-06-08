@@ -19,5 +19,5 @@ angular.module("BookBuddiesMod", ["ui.bootstrap", "ngAnimate", "ngRoute"])
         .otherwise("/home");
     })
     .config(['$qProvider', function ($qProvider) {
-    $qProvider.errorOnUnhandledRejections(false);
+        $qProvider.errorOnUnhandledRejections(false);
     }]);
